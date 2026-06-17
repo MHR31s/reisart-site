@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import TrackedLink from "@/components/TrackedLink";
 
 const metrics = [
   { value: "+20", label: "projetos posicionados" },
@@ -31,14 +32,24 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <a href="#contato" className="premium-button">
+            <TrackedLink
+              href="#contato"
+              eventName="diagnostico_click"
+              eventParams={{ source: "hero" }}
+              className="premium-button"
+            >
               Solicitar diagnóstico
               <ArrowUpRight size={20} />
-            </a>
+            </TrackedLink>
 
-            <a href="#cases" className="premium-button-secondary">
+            <TrackedLink
+              href="#cases"
+              eventName="case_view"
+              eventParams={{ case_name: "home_cases" }}
+              className="premium-button-secondary"
+            >
               Ver cases reais
-            </a>
+            </TrackedLink>
           </div>
 
           <div className="mt-10 grid gap-3 sm:grid-cols-3">

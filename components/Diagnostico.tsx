@@ -2,6 +2,7 @@
 
 import { FormEvent } from "react";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 const whatsappNumber = "5519991392850";
 const checks = [
@@ -31,6 +32,18 @@ export default function Diagnostico() {
       `Instagram: ${instagram || "Não informado"}`,
       `Maior desafio: ${desafio || "Não informado"}`,
     ].join("\n");
+
+    trackEvent("lead_diagnostico", {
+      source: "formulario_site",
+    });
+
+    trackEvent("diagnostico_click", {
+      source: "formulario_site",
+    });
+
+    trackEvent("whatsapp_click", {
+      location: "contact_form",
+    });
 
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensagem)}`,

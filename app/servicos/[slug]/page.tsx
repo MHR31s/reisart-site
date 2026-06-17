@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import TrackedLink from "@/components/TrackedLink";
 
 const whatsappLink =
   "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
@@ -169,14 +170,26 @@ export default async function ServicePage({ params }: PageProps) {
               {service.intro}
             </p>
             <div className="mt-12">
-              <a
+              <TrackedLink
                 href={whatsappLink}
+                eventName="diagnostico_click"
+                eventParams={{ source: `servico_${slug}` }}
+                events={[
+                  {
+                    name: "diagnostico_click",
+                    params: { source: `servico_${slug}` },
+                  },
+                  {
+                    name: "whatsapp_click",
+                    params: { location: `servico_${slug}` },
+                  },
+                ]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="premium-button inline-flex"
               >
                 Solicitar Diagnóstico Estratégico
-              </a>
+              </TrackedLink>
             </div>
           </div>
         </section>
@@ -238,14 +251,26 @@ export default async function ServicePage({ params }: PageProps) {
                   </p>
                 ))}
               </div>
-              <a
+              <TrackedLink
                 href={whatsappLink}
+                eventName="diagnostico_click"
+                eventParams={{ source: `servico_${slug}_aside` }}
+                events={[
+                  {
+                    name: "diagnostico_click",
+                    params: { source: `servico_${slug}_aside` },
+                  },
+                  {
+                    name: "whatsapp_click",
+                    params: { location: `servico_${slug}_aside` },
+                  },
+                ]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="premium-button mt-8 inline-flex"
               >
                 Solicitar Diagnóstico Estratégico
-              </a>
+              </TrackedLink>
             </aside>
           </div>
         </section>

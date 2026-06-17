@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import TrackedLink from "@/components/TrackedLink";
 
 const whatsappLink =
   "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
@@ -177,14 +178,26 @@ export default async function CasePage({ params }: PageProps) {
               <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">
                 {item.transformation}
               </p>
-              <a
+              <TrackedLink
                 href={whatsappLink}
+                eventName="diagnostico_click"
+                eventParams={{ source: `case_${slug}` }}
+                events={[
+                  {
+                    name: "diagnostico_click",
+                    params: { source: `case_${slug}` },
+                  },
+                  {
+                    name: "whatsapp_click",
+                    params: { location: `case_${slug}` },
+                  },
+                ]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="premium-button mt-8 inline-flex"
               >
                 Solicitar Diagnóstico Estratégico
-              </a>
+              </TrackedLink>
             </div>
           </div>
         </section>

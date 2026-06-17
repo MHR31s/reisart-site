@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, MessageCircle, X } from "lucide-react";
+import TrackedLink from "@/components/TrackedLink";
 
 const navItems = [
   { href: "#servicos", label: "Serviços" },
@@ -51,15 +52,17 @@ export default function Header() {
           ))}
         </nav>
 
-        <a
+        <TrackedLink
           href="https://wa.me/5519991392850"
+          eventName="whatsapp_click"
+          eventParams={{ location: "header" }}
           target="_blank"
           rel="noopener noreferrer"
           className="hidden items-center gap-2 border border-[#D8A84E]/50 px-5 py-3 text-sm font-bold text-[#F4C76B] hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F] md:inline-flex"
         >
           <MessageCircle size={18} />
           Falar com Maycon
-        </a>
+        </TrackedLink>
 
         <button
           onClick={() => setMenuOpen((open) => !open)}
@@ -85,15 +88,17 @@ export default function Header() {
               </a>
             ))}
 
-            <a
+            <TrackedLink
               href="https://wa.me/5519991392850"
+              eventName="whatsapp_click"
+              eventParams={{ location: "header_mobile" }}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-5 inline-flex items-center justify-center gap-2 bg-[#F4C76B] px-6 py-4 font-black text-[#07111F]"
             >
               <MessageCircle size={20} />
               Falar com Maycon
-            </a>
+            </TrackedLink>
           </nav>
         </div>
       )}

@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import TrackedLink from "@/components/TrackedLink";
 
 const itens = [
   "Instagram",
@@ -74,8 +75,20 @@ export default function CTA() {
 
           </div>
 
-          <a
+          <TrackedLink
             href="https://wa.me/5519991392850"
+            eventName="diagnostico_click"
+            eventParams={{ source: "cta_legacy" }}
+            events={[
+              {
+                name: "diagnostico_click",
+                params: { source: "cta_legacy" },
+              },
+              {
+                name: "whatsapp_click",
+                params: { location: "cta_legacy" },
+              },
+            ]}
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -102,7 +115,7 @@ export default function CTA() {
             Começar Diagnóstico
 
             <ArrowRight size={20} />
-          </a>
+          </TrackedLink>
 
           <p className="mt-6 text-slate-500 text-sm">
             Em breve: diagnóstico automatizado integrado ao WhatsApp.

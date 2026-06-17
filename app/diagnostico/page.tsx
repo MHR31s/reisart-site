@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import TrackedLink from "@/components/TrackedLink";
 
 const whatsappLink =
   "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
@@ -45,14 +46,26 @@ export default function DiagnosticoPage() {
               reais de negócio.
             </p>
             <div className="mt-12">
-              <a
+              <TrackedLink
                 href={whatsappLink}
+                eventName="diagnostico_click"
+                eventParams={{ source: "diagnostico_page_hero" }}
+                events={[
+                  {
+                    name: "diagnostico_click",
+                    params: { source: "diagnostico_page_hero" },
+                  },
+                  {
+                    name: "whatsapp_click",
+                    params: { location: "diagnostico_page_hero" },
+                  },
+                ]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="premium-button inline-flex"
               >
                 Quero meu Diagnóstico Estratégico
-              </a>
+              </TrackedLink>
             </div>
           </div>
         </section>
@@ -124,14 +137,26 @@ export default function DiagnosticoPage() {
                   </p>
                 ))}
               </div>
-              <a
+              <TrackedLink
                 href={whatsappLink}
+                eventName="diagnostico_click"
+                eventParams={{ source: "diagnostico_page_benefits" }}
+                events={[
+                  {
+                    name: "diagnostico_click",
+                    params: { source: "diagnostico_page_benefits" },
+                  },
+                  {
+                    name: "whatsapp_click",
+                    params: { location: "diagnostico_page_benefits" },
+                  },
+                ]}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="premium-button mt-8 inline-flex"
               >
                 Quero meu Diagnóstico Estratégico
-              </a>
+              </TrackedLink>
             </aside>
           </div>
         </section>

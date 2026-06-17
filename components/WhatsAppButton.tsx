@@ -1,11 +1,14 @@
 "use client";
 
 import { MessageCircle } from "lucide-react";
+import TrackedLink from "@/components/TrackedLink";
 
 export default function WhatsAppButton() {
   return (
-    <a
+    <TrackedLink
       href="https://wa.me/5519991392850"
+      eventName="whatsapp_click"
+      eventParams={{ location: "floating_button" }}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
@@ -31,6 +34,6 @@ export default function WhatsAppButton() {
       "
     >
       <MessageCircle size={30} />
-    </a>
+    </TrackedLink>
   );
 }

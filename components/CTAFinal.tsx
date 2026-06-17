@@ -1,4 +1,5 @@
 import { ArrowUpRight, MessageCircle } from "lucide-react";
+import TrackedLink from "@/components/TrackedLink";
 
 export default function CTAFinal() {
   return (
@@ -20,20 +21,27 @@ export default function CTAFinal() {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <a href="#contato" className="premium-button">
+          <TrackedLink
+            href="#contato"
+            eventName="diagnostico_click"
+            eventParams={{ source: "cta_final" }}
+            className="premium-button"
+          >
             Solicitar diagnóstico estratégico
             <ArrowUpRight size={20} />
-          </a>
+          </TrackedLink>
 
-          <a
+          <TrackedLink
             href="https://wa.me/5519991392850"
+            eventName="whatsapp_click"
+            eventParams={{ location: "cta_final" }}
             target="_blank"
             rel="noopener noreferrer"
             className="premium-button-secondary"
           >
             <MessageCircle size={20} />
             Falar com Maycon
-          </a>
+          </TrackedLink>
         </div>
       </div>
     </section>

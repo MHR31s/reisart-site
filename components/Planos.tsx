@@ -1,3 +1,5 @@
+"use client";
+
 import {
   CheckCircle2,
   Crown,
@@ -5,10 +7,12 @@ import {
   Rocket,
   TrendingUp,
 } from "lucide-react";
+import { trackEvent } from "@/lib/gtag";
 
 const planos = [
   {
     nome: "Presença",
+    slug: "presenca",
     subtitulo: "Para empresas que precisam aparecer.",
     objetivo:
       "Criar uma base digital clara para que o cliente encontre, entenda e comece a confiar na empresa.",
@@ -26,6 +30,7 @@ const planos = [
   },
   {
     nome: "Autoridade",
+    slug: "autoridade",
     subtitulo: "Para empresas que querem ser lembradas.",
     objetivo:
       "Fortalecer presença, conteúdo e campanhas para gerar mais confiança, mais leads e mais vendas.",
@@ -44,6 +49,7 @@ const planos = [
   },
   {
     nome: "Expansão",
+    slug: "expansao",
     subtitulo: "Para empresas que desejam dominar a região.",
     objetivo:
       "Aumentar volume de leads, presença regional e consistência para acelerar o crescimento.",
@@ -61,6 +67,7 @@ const planos = [
   },
   {
     nome: "Dominância",
+    slug: "dominancia",
     subtitulo: "Para marcas que querem liderar o mercado local.",
     objetivo:
       "Unir estratégia avançada, presença presencial e conteúdo real para transformar a marca em referência.",
@@ -158,6 +165,9 @@ export default function Planos() {
 
                   <a
                     href="#contato"
+                    onClick={() =>
+                      trackEvent("plano_click", { plano: plano.slug })
+                    }
                     className="mt-5 inline-flex w-full items-center justify-center border border-[#D8A84E]/45 px-4 py-3 text-sm font-black text-[#F4C76B] hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F]"
                   >
                     Quero esse nível de estratégia
@@ -174,7 +184,13 @@ export default function Planos() {
             diagnóstico ajuda a definir prioridade, canais e ritmo de execução.
           </p>
 
-          <a href="#contato" className="premium-button shrink-0">
+          <a
+            href="#contato"
+            onClick={() =>
+              trackEvent("diagnostico_click", { source: "planos" })
+            }
+            className="premium-button shrink-0"
+          >
             Solicitar diagnóstico
           </a>
         </div>
