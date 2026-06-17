@@ -3,39 +3,43 @@ import "./globals.css";
 import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://reisartmkd.com.br"),
+  metadataBase: new URL("https://www.reisartmkd.com.br"),
 
   title: {
-    default: "Reisart Marketing Digital",
+    default:
+      "Reisart Agência de Marketing Digital | Marketing Digital em Piracicaba",
     template: "%s | Reisart Marketing Digital",
   },
 
   description:
-    "Transformamos empresas locais em referências digitais através de estratégias, posicionamento, automações e marketing orientado a resultados.",
+    "A Reisart ajuda empresas locais a gerar mais visibilidade, autoridade e oportunidades comerciais através de marketing digital, tráfego pago, sites, Google Meu Negócio e automações.",
 
   keywords: [
+    "Reisart",
     "Reisart Marketing Digital",
-    "Marketing Digital",
-    "Consultoria Estratégica",
-    "Gestão de Tráfego",
-    "Empresas Locais",
-    "Marketing em Piracicaba",
-    "Agência de Marketing",
-    "Google Ads",
+    "agência de marketing em Piracicaba",
+    "marketing digital em Piracicaba",
+    "gestão de Instagram",
+    "tráfego pago",
     "Meta Ads",
-    "Automação",
-    "Posicionamento Digital",
+    "Google Ads",
+    "Google Meu Negócio",
+    "criação de sites",
+    "automação de WhatsApp",
   ],
 
   authors: [
     {
       name: "Maycon Reis",
-      url: "https://reisartmkd.com.br",
     },
   ],
 
-  creator: "Maycon Reis",
-  publisher: "Reisart Marketing Digital",
+  creator: "Reisart Agência de Marketing Digital",
+  publisher: "Reisart Agência de Marketing Digital",
+
+  alternates: {
+    canonical: "https://www.reisartmkd.com.br",
+  },
 
   robots: {
     index: true,
@@ -52,20 +56,20 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://reisartmkd.com.br",
-    siteName: "Reisart Marketing Digital",
+    url: "https://www.reisartmkd.com.br",
+    siteName: "Reisart Agência de Marketing Digital",
 
-    title: "Reisart Marketing Digital",
+    title: "Reisart Agência de Marketing Digital",
 
     description:
-      "Transformamos empresas locais em referências digitais.",
+      "Marketing digital estratégico para empresas locais que desejam crescer com posicionamento, conteúdo, tráfego pago e presença digital profissional.",
 
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Reisart Marketing Digital",
+        alt: "Reisart Agência de Marketing Digital",
       },
     ],
   },
@@ -73,10 +77,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Reisart Marketing Digital",
+    title: "Reisart Agência de Marketing Digital",
 
     description:
-      "Transformamos empresas locais em referências digitais.",
+      "Marketing digital estratégico para empresas locais em Piracicaba e região.",
 
     images: ["/og-image.jpg"],
   },
