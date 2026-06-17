@@ -28,6 +28,26 @@ const logos = [
   { name: "Santana na Brasa", logo: "/case-santana.png" },
 ];
 
+const resultImage1 = "";
+const resultImage2 = "";
+
+const evidencias = [
+  {
+    titulo: "Crescimento de presença digital",
+    descricao:
+      "Alcance, visualizações e evolução de presença através de conteúdo, posicionamento e campanhas.",
+    imagem: resultImage1,
+    alt: "Resultados de alcance e visualizações",
+  },
+  {
+    titulo: "Geração de oportunidades",
+    descricao:
+      "Conversas, solicitações de orçamento e contatos gerados através da operação digital.",
+    imagem: resultImage2,
+    alt: "Conversas e oportunidades geradas",
+  },
+];
+
 export default function ProvaSocialResultados() {
   return (
     <section className="bg-[#0B1018] px-6 py-28">
@@ -86,18 +106,43 @@ export default function ProvaSocialResultados() {
             </div>
           </div>
 
-          <div className="border border-dashed border-[#D8A84E]/45 bg-[#101720] p-7">
-            {/* Substituir estes espaços por prints reais de resultados quando disponíveis. */}
+          <div className="border border-white/10 bg-[#101720] p-7">
             <h3 className="text-xl font-black text-white">
-              Espaço para prints de resultados
+              Evidências da operação
             </h3>
+            <p className="premium-copy mt-4 text-sm leading-7 text-[#9AA8B6]">
+              Resultados reais, oportunidades geradas e crescimento de presença
+              digital construídos através de estratégia e execução.
+            </p>
+
             <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <div className="flex min-h-44 items-center justify-center border border-white/10 bg-[#0B1018] p-5 text-center text-sm leading-6 text-[#9AA8B6]">
-                Print de campanha, mensagens ou crescimento aqui
-              </div>
-              <div className="flex min-h-44 items-center justify-center border border-white/10 bg-[#0B1018] p-5 text-center text-sm leading-6 text-[#9AA8B6]">
-                Print de métricas, agenda ou oportunidades aqui
-              </div>
+              {evidencias.map((evidencia) => (
+                <article
+                  key={evidencia.titulo}
+                  className="group border border-white/10 bg-[#0B1018] p-4 transition duration-300 hover:border-[#D8A84E]/45 hover:bg-[#111B27]"
+                >
+                  <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border border-white/10 bg-[#101720]">
+                    {evidencia.imagem ? (
+                      <Image
+                        src={evidencia.imagem}
+                        alt={evidencia.alt}
+                        fill
+                        className="object-cover transition duration-300 group-hover:scale-[1.02]"
+                      />
+                    ) : (
+                      <span className="max-w-40 text-center text-xs font-bold uppercase tracking-[0.24em] text-[#D8A84E]/70">
+                        Imagem em breve
+                      </span>
+                    )}
+                  </div>
+                  <h4 className="mt-5 text-base font-black text-white">
+                    {evidencia.titulo}
+                  </h4>
+                  <p className="premium-copy mt-3 text-sm leading-6 text-[#9AA8B6]">
+                    {evidencia.descricao}
+                  </p>
+                </article>
+              ))}
             </div>
           </div>
         </div>
