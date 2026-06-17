@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.reisartmkd.com.br"),
@@ -16,16 +17,14 @@ export const metadata: Metadata = {
 
   keywords: [
     "Reisart",
-    "Reisart Marketing Digital",
-    "agência de marketing em Piracicaba",
-    "marketing digital em Piracicaba",
-    "gestão de Instagram",
-    "tráfego pago",
-    "Meta Ads",
+    "Marketing Digital",
+    "Marketing Digital em Piracicaba",
+    "Agência de Marketing",
     "Google Ads",
+    "Meta Ads",
     "Google Meu Negócio",
-    "criação de sites",
-    "automação de WhatsApp",
+    "Criação de Sites",
+    "Automação WhatsApp",
   ],
 
   authors: [
@@ -44,13 +43,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
   },
 
   openGraph: {
@@ -80,7 +72,7 @@ export const metadata: Metadata = {
     title: "Reisart Agência de Marketing Digital",
 
     description:
-      "Marketing digital estratégico para empresas locais em Piracicaba e região.",
+      "Marketing digital estratégico para empresas locais.",
 
     images: ["/og-image.jpg"],
   },
@@ -102,6 +94,8 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" suppressHydrationWarning>
       <body className="bg-[#07111F] text-white antialiased">
+        <JsonLd />
+
         <Analytics />
 
         {children}
