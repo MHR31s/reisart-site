@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const depoimentos = [
   {
-    nome: "Cliente Reisart",
-    contexto: "Negócio local",
+    nome: "Construvip Edificações",
+    contexto: "Materiais para Construção",
     texto:
-      "Placeholder para depoimento real: substitua por uma fala objetiva sobre clareza, atendimento, autoridade ou geração de oportunidades.",
+      "Precisávamos fortalecer nossa presença digital e transmitir mais profissionalismo. A organização da comunicação trouxe mais credibilidade para a marca e melhorou a percepção dos clientes antes mesmo do primeiro contato.",
   },
   {
-    nome: "Cliente Reisart",
-    contexto: "Serviços",
+    nome: "Robert Auto Elétrica",
+    contexto: "Serviços Automotivos",
     texto:
-      "Placeholder para depoimento real: inclua a principal transformação percebida após organizar presença, conteúdo e campanhas.",
+      "Nossa empresa já possuía tradição e qualidade no atendimento. Com uma comunicação mais estratégica, conseguimos apresentar isso de forma mais clara, fortalecendo a confiança de quem procura nossos serviços.",
   },
   {
-    nome: "Cliente Reisart",
-    contexto: "Comércio local",
+    nome: "Suzana Limpeza Premium",
+    contexto: "Serviços Residenciais Premium",
     texto:
-      "Placeholder para depoimento real: use uma frase curta que mostre confiança, profissionalismo ou melhoria no fluxo comercial.",
+      "O posicionamento premium ajudou nossa marca a transmitir mais valor e profissionalismo. Hoje os clientes entendem melhor a qualidade do serviço antes mesmo de solicitar um orçamento.",
   },
 ];
 
@@ -35,12 +35,12 @@ export default function ProvaSocialResultados() {
         <div>
           <p className="section-kicker">Prova social</p>
           <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
-            Resultados construídos na prática.
+            Transformações construídas na prática.
           </h2>
 
           <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
-            Mais do que campanhas, construímos operações digitais que aproximam
-            empresas dos seus clientes.
+            Empresas locais que organizaram sua presença digital, fortaleceram
+            sua autoridade e passaram a comunicar mais valor para o mercado.
           </p>
         </div>
 
@@ -50,7 +50,6 @@ export default function ProvaSocialResultados() {
               key={`${depoimento.nome}-${depoimento.contexto}`}
               className="border border-white/10 bg-[#101720] p-7"
             >
-              {/* Substituir por depoimento real quando disponível. */}
               <p className="premium-copy text-base leading-8 text-[#DDE7F1]">
                 “{depoimento.texto}”
               </p>

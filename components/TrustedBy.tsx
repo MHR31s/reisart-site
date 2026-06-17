@@ -17,7 +17,7 @@ export default function TrustedBy() {
           <div>
             <p className="section-kicker">Prova social</p>
             <h2 className="mt-4 text-2xl font-black text-white md:text-4xl">
-              Empresas que confiaram a presença digital à Reisart.
+              Marcas que confiaram seu posicionamento à Reisart.
             </h2>
           </div>
 
