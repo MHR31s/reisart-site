@@ -1,12 +1,34 @@
 import Image from "next/image";
 
 const clients = [
-  { name: "Construvip Edificações", logo: "/case-construvip.png" },
-  { name: "Robert Auto Elétrica", logo: "/case-robert.png" },
-  { name: "Suzana Limpeza Premium", logo: "/case-suzana.png" },
-  { name: "Santana na Brasa", logo: "/case-santana.png" },
-  { name: "Ponto Alto Planejados", logo: "/case-pontoalto.png" },
-  { name: "União Vila Fátima", logo: "/case-uvf.png" },
+  {
+    name: "Construvip",
+    segment: "Materiais para construção",
+    logo: "/case-construvip.png",
+  },
+  {
+    name: "Robert Auto Elétrica",
+    segment: "Serviços automotivos",
+    logo: "/case-robert.png",
+  },
+  {
+    name: "Daniel Sepulturas",
+    segment: "Serviço especializado",
+  },
+  {
+    name: "Suzana Limpeza Premium",
+    segment: "Serviços residenciais premium",
+    logo: "/case-suzana.png",
+  },
+  {
+    name: "União Vila Fátima",
+    segment: "Projeto institucional",
+    logo: "/case-uvf.png",
+  },
+  {
+    name: "Mary Studio",
+    segment: "Beleza e estética",
+  },
 ];
 
 export default function TrustedBy() {
@@ -17,30 +39,49 @@ export default function TrustedBy() {
           <div>
             <p className="section-kicker">Prova social</p>
             <h2 className="mt-4 text-2xl font-black text-white md:text-4xl">
-              Marcas que confiaram seu posicionamento à Reisart.
+              Empresas que confiam na REISART
             </h2>
           </div>
 
-          <p className="max-w-xl text-base leading-7 text-[#9AA8B6]">
-            Clientes de segmentos diferentes, com o mesmo objetivo: parecer
-            mais forte, comunicar melhor e criar mais oportunidades.
+          <p className="premium-copy max-w-xl text-base leading-7 text-[#9AA8B6]">
+            Marcas locais de segmentos diferentes usando posicionamento,
+            presença digital e estratégia para comunicar mais valor ao mercado.
           </p>
         </div>
 
-        <div className="grid gap-px overflow-hidden border-x border-b border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-6">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {clients.map((client) => (
-            <div
+            <article
               key={client.name}
-              className="flex min-h-40 items-center justify-center bg-[#0B1018] p-6"
+              className="group min-h-56 border border-white/10 bg-[#101720] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#D8A84E]/50 hover:bg-[#121E2B]"
             >
-              <Image
-                src={client.logo}
-                alt={client.name}
-                width={170}
-                height={90}
-                className="max-h-20 w-auto object-contain"
-              />
-            </div>
+              <div className="flex h-24 items-center justify-center border border-white/10 bg-[#0B1018] p-4">
+                {client.logo ? (
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={170}
+                    height={90}
+                    className="max-h-16 w-auto object-contain"
+                  />
+                ) : (
+                  <span className="text-center text-xl font-black text-[#F4C76B]">
+                    {client.name}
+                  </span>
+                )}
+              </div>
+
+              <p className="mt-6 text-xs font-black uppercase tracking-[0.24em] text-[#54D2C0]">
+                {client.segment}
+              </p>
+              <h3 className="mt-3 text-2xl font-black text-white">
+                {client.name}
+              </h3>
+              <p className="premium-copy mt-4 text-sm leading-7 text-[#9AA8B6]">
+                Estrutura preparada para adicionar case completo, evidências e
+                detalhes do projeto.
+              </p>
+            </article>
           ))}
         </div>
       </div>

@@ -8,6 +8,7 @@ import TrackedLink from "@/components/TrackedLink";
 
 const navItems = [
   { href: "/servicos", label: "Serviços" },
+  { href: "/automacoes", label: "Automações" },
   { href: "/#planos", label: "Planos" },
   { href: "/#metodo", label: "Método" },
   { href: "/cases", label: "Cases" },
@@ -40,7 +41,7 @@ export default function Header() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (
             <a
               key={item.href}

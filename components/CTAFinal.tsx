@@ -1,6 +1,9 @@
 import { ArrowUpRight, MessageCircle } from "lucide-react";
 import TrackedLink from "@/components/TrackedLink";
 
+const whatsappLink =
+  "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
+
 export default function CTAFinal() {
   return (
     <section id="cta-final" className="bg-[#07111F] px-6 py-28">
@@ -8,15 +11,11 @@ export default function CTAFinal() {
         <div>
           <p className="section-kicker">Próximo passo</p>
           <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
-            Você não precisa de mais marketing.
+            Sua empresa está pronta para crescer?
           </h2>
-          <p className="mt-7 text-xl font-bold leading-8 text-[#F4C76B] md:text-2xl">
-            Você precisa de um sistema que transforme atenção em oportunidade.
-          </p>
-          <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#C7D2DE]">
-            Se a sua empresa já é boa no que faz, talvez o problema não esteja
-            no serviço. Talvez esteja na forma como o mercado percebe o seu
-            valor.
+          <p className="premium-copy mt-7 max-w-4xl text-lg leading-8 text-[#C7D2DE]">
+            A REISART une estratégia, tecnologia, conteúdo e automação para
+            transformar presença digital em oportunidades reais de negócio.
           </p>
         </div>
 
@@ -27,12 +26,12 @@ export default function CTAFinal() {
             eventParams={{ source: "cta_final" }}
             className="premium-button"
           >
-            Solicitar diagnóstico estratégico
+            Solicitar Diagnóstico
             <ArrowUpRight size={20} />
           </TrackedLink>
 
           <TrackedLink
-            href="https://wa.me/5519991392850"
+            href={whatsappLink}
             eventName="whatsapp_click"
             eventParams={{ location: "cta_final" }}
             target="_blank"
@@ -40,7 +39,7 @@ export default function CTAFinal() {
             className="premium-button-secondary"
           >
             <MessageCircle size={20} />
-            Falar com Maycon
+            Falar no WhatsApp
           </TrackedLink>
         </div>
       </div>

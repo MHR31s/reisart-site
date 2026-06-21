@@ -25,6 +25,13 @@ export const metadata: Metadata = {
     "Google Meu Negócio",
     "Criação de Sites",
     "Automação WhatsApp",
+    "Agência de Marketing Digital Piracicaba",
+    "Marketing Digital Piracicaba",
+    "Google Meu Negócio Piracicaba",
+    "Gestão de Redes Sociais Piracicaba",
+    "Tráfego Pago Piracicaba",
+    "Criação de Sites Piracicaba",
+    "Automação WhatsApp Piracicaba",
   ],
 
   authors: [

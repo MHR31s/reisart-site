@@ -4,6 +4,7 @@ import AboutMaycon from "@/components/AboutMaycon";
 import PorQueReisart from "@/components/PorQueReisart";
 import SecaoDor from "@/components/SecaoDor";
 import Servicos from "@/components/Servicos";
+import FunilObjetivo from "@/components/FunilObjetivo";
 import Planos from "@/components/Planos";
 import TrustedBy from "@/components/TrustedBy";
 import ProvaSocialResultados from "@/components/ProvaSocialResultados";
@@ -123,6 +124,8 @@ export default function Home() {
         <SecaoDor />
 
         <Servicos />
+
+        <FunilObjetivo />
 
         <Planos />
 

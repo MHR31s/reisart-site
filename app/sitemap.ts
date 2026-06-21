@@ -4,6 +4,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.reisartmkd.com.br";
   const routes = [
     "",
+    "/automacoes",
     "/servicos",
     "/servicos/gestao-redes-sociais",
     "/servicos/trafego-pago",

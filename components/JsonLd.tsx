@@ -7,19 +7,19 @@ export default function JsonLd() {
     logo: "https://www.reisartmkd.com.br/logo.png",
     sameAs: [
       "https://www.instagram.com/reisartmkd/",
-      "https://www.facebook.com/reisart.ads"
+      "https://www.facebook.com/reisart.ads",
     ],
     founder: {
       "@type": "Person",
-      name: "Maycon Reis"
+      name: "Maycon Reis",
     },
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+55 19 99139-2850",
       contactType: "customer service",
       areaServed: "BR",
-      availableLanguage: "Portuguese"
-    }
+      availableLanguage: "Portuguese",
+    },
   };
 
   const localBusinessSchema = {
@@ -33,7 +33,7 @@ export default function JsonLd() {
       "@type": "PostalAddress",
       addressLocality: "Piracicaba",
       addressRegion: "SP",
-      addressCountry: "BR"
+      addressCountry: "BR",
     },
     areaServed: [
       "Piracicaba",
@@ -42,10 +42,26 @@ export default function JsonLd() {
       "Charqueada",
       "Limeira",
       "Americana",
-      "Santa Bárbara d'Oeste"
+      "Santa Bárbara d'Oeste",
     ],
     description:
-      "Agência de marketing digital em Piracicaba especializada em posicionamento, conteúdo, tráfego pago, Google Meu Negócio, sites e automações."
+      "Agência de marketing digital em Piracicaba especializada em posicionamento, conteúdo, tráfego pago, Google Meu Negócio, sites e automações.",
+    makesOffer: [
+      "Gestão de Redes Sociais",
+      "Tráfego Pago",
+      "Criação de Sites",
+      "Google Meu Negócio",
+      "Identidade Visual",
+      "Produção de Conteúdo",
+      "Consultoria Estratégica",
+      "Automação WhatsApp",
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name,
+      },
+    })),
   };
 
   const websiteSchema = {
@@ -56,8 +72,8 @@ export default function JsonLd() {
     potentialAction: {
       "@type": "SearchAction",
       target: "https://www.reisartmkd.com.br/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (

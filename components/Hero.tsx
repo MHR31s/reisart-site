@@ -1,12 +1,15 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 import TrackedLink from "@/components/TrackedLink";
 
 const metrics = [
-  { value: "+20", label: "projetos posicionados" },
-  { value: "+6", label: "segmentos atendidos" },
-  { value: "360", label: "visão estratégica" },
+  { value: "+50", label: "Projetos Entregues" },
+  { value: "1:1", label: "Atendimento Personalizado" },
+  { value: "MH360", label: "Estratégia MH360°" },
 ];
+
+const whatsappLink =
+  "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
 
 export default function Hero() {
   return (
@@ -19,16 +22,13 @@ export default function Hero() {
           <p className="section-kicker">Reisart Marketing Digital</p>
 
           <h1 className="mt-6 text-4xl font-black leading-[1.02] text-white sm:text-5xl lg:text-6xl">
-            Marketing local com cara de marca grande.
+            Transformamos empresas locais em máquinas de geração de clientes.
           </h1>
 
           <p className="premium-copy mt-8 max-w-2xl text-lg leading-8 text-[#C7D2DE] md:text-xl">
-            Sua empresa pode ser excelente e ainda assim passar despercebida.
-          </p>
-
-          <p className="premium-copy mt-4 max-w-2xl text-lg leading-8 text-[#C7D2DE] md:text-xl">
-            Ajudamos negócios locais a construírem autoridade, atraírem
-            clientes qualificados e venderem com mais previsibilidade.
+            Sites, Google, Tráfego Pago, Redes Sociais e Automações
+            Inteligentes para aumentar sua visibilidade, gerar oportunidades e
+            vender mais.
           </p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -38,17 +38,20 @@ export default function Hero() {
               eventParams={{ source: "hero" }}
               className="premium-button"
             >
-              Solicitar diagnóstico
+              Solicitar Diagnóstico Gratuito
               <ArrowUpRight size={20} />
             </TrackedLink>
 
             <TrackedLink
-              href="#cases"
-              eventName="case_view"
-              eventParams={{ case_name: "home_cases" }}
+              href={whatsappLink}
+              eventName="whatsapp_click"
+              eventParams={{ location: "hero" }}
+              target="_blank"
+              rel="noopener noreferrer"
               className="premium-button-secondary"
             >
-              Ver cases reais
+              <MessageCircle size={20} />
+              Falar no WhatsApp
             </TrackedLink>
           </div>
 
