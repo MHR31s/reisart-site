@@ -33,6 +33,11 @@ export default function TrackedLink({
 }: TrackedLinkProps) {
   const handleClick = () => {
     if (href.includes("wa.me") || href.includes("api.whatsapp.com")) {
+      trackEvent("Lead", {
+        content_name: "whatsapp_click",
+        location: eventParams?.location,
+      });
+
       trackMetaEvent("Lead", {
         content_name: "whatsapp_click",
         location: eventParams?.location,
