@@ -1,8 +1,10 @@
 "use client";
 
 import { FormEvent } from "react";
-import { trackEvent } from "@/lib/gtag";
-import { trackMetaEvent } from "@/lib/meta-pixel";
+import {
+  trackContactConversion,
+  trackLeadConversion,
+} from "@/lib/conversions";
 
 const fields = [
   { name: "nome", label: "Nome", type: "text", placeholder: "Seu nome" },
@@ -22,13 +24,14 @@ export default function DiagnosticoForm() {
     const instagram = String(formData.get("instagram") || "");
     const objetivo = String(formData.get("objetivo") || "");
 
-    trackEvent("lead_diagnostico", {
+    trackLeadConversion({
+      content_name: "diagnostico_form",
       source: "formulario_site",
       objetivo,
     });
-    trackMetaEvent("Lead", {
-      content_name: "diagnostico_form",
-      objetivo,
+    trackContactConversion({
+      content_name: "whatsapp_form_redirect",
+      location: "diagnostico_form",
     });
 
     const message = [

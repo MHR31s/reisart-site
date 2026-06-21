@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import DiagnosticoForm from "@/components/DiagnosticoForm";
+import MetaPageEvent from "@/components/MetaPageEvent";
 
 export const metadata: Metadata = {
   title: "Diagnóstico Estratégico Digital",
@@ -32,6 +33,14 @@ const benefits = [
 export default function DiagnosticoPage() {
   return (
     <>
+      <MetaPageEvent
+        eventName="ViewContent"
+        params={{
+          content_name: "diagnostico",
+          content_category: "diagnostico",
+        }}
+      />
+
       <Header />
 
       <main className="bg-[#07111F] pt-20">

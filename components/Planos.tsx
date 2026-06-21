@@ -7,7 +7,7 @@ import {
   Rocket,
   TrendingUp,
 } from "lucide-react";
-import { trackEvent } from "@/lib/gtag";
+import { trackLeadConversion } from "@/lib/conversions";
 
 const planos = [
   {
@@ -166,7 +166,11 @@ export default function Planos() {
                   <a
                     href="#contato"
                     onClick={() =>
-                      trackEvent("plano_click", { plano: plano.slug })
+                      trackLeadConversion({
+                        content_name: "solicitar_proposta",
+                        plano: plano.slug,
+                        source: "planos",
+                      })
                     }
                     className="mt-5 inline-flex w-full items-center justify-center border border-[#D8A84E]/45 px-4 py-3 text-sm font-black text-[#F4C76B] hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F]"
                   >
@@ -187,7 +191,10 @@ export default function Planos() {
           <a
             href="#contato"
             onClick={() =>
-              trackEvent("diagnostico_click", { source: "planos" })
+              trackLeadConversion({
+                content_name: "solicitar_diagnostico",
+                source: "planos",
+              })
             }
             className="premium-button shrink-0"
           >

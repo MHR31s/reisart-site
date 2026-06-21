@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { trackEvent } from "@/lib/gtag";
-import { trackMetaEvent } from "@/lib/meta-pixel";
+import { trackViewContentConversion } from "@/lib/conversions";
 
 type MetaPageEventProps = {
   eventName: string;
@@ -14,8 +13,9 @@ export default function MetaPageEvent({
   params,
 }: MetaPageEventProps) {
   useEffect(() => {
-    trackEvent(eventName, params);
-    trackMetaEvent(eventName, params);
+    if (eventName === "ViewContent") {
+      trackViewContentConversion(params);
+    }
   }, [eventName, params]);
 
   return null;
