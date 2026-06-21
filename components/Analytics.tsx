@@ -3,6 +3,8 @@
 import Script from "next/script";
 import { GA_MEASUREMENT_ID } from "@/lib/gtag";
 
+const META_PIXEL_ID = "992477697046959";
+
 export default function Analytics() {
   return (
     <>
@@ -25,8 +27,7 @@ export default function Analytics() {
         `}
       </Script>
 
-      {/* Pixel Meta - ativar futuramente */}
-      {/*
+      {/* Meta Pixel */}
       <Script id="meta-pixel" strategy="afterInteractive">
         {`
           !function(f,b,e,v,n,t,s)
@@ -38,11 +39,16 @@ export default function Analytics() {
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
 
-          fbq('init', 'SEU_PIXEL_ID_AQUI');
+          fbq('init', '${META_PIXEL_ID}');
           fbq('track', 'PageView');
         `}
       </Script>
-      */}
+
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1" alt="" />`,
+        }}
+      />
     </>
   );
 }
