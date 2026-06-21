@@ -11,16 +11,22 @@ const whatsappLink =
 
 const services = [
   {
-    title: "Meta Ads",
+    title: "Gestão de Redes Sociais",
     description:
-      "Campanhas para Instagram e Facebook voltadas a alcance, conversas qualificadas e fortalecimento da presença local.",
-    href: "/servicos/meta-ads",
+      "Planejamento, calendário editorial e conteúdo para fortalecer autoridade e presença digital.",
+    href: "/servicos/gestao-redes-sociais",
   },
   {
-    title: "Google Ads",
+    title: "Tráfego Pago",
     description:
-      "Anúncios para capturar pessoas que já estão pesquisando por soluções, serviços ou empresas como a sua.",
-    href: "/servicos/google-ads",
+      "Campanhas pagas para gerar alcance qualificado, conversas no WhatsApp e oportunidades comerciais.",
+    href: "/servicos/trafego-pago",
+  },
+  {
+    title: "Criação de Sites",
+    description:
+      "Sites profissionais para comunicar valor, organizar serviços e converter visitantes em contatos.",
+    href: "/servicos/criacao-de-sites",
   },
   {
     title: "Google Meu Negócio",
@@ -29,22 +35,22 @@ const services = [
     href: "/servicos/google-meu-negocio",
   },
   {
-    title: "Criação de Sites",
+    title: "Identidade Visual",
     description:
-      "Sites profissionais para transmitir autoridade, clareza comercial e confiança antes do primeiro contato.",
-    href: "/servicos/criacao-de-sites",
+      "Imagem visual consistente para a empresa parecer mais profissional em todos os pontos de contato.",
+    href: "/servicos/identidade-visual",
   },
   {
-    title: "Automação para WhatsApp",
+    title: "Produção de Conteúdo",
     description:
-      "Fluxos de atendimento para reduzir perda de oportunidades e tornar a comunicação mais organizada.",
-    href: "/servicos/automacoes",
+      "Captação, vídeos, fotos e materiais criativos para mostrar a empresa com mais verdade e autoridade.",
+    href: "/servicos/producao-de-conteudo",
   },
   {
-    title: "Gestão de Redes Sociais",
+    title: "Consultoria Estratégica",
     description:
-      "Conteúdo planejado para posicionar a marca, fortalecer autoridade e sustentar a presença digital.",
-    href: "/#servicos",
+      "Direção estratégica para organizar posicionamento, canais, campanhas e próximos passos digitais.",
+    href: "/servicos/consultoria-estrategica",
   },
 ];
 
@@ -122,7 +128,7 @@ export default function ServicosPage() {
                   href={service.href}
                   className="mt-8 inline-flex font-bold text-[#F4C76B] hover:text-white"
                 >
-                  Conhecer serviço
+                  Saiba Mais
                 </Link>
               </article>
             ))}

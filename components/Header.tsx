@@ -7,11 +7,11 @@ import { Menu, MessageCircle, X } from "lucide-react";
 import TrackedLink from "@/components/TrackedLink";
 
 const navItems = [
-  { href: "#servicos", label: "Serviços" },
-  { href: "#planos", label: "Planos" },
-  { href: "#metodo", label: "Método" },
-  { href: "#cases", label: "Cases" },
-  { href: "#contato", label: "Diagnóstico" },
+  { href: "/servicos", label: "Serviços" },
+  { href: "/#planos", label: "Planos" },
+  { href: "/#metodo", label: "Método" },
+  { href: "/cases", label: "Cases" },
+  { href: "/diagnostico", label: "Diagnóstico" },
 ];
 
 export default function Header() {

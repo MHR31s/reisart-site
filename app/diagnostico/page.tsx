@@ -8,9 +8,9 @@ const whatsappLink =
   "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
 
 export const metadata: Metadata = {
-  title: "Diagnóstico Estratégico Digital",
+  title: "Diagnóstico de Presença Digital",
   description:
-    "Solicite um diagnóstico estratégico digital para entender presença, posicionamento, canais de aquisição e oportunidades de melhoria da sua empresa.",
+    "Solicite um Diagnóstico de Presença Digital para entender como sua empresa aparece, comunica valor e gera oportunidades no ambiente online.",
 };
 
 const analyses = [
@@ -38,7 +38,7 @@ export default function DiagnosticoPage() {
           <div className="mx-auto max-w-7xl">
             <p className="section-kicker">Diagnóstico</p>
             <h1 className="mt-5 max-w-5xl text-4xl font-black leading-tight text-white md:text-6xl">
-              Diagnóstico Estratégico Digital
+              Diagnóstico de Presença Digital
             </h1>
             <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
               Uma análise inicial para entender como sua empresa aparece,
@@ -64,7 +64,7 @@ export default function DiagnosticoPage() {
                 rel="noopener noreferrer"
                 className="premium-button inline-flex"
               >
-                Quero meu Diagnóstico Estratégico
+                Quero meu Diagnóstico de Presença Digital
               </TrackedLink>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function DiagnosticoPage() {
                 rel="noopener noreferrer"
                 className="premium-button mt-8 inline-flex"
               >
-                Quero meu Diagnóstico Estratégico
+                Quero meu Diagnóstico de Presença Digital
               </TrackedLink>
             </aside>
           </div>

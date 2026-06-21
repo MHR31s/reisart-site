@@ -11,76 +11,76 @@ import { trackEvent } from "@/lib/gtag";
 
 const planos = [
   {
-    nome: "Presença",
-    slug: "presenca",
-    subtitulo: "Para empresas que precisam aparecer.",
+    nome: "Básico",
+    slug: "basico",
+    subtitulo: "Comece a ser visto. Comece a vender.",
     objetivo:
-      "Criar uma base digital clara para que o cliente encontre, entenda e comece a confiar na empresa.",
-    ideal: "Empresas pequenas, negócios locais e marcas que estão começando no digital.",
+      "Criar presença digital, atrair o público certo e gerar as primeiras oportunidades de venda.",
+    ideal:
+      "Empresas pequenas, negócios locais e marcas que estão começando no digital.",
     destaque: "Primeiro passo",
     icon: Rocket,
     topicos: [
       "Campanhas em Google Ads ou Meta Ads",
-      "Anúncios otimizados para WhatsApp",
-      "Segmentação de público local",
       "Planejamento de conteúdo básico",
-      "Posts, stories e calendário mensal",
+      "Posts e stories mensais",
+      "Anúncios otimizados para WhatsApp",
       "Relatório mensal com principais resultados",
     ],
   },
   {
-    nome: "Autoridade",
-    slug: "autoridade",
-    subtitulo: "Para empresas que querem ser lembradas.",
+    nome: "Crescimento",
+    slug: "crescimento",
+    subtitulo: "Mais visibilidade, mais leads e mais vendas.",
     objetivo:
-      "Fortalecer presença, conteúdo e campanhas para gerar mais confiança, mais leads e mais vendas.",
-    ideal: "Empresas que já vendem e querem crescer com mais previsibilidade.",
+      "Aumentar o volume de leads qualificados, fortalecer a marca e gerar crescimento consistente.",
+    ideal:
+      "Empresas que já vendem e querem crescer com mais previsibilidade.",
     destaque: "Mais escolhido",
     recomendado: true,
     icon: TrendingUp,
     topicos: [
       "Google Ads e Meta Ads em conjunto",
-      "Campanhas para WhatsApp, promocionais e sazonais",
-      "Remarketing para quem já interagiu",
-      "Públicos personalizados e lookalike",
-      "Conteúdo de autoridade, promocional e institucional",
-      "Reels, roteiros e calendário editorial estratégico",
+      "Campanhas para WhatsApp e promoções",
+      "Remarketing para interessados",
+      "Conteúdo institucional e promocional",
+      "Calendário editorial estratégico",
     ],
   },
   {
-    nome: "Expansão",
-    slug: "expansao",
-    subtitulo: "Para empresas que desejam dominar a região.",
+    nome: "Escala",
+    slug: "escala",
+    subtitulo: "Domine sua região e acelere suas vendas.",
     objetivo:
-      "Aumentar volume de leads, presença regional e consistência para acelerar o crescimento.",
-    ideal: "Empresas que buscam resultados mais agressivos, consistentes e escaláveis.",
+      "Gerar alto volume de leads, aumentar vendas e posicionar a marca como referência local.",
+    ideal:
+      "Empresas que buscam resultados mais agressivos, consistentes e escaláveis.",
     destaque: "Crescimento regional",
     icon: Crown,
     topicos: [
       "Estratégias avançadas de segmentação",
-      "Remarketing avançado e campanhas simultâneas",
-      "Campanhas para produtos e ofertas específicas",
-      "Otimizações frequentes e testes A/B constantes",
-      "Conteúdo de autoridade, bastidores e provas sociais",
-      "Análise de métricas e otimização de conteúdo",
+      "Campanhas simultâneas para máximo alcance",
+      "Conteúdo de autoridade e bastidores",
+      "Otimizações frequentes e testes A/B",
+      "Análise de métricas e ajustes estratégicos",
     ],
   },
   {
-    nome: "Dominância",
-    slug: "dominancia",
-    subtitulo: "Para marcas que querem liderar o mercado local.",
+    nome: "Presença Total",
+    slug: "presenca_total",
+    subtitulo: "Premium presencial para dominar sua região.",
     objetivo:
-      "Unir estratégia avançada, presença presencial e conteúdo real para transformar a marca em referência.",
-    ideal: "Empresas que querem dominar a região e se tornar referência no mercado.",
+      "Unir marketing completo, conteúdo real e presença presencial para construir autoridade e resultados reais.",
+    ideal:
+      "Empresas que querem terceirizar o marketing e se tornar referência no mercado local.",
     destaque: "Premium presencial",
     icon: MapPin,
     topicos: [
-      "Captação presencial de fotos, vídeos e ofertas",
+      "Captação presencial de fotos e vídeos",
       "Gravação de reels, bastidores e depoimentos",
       "Campanhas completas em Google Ads e Meta Ads",
-      "Conteúdo autêntico com produtos, serviços e equipe",
       "Materiais criativos para anúncios",
-      "Marketing completo para crescer sem depender do improviso",
+      "Marketing completo com estratégia e execução",
     ],
   },
 ];
@@ -90,15 +90,15 @@ export default function Planos() {
     <section id="planos" className="bg-[#07111F] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <div>
-          <p className="section-kicker">Planos</p>
+          <p className="section-kicker">Planos REISART</p>
           <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
-            Escolha a intensidade certa para o momento da sua empresa.
+            Escolha o nível de presença que combina com o momento da sua empresa.
           </h2>
 
           <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
-            Os planos organizam as principais entregas de tráfego, conteúdo,
-            posicionamento e acompanhamento. A recomendação ideal é definida
-            depois do diagnóstico.
+            Do primeiro passo digital à presença premium presencial, cada plano
+            organiza estratégia, conteúdo, tráfego e acompanhamento para gerar
+            mais autoridade e oportunidades comerciais.
           </p>
         </div>
 
@@ -170,7 +170,7 @@ export default function Planos() {
                     }
                     className="mt-5 inline-flex w-full items-center justify-center border border-[#D8A84E]/45 px-4 py-3 text-sm font-black text-[#F4C76B] hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F]"
                   >
-                    Quero esse nível de estratégia
+                    Solicitar Proposta
                   </a>
                 </div>
               </article>

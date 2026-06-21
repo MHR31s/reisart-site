@@ -1,61 +1,63 @@
+import Link from "next/link";
 import {
   Bot,
   ChartNoAxesCombined,
+  Camera,
   Globe2,
   Megaphone,
   MessageSquareText,
-  Search,
-  Sparkles,
+  Palette,
   Store,
 } from "lucide-react";
 
 const servicos = [
   {
-    titulo: "Posicionamento digital",
+    titulo: "Gestão de Redes Sociais",
     descricao:
-      "Organiza a forma como sua empresa é percebida para o cliente entender valor antes de perguntar preço.",
-    icon: Sparkles,
-  },
-  {
-    titulo: "Gestão de conteúdo",
-    descricao:
-      "Transforma redes sociais em uma vitrine que educa, gera confiança e prepara o cliente para comprar.",
+      "Planejamento, calendário e conteúdo para transformar redes sociais em presença profissional.",
+    href: "/servicos/gestao-redes-sociais",
     icon: MessageSquareText,
   },
   {
-    titulo: "Meta Ads",
+    titulo: "Tráfego Pago",
     descricao:
-      "Coloca sua oferta na frente das pessoas certas e estimula conversas qualificadas no WhatsApp.",
+      "Campanhas em Google, Meta e canais estratégicos para gerar conversas e oportunidades.",
+    href: "/servicos/trafego-pago",
     icon: Megaphone,
   },
   {
-    titulo: "Google Ads",
+    titulo: "Criação de Sites",
     descricao:
-      "Faz sua empresa aparecer quando o cliente já está procurando por uma solução como a sua.",
-    icon: Search,
+      "Sites profissionais para apresentar sua marca, organizar sua oferta e gerar contatos.",
+    href: "/servicos/criacao-de-sites",
+    icon: Globe2,
   },
   {
     titulo: "Google Meu Negócio",
     descricao:
-      "Aumenta confiança local e facilita o contato de quem pesquisa por empresas próximas.",
+      "Otimização da presença local para melhorar confiança, descoberta e contato no Google.",
+    href: "/servicos/google-meu-negocio",
     icon: Store,
   },
   {
-    titulo: "Sites comerciais",
+    titulo: "Identidade Visual",
     descricao:
-      "Cria uma página clara, rápida e preparada para transformar visitantes em oportunidades comerciais.",
-    icon: Globe2,
+      "Construção de uma imagem consistente para sua empresa parecer mais profissional.",
+    href: "/servicos/identidade-visual",
+    icon: Palette,
   },
   {
-    titulo: "IA e automações",
+    titulo: "Produção de Conteúdo",
     descricao:
-      "Acelera atendimento, pré-qualifica interessados e reduz perda de contatos por demora na resposta.",
-    icon: Bot,
+      "Fotos, vídeos, bastidores e materiais criativos para comunicar valor com autenticidade.",
+    href: "/servicos/producao-de-conteudo",
+    icon: Camera,
   },
   {
-    titulo: "Diagnóstico estratégico",
+    titulo: "Consultoria Estratégica",
     descricao:
-      "Mostra onde a empresa está perdendo oportunidades e qual ação tem mais potencial de retorno.",
+      "Diagnóstico, direção e plano de ação para organizar presença, campanhas e atendimento.",
+    href: "/servicos/consultoria-estrategica",
     icon: ChartNoAxesCombined,
   },
 ];
@@ -65,26 +67,26 @@ export default function Servicos() {
     <section id="servicos" className="bg-[#0B1018] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <div>
-          <p className="section-kicker">Serviços</p>
+          <p className="section-kicker">Serviços Individuais</p>
           <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
-            Uma operação digital que vende antes do primeiro contato.
+            Escolha o serviço certo para fortalecer sua presença digital.
           </h2>
 
           <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
-            Cada entrega existe para aumentar percepção de valor, reduzir
-            improviso comercial e criar uma jornada mais forte entre descoberta,
-            confiança e decisão.
+            Cada serviço foi pensado para resolver um ponto específico da
+            operação digital: presença, tráfego, autoridade, conversão,
+            identidade, conteúdo e estratégia.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-px overflow-hidden border border-white/10 bg-white/10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {servicos.map((servico) => {
             const Icon = servico.icon;
 
             return (
               <article
                 key={servico.titulo}
-                className="group min-h-[250px] bg-[#0E1622] p-7 transition-colors hover:bg-[#121E2B]"
+                className="group flex min-h-[280px] flex-col border border-white/10 bg-[#0E1622] p-7 transition-colors hover:border-[#D8A84E]/50 hover:bg-[#121E2B]"
               >
                 <Icon className="text-[#54D2C0]" size={26} strokeWidth={1.7} />
 
@@ -95,9 +97,36 @@ export default function Servicos() {
                 <p className="premium-copy mt-4 text-sm leading-7 text-[#9AA8B6]">
                   {servico.descricao}
                 </p>
+
+                <Link
+                  href={servico.href}
+                  className="mt-auto inline-flex pt-7 font-bold text-[#F4C76B] hover:text-white"
+                >
+                  Saiba Mais
+                </Link>
               </article>
             );
           })}
+
+          <article className="flex min-h-[280px] flex-col justify-between border border-[#D8A84E]/35 bg-[#101720] p-7 lg:col-span-3">
+            <div>
+              <Bot className="text-[#F4C76B]" size={28} strokeWidth={1.7} />
+              <h3 className="mt-8 text-2xl font-black text-white">
+                Precisa combinar serviços?
+              </h3>
+              <p className="premium-copy mt-4 max-w-3xl text-base leading-7 text-[#AAB7C4]">
+                A REISART também monta operações completas reunindo conteúdo,
+                tráfego, site, Google Meu Negócio e automações conforme o
+                diagnóstico da empresa.
+              </p>
+            </div>
+            <Link
+              href="/diagnostico"
+              className="premium-button mt-7 inline-flex w-fit"
+            >
+              Diagnóstico de Presença Digital
+            </Link>
+          </article>
         </div>
       </div>
     </section>

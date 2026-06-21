@@ -9,6 +9,50 @@ const whatsappLink =
   "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
 
 const services = {
+  "gestao-redes-sociais": {
+    title: "Gestão de Redes Sociais",
+    description:
+      "Gestão de redes sociais para empresas locais que querem comunicar valor, fortalecer autoridade e manter presença digital profissional.",
+    intro:
+      "A REISART transforma redes sociais em uma vitrine estratégica, com planejamento, calendário, conteúdo e direção para comunicar valor com consistência.",
+    problem:
+      "Muitas empresas publicam sem frequência, sem mensagem clara e sem conexão com objetivos comerciais, o que reduz confiança e enfraquece a percepção da marca.",
+    solution:
+      "A REISART organiza temas, formatos, linguagem e calendário para sustentar uma presença digital mais profissional e alinhada ao público certo.",
+    benefits: [
+      "Mais consistência na comunicação",
+      "Conteúdo alinhado ao posicionamento da marca",
+      "Presença digital mais profissional",
+      "Mais confiança antes do primeiro contato",
+    ],
+    indicated: [
+      "Empresas que querem melhorar o Instagram",
+      "Negócios locais que precisam manter presença ativa",
+      "Marcas que querem comunicar valor com mais clareza",
+    ],
+  },
+  "trafego-pago": {
+    title: "Tráfego Pago para Empresas Locais",
+    description:
+      "Tráfego pago para empresas locais que querem gerar visibilidade, conversas no WhatsApp e oportunidades comerciais com estratégia.",
+    intro:
+      "O tráfego pago coloca sua empresa na frente das pessoas certas, combinando Meta Ads, Google Ads e campanhas orientadas para geração de oportunidades.",
+    problem:
+      "Sem estratégia, anúncios podem gerar cliques sem qualidade, consumir verba e não se conectar com a oferta, o atendimento e o momento do cliente.",
+    solution:
+      "A REISART estrutura campanhas, públicos, criativos, palavras-chave e acompanhamento para transformar mídia em conversas e oportunidades.",
+    benefits: [
+      "Mais alcance qualificado",
+      "Mais conversas no WhatsApp",
+      "Campanhas conectadas ao objetivo comercial",
+      "Melhor leitura dos canais que geram oportunidades",
+    ],
+    indicated: [
+      "Empresas que querem acelerar contatos",
+      "Negócios que precisam divulgar ofertas ou serviços",
+      "Marcas que querem anunciar com critério",
+    ],
+  },
   "meta-ads": {
     title: "Meta Ads para Empresas Locais",
     description:
@@ -117,6 +161,72 @@ const services = {
       "Empresas que recebem contatos pelo WhatsApp",
       "Negócios que querem padronizar atendimento",
       "Marcas que precisam organizar o fluxo comercial",
+    ],
+  },
+  "identidade-visual": {
+    title: "Identidade Visual para Empresas Locais",
+    description:
+      "Identidade visual para empresas que precisam transmitir profissionalismo, confiança e valor em todos os pontos de contato.",
+    intro:
+      "A identidade visual ajuda o cliente a reconhecer, confiar e lembrar da sua marca. A REISART organiza elementos visuais para deixar a comunicação mais forte.",
+    problem:
+      "Quando a empresa usa artes, cores e materiais sem padrão, a percepção de profissionalismo diminui e a marca fica menos memorável.",
+    solution:
+      "A REISART cria direção visual, padrões e materiais que deixam a marca mais consistente nas redes, anúncios, site e apresentação comercial.",
+    benefits: [
+      "Imagem mais profissional",
+      "Mais consistência na comunicação",
+      "Materiais visuais mais alinhados ao posicionamento",
+      "Percepção de valor mais clara",
+    ],
+    indicated: [
+      "Empresas que querem melhorar a aparência da marca",
+      "Negócios que precisam padronizar comunicação visual",
+      "Marcas que querem parecer mais confiáveis",
+    ],
+  },
+  "producao-de-conteudo": {
+    title: "Produção de Conteúdo",
+    description:
+      "Produção de conteúdo para empresas que querem mostrar bastidores, serviços, equipe e ofertas com mais autenticidade.",
+    intro:
+      "Conteúdo real aproxima a marca das pessoas. A REISART ajuda sua empresa a transformar rotina, serviços e diferenciais em fotos, vídeos e materiais criativos.",
+    problem:
+      "Muitas empresas têm bons serviços, mas não mostram isso com clareza. Sem conteúdo real, o público tem menos confiança para entrar em contato.",
+    solution:
+      "A REISART planeja e produz materiais que reforçam autoridade, bastidores, diferenciais e ofertas, conectando conteúdo com posicionamento e vendas.",
+    benefits: [
+      "Mais autenticidade na comunicação",
+      "Conteúdo visual para redes e anúncios",
+      "Mais confiança antes do orçamento",
+      "Melhor percepção dos serviços oferecidos",
+    ],
+    indicated: [
+      "Empresas que precisam mostrar mais o que fazem",
+      "Negócios com serviços visuais ou presenciais",
+      "Marcas que querem conteúdo próprio para campanhas",
+    ],
+  },
+  "consultoria-estrategica": {
+    title: "Consultoria Estratégica Digital",
+    description:
+      "Consultoria estratégica para empresas que precisam organizar presença, canais, campanhas e próximos passos digitais.",
+    intro:
+      "Antes de executar, é preciso entender o cenário. A consultoria da REISART identifica gargalos, prioridades e caminhos para uma presença digital mais forte.",
+    problem:
+      "Muitas empresas fazem ações soltas, sem saber qual canal priorizar, que mensagem usar ou como transformar presença em oportunidade.",
+    solution:
+      "A REISART analisa presença, posicionamento, conteúdo, tráfego e atendimento para indicar um plano mais claro de crescimento digital.",
+    benefits: [
+      "Mais clareza sobre prioridades",
+      "Direção estratégica antes de investir",
+      "Melhor organização da presença digital",
+      "Plano de ação mais conectado ao objetivo comercial",
+    ],
+    indicated: [
+      "Empresas que estão perdidas no digital",
+      "Negócios que querem crescer com mais método",
+      "Marcas que precisam de direção antes da execução",
     ],
   },
 } as const;
