@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import TrackedLink from "@/components/TrackedLink";
+import MetaPageEvent from "@/components/MetaPageEvent";
 
 const whatsappLink =
   "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
@@ -47,6 +48,14 @@ export const metadata: Metadata = {
 export default function CasesPage() {
   return (
     <>
+      <MetaPageEvent
+        eventName="ViewContent"
+        params={{
+          content_name: "portfolio",
+          content_category: "cases",
+        }}
+      />
+
       <Header />
 
       <main className="bg-[#07111F] pt-20">

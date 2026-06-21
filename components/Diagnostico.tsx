@@ -3,6 +3,7 @@
 import { FormEvent } from "react";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { trackEvent } from "@/lib/gtag";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 
 const whatsappNumber = "5519991392850";
 const checks = [
@@ -43,6 +44,11 @@ export default function Diagnostico() {
 
     trackEvent("whatsapp_click", {
       location: "contact_form",
+    });
+
+    trackMetaEvent("Lead", {
+      content_name: "formulario_contato",
+      source: "formulario_site",
     });
 
     window.open(

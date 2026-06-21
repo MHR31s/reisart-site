@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { trackEvent } from "@/lib/gtag";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 
 type TrackedLinkProps = {
   href: string;
@@ -31,6 +32,13 @@ export default function TrackedLink({
   ariaLabel,
 }: TrackedLinkProps) {
   const handleClick = () => {
+    if (href.includes("wa.me") || href.includes("api.whatsapp.com")) {
+      trackMetaEvent("Lead", {
+        content_name: "whatsapp_click",
+        location: eventParams?.location,
+      });
+    }
+
     if (events?.length) {
       events.forEach((event) => {
         trackEvent(event.name, event.params);
