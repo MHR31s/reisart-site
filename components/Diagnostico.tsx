@@ -8,6 +8,7 @@ import {
 } from "@/lib/conversions";
 
 const whatsappNumber = "5519991392850";
+const n8nWebhookUrl = "COLOCAR_AQUI_A_URL_DO_WEBHOOK_N8N";
 const checks = [
   "Presença digital",
   "Oferta e posicionamento",
@@ -16,7 +17,7 @@ const checks = [
 ];
 
 export default function Diagnostico() {
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const formData = new FormData(event.currentTarget);
@@ -45,6 +46,27 @@ export default function Diagnostico() {
       content_name: "whatsapp_form_redirect",
       location: "contact_form",
     });
+
+    try {
+      await fetch(n8nWebhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome,
+          empresa,
+          telefone: whatsapp,
+          instagram,
+          desafio,
+          origem: "Site",
+          servicoInteresse: "Diagnóstico",
+          status: "Lead",
+        }),
+      });
+    } catch (error) {
+      console.error("Erro ao enviar lead para o webhook do n8n:", error);
+    }
 
     window.open(
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(mensagem)}`,
