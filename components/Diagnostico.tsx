@@ -8,7 +8,8 @@ import {
 } from "@/lib/conversions";
 
 const whatsappNumber = "5519991392850";
-const n8nWebhookUrl = "COLOCAR_AQUI_A_URL_DO_WEBHOOK_N8N";
+const n8nWebhookUrl =
+  "https://energeticflea-n8n.cloudfy.live/webhook/reisart-lead-site";
 const checks = [
   "Presença digital",
   "Oferta e posicionamento",
