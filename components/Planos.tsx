@@ -8,6 +8,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { trackLeadConversion } from "@/lib/conversions";
+import FadeIn from "@/components/FadeIn";
 
 const planos = [
   {
@@ -89,118 +90,146 @@ export default function Planos() {
   return (
     <section id="planos" className="bg-[#07111F] px-6 py-28">
       <div className="mx-auto max-w-7xl">
-        <div>
+        <FadeIn>
           <p className="section-kicker">Planos REISART</p>
-          <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
+          <h2 className="mt-5 max-w-4xl text-3xl font-black leading-tight tracking-tight text-white md:text-5xl">
             Escolha o nível de presença que combina com o momento da sua empresa.
           </h2>
-
-          <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
+          <p className="premium-copy mt-7 max-w-3xl text-lg leading-[1.85] text-[#8A9AAA]">
             Do primeiro passo digital à presença premium presencial, cada plano
             organiza estratégia, conteúdo, tráfego e acompanhamento para gerar
             mais autoridade e oportunidades comerciais.
           </p>
-        </div>
+        </FadeIn>
 
         <div className="mt-16 grid gap-5 lg:grid-cols-4">
-          {planos.map((plano) => {
+          {planos.map((plano, i) => {
             const Icon = plano.icon;
+            const isRecomendado = plano.recomendado;
 
             return (
-              <article
-                key={plano.nome}
-                className="relative flex min-h-full flex-col border border-white/10 bg-[#101720] p-6 transition-colors hover:border-[#D8A84E]/60"
-              >
-                {plano.recomendado && (
-                  <span className="absolute -top-3 left-6 bg-[#F4C76B] px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-[#07111F]">
-                    Mais escolhido
-                  </span>
-                )}
+              <FadeIn key={plano.nome} delay={i * 80}>
+                <article
+                  className={[
+                    "relative flex h-full min-h-full flex-col p-6 transition-all duration-300",
+                    isRecomendado
+                      ? "border border-[#D8A84E]/60 bg-[#0E1A26] shadow-[0_0_40px_rgba(244,199,107,0.08),0_0_0_1px_rgba(244,199,107,0.08)]"
+                      : "border border-white/[0.07] bg-[#0D1520] hover:border-[#D8A84E]/35 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]",
+                  ].join(" ")}
+                >
+                  {isRecomendado && (
+                    <span className="absolute -top-3 left-5 bg-[#F4C76B] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#07111F]">
+                      Mais escolhido
+                    </span>
+                  )}
 
-                <div className="flex items-center justify-between gap-4">
-                  <Icon className="text-[#F4C76B]" size={30} strokeWidth={1.8} />
-                  <span className="border border-[#54D2C0]/40 px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#54D2C0]">
-                    {plano.destaque}
-                  </span>
-                </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <div className={[
+                      "flex h-10 w-10 items-center justify-center",
+                      isRecomendado
+                        ? "border border-[#D8A84E]/40 bg-[#D8A84E]/10"
+                        : "border border-white/10 bg-white/[0.04]",
+                    ].join(" ")}>
+                      <Icon
+                        className={isRecomendado ? "text-[#F4C76B]" : "text-[#9AA8B6]"}
+                        size={20}
+                        strokeWidth={1.8}
+                      />
+                    </div>
+                    <span className="border border-[#54D2C0]/30 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#54D2C0]">
+                      {plano.destaque}
+                    </span>
+                  </div>
 
-                <h3 className="mt-8 text-2xl font-black text-white">
-                  {plano.nome}
-                </h3>
+                  <h3 className="mt-7 text-xl font-black tracking-tight text-white">
+                    {plano.nome}
+                  </h3>
 
-                <p className="mt-3 text-base font-bold leading-6 text-[#F4C76B]">
-                  {plano.subtitulo}
-                </p>
-
-                <p className="premium-copy mt-5 text-sm leading-7 text-[#AAB7C4]">
-                  {plano.objetivo}
-                </p>
-
-                <div className="mt-7 border-t border-white/10 pt-6">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-[#6F7D8B]">
-                    Tópicos incluídos
+                  <p className={[
+                    "mt-2.5 text-sm font-bold leading-6",
+                    isRecomendado ? "text-[#F4C76B]" : "text-[#8A9AAA]",
+                  ].join(" ")}>
+                    {plano.subtitulo}
                   </p>
 
-                  <ul className="mt-5 space-y-3">
-                    {plano.topicos.map((topico) => (
-                      <li
-                        key={topico}
-                        className="flex gap-3 text-sm leading-6 text-[#DDE7F1]"
-                      >
-                        <CheckCircle2
-                          className="mt-0.5 shrink-0 text-[#54D2C0]"
-                          size={17}
-                        />
-                        <span>{topico}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-auto pt-7">
-                  <p className="premium-copy border-t border-white/10 pt-5 text-sm leading-6 text-[#9AA8B6]">
-                    <strong className="text-white">Ideal para:</strong>{" "}
-                    {plano.ideal}
+                  <p className="premium-copy mt-4 text-sm leading-7 text-[#7A8E9E]">
+                    {plano.objetivo}
                   </p>
 
-                  <a
-                    href="#contato"
-                    onClick={() =>
-                      trackLeadConversion({
-                        content_name: "solicitar_proposta",
-                        plano: plano.slug,
-                        source: "planos",
-                      })
-                    }
-                    className="mt-5 inline-flex w-full items-center justify-center border border-[#D8A84E]/45 px-4 py-3 text-sm font-black text-[#F4C76B] hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F]"
-                  >
-                    Solicitar Proposta
-                  </a>
-                </div>
-              </article>
+                  <div className="mt-6 border-t border-white/[0.07] pt-5">
+                    <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#4E6070]">
+                      Tópicos incluídos
+                    </p>
+                    <ul className="mt-4 space-y-2.5">
+                      {plano.topicos.map((topico) => (
+                        <li
+                          key={topico}
+                          className="flex gap-3 text-sm leading-6 text-[#C7D2DE]"
+                        >
+                          <CheckCircle2
+                            className={[
+                              "mt-0.5 shrink-0",
+                              isRecomendado ? "text-[#F4C76B]" : "text-[#54D2C0]",
+                            ].join(" ")}
+                            size={15}
+                          />
+                          <span>{topico}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-auto pt-6">
+                    <p className="premium-copy border-t border-white/[0.07] pt-5 text-sm leading-6 text-[#7A8E9E]">
+                      <strong className="text-[#C7D2DE]">Ideal para:</strong>{" "}
+                      {plano.ideal}
+                    </p>
+
+                    <a
+                      href="#contato"
+                      onClick={() =>
+                        trackLeadConversion({
+                          content_name: "solicitar_proposta",
+                          plano: plano.slug,
+                          source: "planos",
+                        })
+                      }
+                      className={[
+                        "mt-5 inline-flex w-full items-center justify-center px-4 py-3 text-sm font-black",
+                        isRecomendado
+                          ? "bg-[#F4C76B] text-[#07111F] hover:bg-[#ffe08a] hover:shadow-[0_8px_24px_rgba(244,199,107,0.25)]"
+                          : "border border-[#D8A84E]/30 text-[#F4C76B] hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F]",
+                      ].join(" ")}
+                    >
+                      Solicitar Proposta
+                    </a>
+                  </div>
+                </article>
+              </FadeIn>
             );
           })}
         </div>
 
-        <div className="mt-10 flex flex-col items-start justify-between gap-5 border border-[#D8A84E]/35 bg-[#0B1018] p-6 md:flex-row md:items-center">
-          <p className="premium-copy max-w-3xl text-base leading-7 text-[#C7D2DE]">
-            Quer saber qual plano faz mais sentido para sua empresa agora? O
-            diagnóstico ajuda a definir prioridade, canais e ritmo de execução.
-          </p>
-
-          <a
-            href="#contato"
-            onClick={() =>
-              trackLeadConversion({
-                content_name: "solicitar_diagnostico",
-                source: "planos",
-              })
-            }
-            className="premium-button shrink-0"
-          >
-            Solicitar diagnóstico
-          </a>
-        </div>
+        <FadeIn>
+          <div className="mt-10 flex flex-col items-start justify-between gap-5 border border-[#D8A84E]/25 bg-[#0B1018] p-7 md:flex-row md:items-center">
+            <p className="premium-copy max-w-3xl text-base leading-7 text-[#C7D2DE]">
+              Quer saber qual plano faz mais sentido para sua empresa agora? O
+              diagnóstico ajuda a definir prioridade, canais e ritmo de execução.
+            </p>
+            <a
+              href="#contato"
+              onClick={() =>
+                trackLeadConversion({
+                  content_name: "solicitar_diagnostico",
+                  source: "planos",
+                })
+              }
+              className="premium-button shrink-0"
+            >
+              Solicitar diagnóstico
+            </a>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

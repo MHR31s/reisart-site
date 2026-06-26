@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FadeIn from "@/components/FadeIn";
 import {
   Bot,
   ChartNoAxesCombined,
@@ -123,17 +124,16 @@ export default function Servicos() {
   return (
     <section id="servicos" className="bg-[#0B1018] px-6 py-28">
       <div className="mx-auto max-w-7xl">
-        <div>
+        <FadeIn>
           <p className="section-kicker">Serviços Individuais</p>
-          <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
+          <h2 className="mt-5 max-w-4xl text-3xl font-black leading-tight tracking-tight text-white md:text-5xl">
             O que sua empresa precisa hoje?
           </h2>
-
-          <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
+          <p className="premium-copy mt-7 max-w-3xl text-lg leading-[1.85] text-[#8A9AAA]">
             Escolha o resultado que você deseja alcançar e descubra qual solução
             da REISART pode acelerar o crescimento da sua empresa.
           </p>
-        </div>
+        </FadeIn>
 
         <div className="mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {servicos.map((servico) => {
