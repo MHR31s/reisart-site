@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import {
   trackContactConversion,
   trackLeadConversion,
@@ -14,8 +14,11 @@ const fields = [
 ];
 
 export default function DiagnosticoForm() {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setLoading(true);
 
     const formData = new FormData(event.currentTarget);
     const nome = String(formData.get("nome") || "");
@@ -24,6 +27,26 @@ export default function DiagnosticoForm() {
     const instagram = String(formData.get("instagram") || "");
     const objetivo = String(formData.get("objetivo") || "");
 
+    // Envia dados para o n8n
+    try {
+      await fetch("https://energeticflea-n8n.cloudfy.live/webhook/reisart-lead-site", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nome,
+          empresa,
+          whatsapp,
+          instagram,
+          objetivo,
+          origem: "site_diagnostico",
+          data: new Date().toISOString(),
+        }),
+      });
+    } catch (error) {
+      console.error("Erro ao enviar para n8n:", error);
+    }
+
+    // Dispara conversões Meta
     trackLeadConversion({
       content_name: "diagnostico_form",
       source: "formulario_site",
@@ -34,6 +57,7 @@ export default function DiagnosticoForm() {
       location: "diagnostico_form",
     });
 
+    // Abre WhatsApp
     const message = [
       "Olá, quero solicitar um Diagnóstico de Presença Digital.",
       `Nome: ${nome}`,
@@ -48,6 +72,8 @@ export default function DiagnosticoForm() {
       "_blank",
       "noopener,noreferrer"
     );
+
+    setLoading(false);
   };
 
   return (
@@ -93,8 +119,12 @@ export default function DiagnosticoForm() {
         </select>
       </label>
 
-      <button type="submit" className="premium-button mt-8 w-full justify-center">
-        Solicitar Diagnóstico
+      <button
+        type="submit"
+        disabled={loading}
+        className="premium-button mt-8 w-full justify-center disabled:opacity-60"
+      >
+        {loading ? "Enviando..." : "Solicitar Diagnóstico"}
       </button>
     </form>
   );
