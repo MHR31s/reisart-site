@@ -50,7 +50,7 @@ const evidencias = [
 
 export default function ProvaSocialResultados() {
   return (
-    <section className="bg-[#0B1018] px-6 py-28">
+    <section className="bg-[#05070D] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <div>
           <p className="section-kicker">Prova social</p>
@@ -68,7 +68,7 @@ export default function ProvaSocialResultados() {
           {depoimentos.map((depoimento) => (
             <article
               key={`${depoimento.nome}-${depoimento.contexto}`}
-              className="border border-white/10 bg-[#101720] p-7"
+              className="border border-white/10 bg-[#0B1638] p-7"
             >
               <p className="premium-copy text-base leading-8 text-[#DDE7F1]">
                 “{depoimento.texto}”
@@ -84,7 +84,7 @@ export default function ProvaSocialResultados() {
         </div>
 
         <div className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="border border-white/10 bg-[#101720] p-7">
+          <div className="border border-white/10 bg-[#0B1638] p-7">
             <h3 className="text-xl font-black text-white">
               Clientes e segmentos atendidos
             </h3>
@@ -92,7 +92,7 @@ export default function ProvaSocialResultados() {
               {logos.map((client) => (
                 <div
                   key={client.name}
-                  className="flex min-h-32 items-center justify-center bg-[#0B1018] p-5"
+                  className="flex min-h-32 items-center justify-center bg-[#05070D] p-5"
                 >
                   <Image
                     src={client.logo}
@@ -106,7 +106,7 @@ export default function ProvaSocialResultados() {
             </div>
           </div>
 
-          <div className="border border-white/10 bg-[#101720] p-7">
+          <div className="border border-white/10 bg-[#0B1638] p-7">
             <h3 className="text-xl font-black text-white">
               Evidências da operação
             </h3>
@@ -119,9 +119,9 @@ export default function ProvaSocialResultados() {
               {evidencias.map((evidencia) => (
                 <article
                   key={evidencia.titulo}
-                  className="group border border-white/10 bg-[#0B1018] p-4 transition duration-300 hover:border-[#D8A84E]/45 hover:bg-[#111B27]"
+                  className="group border border-white/10 bg-[#05070D] p-4 transition duration-300 hover:border-[#3B82FF]/45 hover:bg-[#0B1638]"
                 >
-                  <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border border-white/10 bg-[#101720]">
+                  <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border border-white/10 bg-[#0B1638]">
                     {evidencia.imagem ? (
                       <Image
                         src={evidencia.imagem}
@@ -130,7 +130,7 @@ export default function ProvaSocialResultados() {
                         className="object-cover transition duration-300 group-hover:scale-[1.02]"
                       />
                     ) : (
-                      <span className="max-w-40 text-center text-xs font-bold uppercase tracking-[0.24em] text-[#D8A84E]/70">
+                      <span className="max-w-40 text-center text-xs font-bold uppercase tracking-[0.24em] text-[#3B82FF]/70">
                         Imagem em breve
                       </span>
                     )}

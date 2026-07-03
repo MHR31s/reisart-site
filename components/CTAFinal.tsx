@@ -7,14 +7,14 @@ const whatsappLink =
 
 export default function CTAFinal() {
   return (
-    <section id="cta-final" className="bg-[#07111F] px-6 py-28">
+    <section id="cta-final" className="bg-[#05070D] px-6 py-28">
       <FadeIn>
-        <div className="relative mx-auto max-w-7xl overflow-hidden border border-[#D8A84E]/30 bg-[#0D1520] p-8 md:p-12 lg:p-16">
+        <div className="relative mx-auto max-w-7xl overflow-hidden border border-[#3B82FF]/30 bg-[#0B1638] p-8 md:p-12 lg:p-16">
           {/* Glow de fundo */}
-          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(244,199,107,0.07)_0%,transparent_70%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_100%,rgba(33,68,255,0.07)_0%,transparent_70%)]" />
 
           {/* Linha superior dourada */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#D8A84E]/50 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#3B82FF]/50 to-transparent" />
 
           <div className="relative">
             <p className="section-kicker">Próximo passo</p>

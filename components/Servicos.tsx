@@ -122,7 +122,7 @@ const servicos = [
 
 export default function Servicos() {
   return (
-    <section id="servicos" className="bg-[#0B1018] px-6 py-28">
+    <section id="servicos" className="bg-[#05070D] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <FadeIn>
           <p className="section-kicker">Serviços Individuais</p>
@@ -142,17 +142,17 @@ export default function Servicos() {
             return (
               <article
                 key={servico.titulo}
-                className="group flex min-h-[430px] flex-col border border-white/10 bg-[#0E1622] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#D8A84E]/50 hover:bg-[#121E2B] hover:shadow-2xl hover:shadow-black/20 md:p-8"
+                className="group flex min-h-[430px] flex-col border border-white/10 bg-[#0E1622] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#3B82FF]/50 hover:bg-[#121E2B] hover:shadow-2xl hover:shadow-black/20 md:p-8"
               >
-                <div className="flex h-12 w-12 items-center justify-center border border-[#54D2C0]/25 bg-[#54D2C0]/10">
-                  <Icon className="text-[#54D2C0]" size={24} strokeWidth={1.7} />
+                <div className="flex h-12 w-12 items-center justify-center border border-[#3B82FF]/25 bg-[#3B82FF]/10">
+                  <Icon className="text-[#3B82FF]" size={24} strokeWidth={1.7} />
                 </div>
 
                 <h3 className="mt-8 text-xl font-bold text-white">
                   {servico.titulo}
                 </h3>
 
-                <p className="mt-3 text-base font-black leading-6 text-[#F4C76B]">
+                <p className="mt-3 text-base font-black leading-6 text-[#3B82FF]">
                   {servico.subtitulo}
                 </p>
 
@@ -167,7 +167,7 @@ export default function Servicos() {
                       className="flex gap-3 text-sm leading-6 text-[#DDE7F1]"
                     >
                       <CheckCircle2
-                        className="mt-0.5 shrink-0 text-[#54D2C0]"
+                        className="mt-0.5 shrink-0 text-[#3B82FF]"
                         size={16}
                       />
                       <span>{beneficio}</span>
@@ -177,7 +177,7 @@ export default function Servicos() {
 
                 <Link
                   href={servico.href}
-                  className="mt-auto inline-flex border border-[#D8A84E]/45 px-4 py-3 text-center text-sm font-black text-[#F4C76B] transition hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F]"
+                  className="mt-auto inline-flex border border-[#3B82FF]/45 px-4 py-3 text-center text-sm font-black text-[#3B82FF] transition hover:border-[#2144FF] hover:bg-[#2144FF] hover:text-white"
                 >
                   {servico.botao}
                 </Link>
@@ -185,9 +185,9 @@ export default function Servicos() {
             );
           })}
 
-          <article className="flex min-h-[280px] flex-col justify-between border border-[#D8A84E]/35 bg-[#101720] p-7 lg:col-span-3">
+          <article className="flex min-h-[280px] flex-col justify-between border border-[#3B82FF]/35 bg-[#0B1638] p-7 lg:col-span-3">
             <div>
-              <Bot className="text-[#F4C76B]" size={28} strokeWidth={1.7} />
+              <Bot className="text-[#3B82FF]" size={28} strokeWidth={1.7} />
               <h3 className="mt-8 text-2xl font-black text-white md:text-3xl">
                 Não sabe qual serviço escolher?
               </h3>

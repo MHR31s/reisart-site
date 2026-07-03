@@ -147,7 +147,7 @@ export default function Diagnostico() {
   }
 
   return (
-    <section id="contato" className="bg-[#07111F] px-6 py-28">
+    <section id="contato" className="bg-[#05070D] px-6 py-28">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div>
           <p className="section-kicker">Diagnóstico estratégico</p>
@@ -163,7 +163,7 @@ export default function Diagnostico() {
           <div className="mt-10 grid gap-4">
             {checks.map((item) => (
               <div key={item} className="flex items-center gap-3 text-[#DDE7F1]">
-                <CheckCircle2 size={20} className="text-[#54D2C0]" />
+                <CheckCircle2 size={20} className="text-[#3B82FF]" />
                 <span>{item}</span>
               </div>
             ))}
@@ -172,7 +172,7 @@ export default function Diagnostico() {
 
         <form
           onSubmit={handleSubmit}
-          className="grid gap-5 border border-white/10 bg-[#101720] p-6 shadow-2xl shadow-black/30 md:grid-cols-2 md:p-8"
+          className="grid gap-5 border border-white/10 bg-[#0B1638] p-6 shadow-2xl shadow-black/30 md:grid-cols-2 md:p-8"
         >
           <input
             name="nome"
@@ -241,8 +241,8 @@ export default function Diagnostico() {
             <p
               className={`md:col-span-2 border px-4 py-3 text-sm leading-6 ${
                 feedback.type === "success"
-                  ? "border-[#54D2C0]/40 bg-[#54D2C0]/10 text-[#DDE7F1]"
-                  : "border-[#F4C76B]/45 bg-[#F4C76B]/10 text-[#F4C76B]"
+                  ? "border-[#3B82FF]/40 bg-[#3B82FF]/10 text-[#DDE7F1]"
+                  : "border-[#3B82FF]/45 bg-[#3B82FF]/10 text-[#3B82FF]"
               }`}
               role="status"
               aria-live="polite"

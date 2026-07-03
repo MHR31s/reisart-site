@@ -24,7 +24,7 @@ const motivos = [
 
 export default function PorQueReisart() {
   return (
-    <section className="bg-[#07111F] px-6 py-24">
+    <section className="bg-[#05070D] px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="border-y border-white/[0.07] py-14">
           <FadeIn>
@@ -41,8 +41,8 @@ export default function PorQueReisart() {
               return (
                 <FadeIn key={motivo.titulo} delay={i * 100}>
                   <article className="group h-full bg-[#0D1622] p-7 transition-colors hover:bg-[#111E2C]">
-                    <div className="inline-flex h-11 w-11 items-center justify-center border border-[#D8A84E]/25 bg-[#D8A84E]/[0.08]">
-                      <Icon className="text-[#F4C76B]" size={22} />
+                    <div className="inline-flex h-11 w-11 items-center justify-center border border-[#3B82FF]/25 bg-[#3B82FF]/[0.08]">
+                      <Icon className="text-[#3B82FF]" size={22} />
                     </div>
                     <h3 className="mt-6 text-lg font-black tracking-tight text-white">
                       {motivo.titulo}

@@ -107,10 +107,10 @@ export default async function CasePage({ params }: PageProps) {
     <>
       <Header />
 
-      <main className="bg-[#07111F] pt-20">
+      <main className="bg-[#05070D] pt-20">
         <section className="px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <div className="border border-white/10 bg-[#101720] p-10">
+            <div className="border border-white/10 bg-[#0B1638] p-10">
               <Image
                 src={item.logo}
                 alt={item.name}
@@ -131,9 +131,9 @@ export default async function CasePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="bg-[#0B1018] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
-            <article className="border border-white/10 bg-[#101720] p-7">
+            <article className="border border-white/10 bg-[#0B1638] p-7">
               <h2 className="text-2xl font-black text-white">
                 Desafio inicial
               </h2>
@@ -142,7 +142,7 @@ export default async function CasePage({ params }: PageProps) {
               </p>
             </article>
 
-            <article className="border border-white/10 bg-[#101720] p-7">
+            <article className="border border-white/10 bg-[#0B1638] p-7">
               <h2 className="text-2xl font-black text-white">
                 Estratégia aplicada
               </h2>
@@ -155,7 +155,7 @@ export default async function CasePage({ params }: PageProps) {
 
         <section className="px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="border border-white/10 bg-[#101720] p-7">
+            <div className="border border-white/10 bg-[#0B1638] p-7">
               <h2 className="text-2xl font-black text-white">
                 Entregas realizadas
               </h2>
@@ -171,7 +171,7 @@ export default async function CasePage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="border border-[#D8A84E]/35 bg-[#101720] p-7">
+            <div className="border border-[#3B82FF]/35 bg-[#0B1638] p-7">
               <h2 className="text-2xl font-black text-white">
                 Transformação percebida
               </h2>

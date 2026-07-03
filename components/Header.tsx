@@ -19,9 +19,9 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-[#07111F]/90 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 bg-[#05070D]/90 backdrop-blur-xl">
       {/* Linha inferior com gradiente dourado */}
-      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#D8A84E]/30 to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#3B82FF]/30 to-transparent" />
 
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
@@ -52,7 +52,7 @@ export default function Header() {
               className="group relative text-sm font-semibold text-[#B8C8D8] transition-colors hover:text-white"
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#F4C76B] transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 h-px w-0 bg-[#2144FF] transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
@@ -63,7 +63,7 @@ export default function Header() {
           eventParams={{ location: "header" }}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden items-center gap-2 border border-[#D8A84E]/40 px-5 py-2.5 text-sm font-bold text-[#F4C76B] hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F] md:inline-flex"
+          className="hidden items-center gap-2 border border-[#3B82FF]/40 px-5 py-2.5 text-sm font-bold text-[#3B82FF] hover:border-[#2144FF] hover:bg-[#2144FF] hover:text-white md:inline-flex"
         >
           <MessageCircle size={16} />
           Falar com Maycon
@@ -80,14 +80,14 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <div className="border-t border-white/[0.07] bg-[#07111F]/98 backdrop-blur-xl md:hidden">
+        <div className="border-t border-white/[0.07] bg-[#05070D]/98 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-0 px-6 py-5">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className="border-b border-white/[0.07] py-4 text-base font-semibold text-[#C7D2DE] hover:text-[#F4C76B]"
+                className="border-b border-white/[0.07] py-4 text-base font-semibold text-[#C7D2DE] hover:text-[#3B82FF]"
               >
                 {item.label}
               </a>
@@ -99,7 +99,7 @@ export default function Header() {
               eventParams={{ location: "header_mobile" }}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center justify-center gap-2 bg-[#F4C76B] px-6 py-4 font-black text-[#07111F]"
+              className="mt-5 inline-flex items-center justify-center gap-2 bg-[#2144FF] px-6 py-4 font-black text-white"
             >
               <MessageCircle size={20} />
               Falar com Maycon

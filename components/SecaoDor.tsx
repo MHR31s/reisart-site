@@ -20,7 +20,7 @@ const dores = [
 
 export default function SecaoDor() {
   return (
-    <section className="bg-[#101720] px-6 py-28">
+    <section className="bg-[#0B1638] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <div>
           <p className="section-kicker">Presença, percepção e conversão</p>
@@ -37,8 +37,8 @@ export default function SecaoDor() {
             const Icon = dor.icon;
 
             return (
-              <article key={dor.titulo} className="bg-[#0B1018] p-7">
-                <Icon className="text-[#F4C76B]" size={30} strokeWidth={1.8} />
+              <article key={dor.titulo} className="bg-[#05070D] p-7">
+                <Icon className="text-[#3B82FF]" size={30} strokeWidth={1.8} />
                 <h3 className="mt-7 text-xl font-black text-white md:text-2xl">
                   {dor.titulo}
                 </h3>
@@ -50,7 +50,7 @@ export default function SecaoDor() {
           })}
         </div>
 
-        <div className="mt-10 border-l border-[#D8A84E]/60 pl-6">
+        <div className="mt-10 border-l border-[#3B82FF]/60 pl-6">
           <p className="premium-copy max-w-3xl text-lg leading-8 text-[#DDE7F1]">
             É nesse espaço que concorrentes ganham mercado. A Reisart trabalha
             exatamente nesses três pontos: presença, percepção e conversão.

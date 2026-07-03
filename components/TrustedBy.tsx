@@ -33,7 +33,7 @@ const clients = [
 
 export default function TrustedBy() {
   return (
-    <section className="bg-[#07111F] px-6 py-24">
+    <section className="bg-[#05070D] px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-5 border-y border-white/10 py-10 lg:flex-row lg:items-center lg:justify-between">
           <div>
@@ -53,9 +53,9 @@ export default function TrustedBy() {
           {clients.map((client) => (
             <article
               key={client.name}
-              className="group min-h-56 border border-white/10 bg-[#101720] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#D8A84E]/50 hover:bg-[#121E2B]"
+              className="group min-h-56 border border-white/10 bg-[#0B1638] p-6 transition duration-300 hover:-translate-y-1 hover:border-[#3B82FF]/50 hover:bg-[#121E2B]"
             >
-              <div className="flex h-24 items-center justify-center border border-white/10 bg-[#0B1018] p-4">
+              <div className="flex h-24 items-center justify-center border border-white/10 bg-[#05070D] p-4">
                 {client.logo ? (
                   <Image
                     src={client.logo}
@@ -65,13 +65,13 @@ export default function TrustedBy() {
                     className="max-h-16 w-auto object-contain"
                   />
                 ) : (
-                  <span className="text-center text-xl font-black text-[#F4C76B]">
+                  <span className="text-center text-xl font-black text-[#3B82FF]">
                     {client.name}
                   </span>
                 )}
               </div>
 
-              <p className="mt-6 text-xs font-black uppercase tracking-[0.24em] text-[#54D2C0]">
+              <p className="mt-6 text-xs font-black uppercase tracking-[0.24em] text-[#3B82FF]">
                 {client.segment}
               </p>
               <h3 className="mt-3 text-2xl font-black text-white">

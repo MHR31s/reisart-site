@@ -114,7 +114,7 @@ export default function Home() {
 
       <Header />
 
-      <main className="overflow-x-hidden bg-[#07111F]">
+      <main className="overflow-x-hidden bg-[#05070D]">
         <Hero />
 
         <AboutMaycon />

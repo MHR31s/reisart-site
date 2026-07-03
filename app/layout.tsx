@@ -107,7 +107,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning className={inter.variable}>
-      <body className="bg-[#07111F] text-white antialiased">
+      <body className="bg-[#05070D] text-white antialiased">
         <JsonLd />
 
         <Analytics />

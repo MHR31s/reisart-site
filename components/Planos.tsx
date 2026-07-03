@@ -88,7 +88,7 @@ const planos = [
 
 export default function Planos() {
   return (
-    <section id="planos" className="bg-[#07111F] px-6 py-28">
+    <section id="planos" className="bg-[#05070D] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <FadeIn>
           <p className="section-kicker">Planos REISART</p>
@@ -113,12 +113,12 @@ export default function Planos() {
                   className={[
                     "relative flex h-full min-h-full flex-col p-6 transition-all duration-300",
                     isRecomendado
-                      ? "border border-[#D8A84E]/60 bg-[#0E1A26] shadow-[0_0_40px_rgba(244,199,107,0.08),0_0_0_1px_rgba(244,199,107,0.08)]"
-                      : "border border-white/[0.07] bg-[#0D1520] hover:border-[#D8A84E]/35 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]",
+                      ? "border border-[#3B82FF]/60 bg-[#0B1638] shadow-[0_0_40px_rgba(33,68,255,0.08),0_0_0_1px_rgba(33,68,255,0.08)]"
+                      : "border border-white/[0.07] bg-[#0B1638] hover:border-[#3B82FF]/35 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]",
                   ].join(" ")}
                 >
                   {isRecomendado && (
-                    <span className="absolute -top-3 left-5 bg-[#F4C76B] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-[#07111F]">
+                    <span className="absolute -top-3 left-5 bg-[#2144FF] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-white">
                       Mais escolhido
                     </span>
                   )}
@@ -127,16 +127,16 @@ export default function Planos() {
                     <div className={[
                       "flex h-10 w-10 items-center justify-center",
                       isRecomendado
-                        ? "border border-[#D8A84E]/40 bg-[#D8A84E]/10"
+                        ? "border border-[#3B82FF]/40 bg-[#3B82FF]/10"
                         : "border border-white/10 bg-white/[0.04]",
                     ].join(" ")}>
                       <Icon
-                        className={isRecomendado ? "text-[#F4C76B]" : "text-[#9AA8B6]"}
+                        className={isRecomendado ? "text-[#3B82FF]" : "text-[#9AA8B6]"}
                         size={20}
                         strokeWidth={1.8}
                       />
                     </div>
-                    <span className="border border-[#54D2C0]/30 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#54D2C0]">
+                    <span className="border border-[#3B82FF]/30 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#3B82FF]">
                       {plano.destaque}
                     </span>
                   </div>
@@ -147,7 +147,7 @@ export default function Planos() {
 
                   <p className={[
                     "mt-2.5 text-sm font-bold leading-6",
-                    isRecomendado ? "text-[#F4C76B]" : "text-[#8A9AAA]",
+                    isRecomendado ? "text-[#3B82FF]" : "text-[#8A9AAA]",
                   ].join(" ")}>
                     {plano.subtitulo}
                   </p>
@@ -169,7 +169,7 @@ export default function Planos() {
                           <CheckCircle2
                             className={[
                               "mt-0.5 shrink-0",
-                              isRecomendado ? "text-[#F4C76B]" : "text-[#54D2C0]",
+                              "text-[#3B82FF]",
                             ].join(" ")}
                             size={15}
                           />
@@ -197,8 +197,8 @@ export default function Planos() {
                       className={[
                         "mt-5 inline-flex w-full items-center justify-center px-4 py-3 text-sm font-black",
                         isRecomendado
-                          ? "bg-[#F4C76B] text-[#07111F] hover:bg-[#ffe08a] hover:shadow-[0_8px_24px_rgba(244,199,107,0.25)]"
-                          : "border border-[#D8A84E]/30 text-[#F4C76B] hover:border-[#F4C76B] hover:bg-[#F4C76B] hover:text-[#07111F]",
+                          ? "bg-[#2144FF] text-white hover:bg-[#1a35d1] hover:shadow-[0_8px_24px_rgba(59,130,255,0.3)]"
+                          : "border border-[#3B82FF]/30 text-[#3B82FF] hover:border-[#2144FF] hover:bg-[#2144FF] hover:text-white",
                       ].join(" ")}
                     >
                       Solicitar Proposta
@@ -211,7 +211,7 @@ export default function Planos() {
         </div>
 
         <FadeIn>
-          <div className="mt-10 flex flex-col items-start justify-between gap-5 border border-[#D8A84E]/25 bg-[#0B1018] p-7 md:flex-row md:items-center">
+          <div className="mt-10 flex flex-col items-start justify-between gap-5 border border-[#3B82FF]/25 bg-[#05070D] p-7 md:flex-row md:items-center">
             <p className="premium-copy max-w-3xl text-base leading-7 text-[#C7D2DE]">
               Quer saber qual plano faz mais sentido para sua empresa agora? O
               diagnóstico ajuda a definir prioridade, canais e ritmo de execução.

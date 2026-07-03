@@ -269,7 +269,7 @@ export default async function ServicePage({ params }: PageProps) {
     <>
       <Header />
 
-      <main className="bg-[#07111F] pt-20">
+      <main className="bg-[#05070D] pt-20">
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <p className="section-kicker">Serviço estratégico</p>
@@ -304,9 +304,9 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="bg-[#0B1018] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
-            <article className="border border-white/10 bg-[#101720] p-7">
+            <article className="border border-white/10 bg-[#0B1638] p-7">
               <p className="section-kicker">Problema do cliente</p>
               <h2 className="mt-4 text-2xl font-black text-white md:text-3xl">
                 O que normalmente trava o resultado
@@ -316,7 +316,7 @@ export default async function ServicePage({ params }: PageProps) {
               </p>
             </article>
 
-            <article className="border border-white/10 bg-[#101720] p-7">
+            <article className="border border-white/10 bg-[#0B1638] p-7">
               <p className="section-kicker">Como a Reisart resolve</p>
               <h2 className="mt-4 text-2xl font-black text-white md:text-3xl">
                 Estratégia antes da execução
@@ -339,7 +339,7 @@ export default async function ServicePage({ params }: PageProps) {
                 {service.benefits.map((benefit) => (
                   <div
                     key={benefit}
-                    className="border border-white/10 bg-[#101720] p-5 text-[#DDE7F1]"
+                    className="border border-white/10 bg-[#0B1638] p-5 text-[#DDE7F1]"
                   >
                     {benefit}
                   </div>
@@ -347,7 +347,7 @@ export default async function ServicePage({ params }: PageProps) {
               </div>
             </div>
 
-            <aside className="border border-[#D8A84E]/35 bg-[#101720] p-7">
+            <aside className="border border-[#3B82FF]/35 bg-[#0B1638] p-7">
               <h2 className="text-2xl font-black text-white">
                 Para quem é indicado
               </h2>

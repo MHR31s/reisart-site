@@ -58,7 +58,7 @@ export default function CasesPage() {
 
       <Header />
 
-      <main className="bg-[#07111F] pt-20">
+      <main className="bg-[#05070D] pt-20">
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <p className="section-kicker">Cases</p>
@@ -73,12 +73,12 @@ export default function CasesPage() {
           </div>
         </section>
 
-        <section className="bg-[#0B1018] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">
             {cases.map((item) => (
               <article
                 key={item.name}
-                className="border border-white/10 bg-[#101720] p-7 transition duration-300 hover:border-[#D8A84E]/50 hover:bg-[#111B27]"
+                className="border border-white/10 bg-[#0B1638] p-7 transition duration-300 hover:border-[#3B82FF]/50 hover:bg-[#0B1638]"
               >
                 <div className="flex h-24 items-center border-b border-white/10 pb-6">
                   <Image
@@ -89,7 +89,7 @@ export default function CasesPage() {
                     className="max-h-20 w-auto object-contain"
                   />
                 </div>
-                <p className="mt-7 text-xs font-bold uppercase tracking-[0.24em] text-[#54D2C0]">
+                <p className="mt-7 text-xs font-bold uppercase tracking-[0.24em] text-[#3B82FF]">
                   {item.segment}
                 </p>
                 <h2 className="mt-4 text-2xl font-black text-white">
@@ -102,7 +102,7 @@ export default function CasesPage() {
                   href={item.href}
                   eventName="case_view"
                   eventParams={{ case_name: item.slug }}
-                  className="mt-8 inline-flex font-bold text-[#F4C76B] hover:text-white"
+                  className="mt-8 inline-flex font-bold text-[#3B82FF] hover:text-white"
                 >
                   Ver case
                 </TrackedLink>

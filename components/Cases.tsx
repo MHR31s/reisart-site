@@ -26,7 +26,7 @@ const cases = [
 
 export default function Cases() {
   return (
-    <section id="cases" className="bg-[#0B1018] px-6 py-28">
+    <section id="cases" className="bg-[#05070D] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <div>
           <p className="section-kicker">Cases reais</p>
@@ -45,7 +45,7 @@ export default function Cases() {
           {cases.map((item) => (
             <article
               key={item.cliente}
-              className="border border-white/10 bg-[#101720] p-7 transition-colors hover:border-[#D8A84E]/50"
+              className="border border-white/10 bg-[#0B1638] p-7 transition-colors hover:border-[#3B82FF]/50"
             >
               <div className="flex h-24 items-center border-b border-white/10 pb-6">
                 <Image
@@ -57,7 +57,7 @@ export default function Cases() {
                 />
               </div>
 
-              <p className="mt-7 text-xs font-bold uppercase tracking-[0.24em] text-[#54D2C0]">
+              <p className="mt-7 text-xs font-bold uppercase tracking-[0.24em] text-[#3B82FF]">
                 {item.segmento}
               </p>
 
@@ -67,14 +67,14 @@ export default function Cases() {
 
               <div className="mt-7 space-y-6 text-sm leading-7 text-[#AAB7C4]">
                 <p>
-                  <span className="block font-bold uppercase tracking-[0.18em] text-[#F4C76B]">
+                  <span className="block font-bold uppercase tracking-[0.18em] text-[#3B82FF]">
                     Desafio
                   </span>
                   {item.desafio}
                 </p>
 
                 <p>
-                  <span className="block font-bold uppercase tracking-[0.18em] text-[#F4C76B]">
+                  <span className="block font-bold uppercase tracking-[0.18em] text-[#3B82FF]">
                     Resultado
                   </span>
                   {item.resultado}

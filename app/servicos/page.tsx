@@ -73,7 +73,7 @@ export default function ServicosPage() {
 
       <Header />
 
-      <main className="bg-[#07111F] pt-20">
+      <main className="bg-[#05070D] pt-20">
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <p className="section-kicker">Serviços</p>
@@ -111,12 +111,12 @@ export default function ServicosPage() {
           </div>
         </section>
 
-        <section className="bg-[#0B1018] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <article
                 key={service.title}
-                className="border border-white/10 bg-[#101720] p-7 transition duration-300 hover:border-[#D8A84E]/50 hover:bg-[#111B27]"
+                className="border border-white/10 bg-[#0B1638] p-7 transition duration-300 hover:border-[#3B82FF]/50 hover:bg-[#0B1638]"
               >
                 <h2 className="text-2xl font-black text-white">
                   {service.title}
@@ -126,7 +126,7 @@ export default function ServicosPage() {
                 </p>
                 <Link
                   href={service.href}
-                  className="mt-8 inline-flex font-bold text-[#F4C76B] hover:text-white"
+                  className="mt-8 inline-flex font-bold text-[#3B82FF] hover:text-white"
                 >
                   Saiba Mais
                 </Link>

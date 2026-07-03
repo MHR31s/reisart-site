@@ -44,7 +44,7 @@ export default function AutomacoesPage() {
 
       <Header />
 
-      <main className="bg-[#07111F] pt-20">
+      <main className="bg-[#05070D] pt-20">
         <section className="px-6 py-24">
           <div className="mx-auto max-w-7xl">
             <p className="section-kicker">Automação inteligente</p>
@@ -80,7 +80,7 @@ export default function AutomacoesPage() {
           </div>
         </section>
 
-        <section className="bg-[#0B1018] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => {
               const Icon = service.icon;
@@ -88,11 +88,11 @@ export default function AutomacoesPage() {
               return (
                 <article
                   key={service.title}
-                  className="border border-white/10 bg-[#101720] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#D8A84E]/50 hover:bg-[#121E2B]"
+                  className="border border-white/10 bg-[#0B1638] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#3B82FF]/50 hover:bg-[#121E2B]"
                 >
-                  <div className="flex h-12 w-12 items-center justify-center border border-[#54D2C0]/25 bg-[#54D2C0]/10">
+                  <div className="flex h-12 w-12 items-center justify-center border border-[#3B82FF]/25 bg-[#3B82FF]/10">
                     <Icon
-                      className="text-[#54D2C0]"
+                      className="text-[#3B82FF]"
                       size={24}
                       strokeWidth={1.7}
                     />
@@ -122,9 +122,9 @@ export default function AutomacoesPage() {
               {benefits.map((benefit) => (
                 <div
                   key={benefit}
-                  className="flex items-center gap-3 border border-white/10 bg-[#101720] p-5 text-[#DDE7F1]"
+                  className="flex items-center gap-3 border border-white/10 bg-[#0B1638] p-5 text-[#DDE7F1]"
                 >
-                  <CheckCircle2 className="text-[#54D2C0]" size={18} />
+                  <CheckCircle2 className="text-[#3B82FF]" size={18} />
                   {benefit}
                 </div>
               ))}

@@ -30,7 +30,7 @@ const objetivos = [
 
 export default function FunilObjetivo() {
   return (
-    <section className="bg-[#07111F] px-6 py-28">
+    <section className="bg-[#05070D] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-4xl">
           <p className="section-kicker">Funil de decisão</p>
@@ -52,18 +52,18 @@ export default function FunilObjetivo() {
               <Link
                 key={objetivo.titulo}
                 href={objetivo.href}
-                className="group border border-white/10 bg-[#101720] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#D8A84E]/50 hover:bg-[#121E2B]"
+                className="group border border-white/10 bg-[#0B1638] p-7 transition duration-300 hover:-translate-y-1 hover:border-[#3B82FF]/50 hover:bg-[#121E2B]"
               >
                 <div className="flex items-start justify-between gap-5">
-                  <div className="flex h-12 w-12 items-center justify-center border border-[#54D2C0]/25 bg-[#54D2C0]/10">
+                  <div className="flex h-12 w-12 items-center justify-center border border-[#3B82FF]/25 bg-[#3B82FF]/10">
                     <Icon
-                      className="text-[#54D2C0]"
+                      className="text-[#3B82FF]"
                       size={24}
                       strokeWidth={1.7}
                     />
                   </div>
                   <ArrowUpRight
-                    className="text-[#F4C76B] opacity-70 transition group-hover:opacity-100"
+                    className="text-[#3B82FF] opacity-70 transition group-hover:opacity-100"
                     size={22}
                   />
                 </div>
@@ -78,7 +78,7 @@ export default function FunilObjetivo() {
                       key={solucao}
                       className="flex items-center gap-3 text-base font-bold text-[#DDE7F1]"
                     >
-                      <Share2 size={16} className="text-[#F4C76B]" />
+                      <Share2 size={16} className="text-[#3B82FF]" />
                       {solucao}
                     </p>
                   ))}

@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #07111f;
+  --background: #05070d;
   --foreground: #ffffff;
-  --gold: #f4c76b;
-  --gold-dark: #d8a84e;
-  --gold-glow: rgba(244, 199, 107, 0.18);
-  --mint: #54d2c0;
-  --coral: #f27b5f;
-  --ink: #0b1018;
-  --panel: #101720;
+  --gold: #2144ff;
+  --gold-dark: #3b82ff;
+  --gold-glow: rgba(33, 68, 255, 0.18);
+  --mint: #3b82ff;
+  --coral: #3b82ff;
+  --ink: #05070d;
+  --panel: #0b1638;
   --muted: #9aa8b6;
 }
 
@@ -34,7 +34,7 @@ body {
 
 ::selection {
   background: var(--gold);
-  color: #07111f;
+  color: #ffffff;
 }
 
 ::-webkit-scrollbar {
@@ -84,7 +84,7 @@ textarea {
 /* ── Typography utilities ─────────────────────────── */
 
 .section-kicker {
-  color: var(--gold);
+  color: var(--gold-dark);
   font-size: 0.71rem;
   font-weight: 800;
   letter-spacing: 0.3em;
@@ -92,7 +92,7 @@ textarea {
 }
 
 .gradient-text {
-  background: linear-gradient(110deg, #f4c76b 0%, #ffe699 50%, #d8a84e 100%);
+  background: linear-gradient(110deg, #2144ff 0%, #6fa3ff 50%, #3b82ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -141,7 +141,7 @@ textarea {
   min-height: 3.25rem;
   padding: 0.875rem 1.625rem;
   background: var(--gold);
-  color: #07111f;
+  color: #ffffff;
   font-weight: 900;
   font-size: 0.875rem;
   letter-spacing: 0.015em;
@@ -149,11 +149,11 @@ textarea {
 }
 
 .premium-button:hover {
-  background: #ffe08a;
+  background: #1a35d1;
   transform: translateY(-2px);
   box-shadow:
-    0 8px 30px rgba(244, 199, 107, 0.3),
-    0 0 0 1px rgba(244, 199, 107, 0.25);
+    0 8px 30px rgba(59, 130, 255, 0.35),
+    0 0 0 1px rgba(59, 130, 255, 0.3);
 }
 
 .premium-button:active {
@@ -176,20 +176,20 @@ textarea {
 }
 
 .premium-button-secondary:hover {
-  border-color: rgba(84, 210, 192, 0.5);
-  color: #54d2c0;
-  background: rgba(84, 210, 192, 0.06);
+  border-color: rgba(59, 130, 255, 0.5);
+  color: #3b82ff;
+  background: rgba(59, 130, 255, 0.06);
 }
 
 .premium-link {
-  color: var(--gold);
+  color: var(--gold-dark);
   font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 0.4rem;
 }
 
 .premium-link:hover {
-  color: #ffe08a;
+  color: #5C8CFF;
 }
 
 /* ── Inputs ───────────────────────────────────────── */
@@ -208,9 +208,9 @@ textarea {
 }
 
 .premium-input:focus {
-  border-color: rgba(216, 168, 78, 0.5);
+  border-color: rgba(59, 130, 255, 0.5);
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 0 3px rgba(216, 168, 78, 0.08);
+  box-shadow: 0 0 0 3px rgba(59, 130, 255, 0.08);
 }
 
 /* ── Card variants ────────────────────────────────── */
@@ -220,7 +220,7 @@ textarea {
 }
 
 .card-gold-hover:hover {
-  border-color: rgba(216, 168, 78, 0.5) !important;
-  box-shadow: 0 0 0 1px rgba(216, 168, 78, 0.12), 0 16px 40px rgba(0, 0, 0, 0.35);
+  border-color: rgba(59, 130, 255, 0.5) !important;
+  box-shadow: 0 0 0 1px rgba(59, 130, 255, 0.12), 0 16px 40px rgba(0, 0, 0, 0.35);
   transform: translateY(-3px);
 }

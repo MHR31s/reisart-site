@@ -30,7 +30,7 @@ const etapas = [
 
 export default function Metodo() {
   return (
-    <section id="metodo" className="bg-[#0D1520] px-6 py-28">
+    <section id="metodo" className="bg-[#0B1638] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <FadeIn>
           <div className="max-w-4xl">
@@ -49,16 +49,16 @@ export default function Metodo() {
         <div className="mt-16 grid gap-4 lg:grid-cols-5">
           {etapas.map((etapa, i) => (
             <FadeIn key={etapa.numero} delay={i * 90}>
-              <article className="group relative flex h-full flex-col border border-white/[0.07] bg-[#0A1219] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#D8A84E]/40 hover:bg-[#0F1C28] hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
+              <article className="group relative flex h-full flex-col border border-white/[0.07] bg-[#0B1638] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#3B82FF]/40 hover:bg-[#0B1638] hover:shadow-[0_16px_40px_rgba(0,0,0,0.4)]">
                 {/* Número */}
-                <span className="font-black tracking-[0.3em] text-[#F4C76B]" style={{ fontSize: "0.7rem" }}>
+                <span className="font-black tracking-[0.3em] text-[#3B82FF]" style={{ fontSize: "0.7rem" }}>
                   {etapa.numero}
                 </span>
 
                 {/* Linha de progresso */}
                 <div className="mt-4 h-px w-full bg-white/[0.06]">
                   <div
-                    className="h-full bg-gradient-to-r from-[#F4C76B]/60 to-[#D8A84E]/20"
+                    className="h-full bg-gradient-to-r from-[#2144FF]/60 to-[#3B82FF]/20"
                     style={{ width: `${(i + 1) * 20}%` }}
                   />
                 </div>
@@ -75,9 +75,9 @@ export default function Metodo() {
         </div>
 
         <FadeIn delay={100}>
-          <div className="mt-8 border border-[#D8A84E]/20 bg-[#090F17] p-8">
+          <div className="mt-8 border border-[#3B82FF]/20 bg-[#05070D] p-8">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:gap-5">
-              <p className="text-3xl font-black tracking-tight text-[#F4C76B] md:text-4xl">
+              <p className="text-3xl font-black tracking-tight text-[#3B82FF] md:text-4xl">
                 MH360°
               </p>
               <p className="premium-copy text-base leading-7 text-[#C7D2DE]">

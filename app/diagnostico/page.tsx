@@ -43,7 +43,7 @@ export default function DiagnosticoPage() {
 
       <Header />
 
-      <main className="bg-[#07111F] pt-20">
+      <main className="bg-[#05070D] pt-20">
         <section className="px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div>
@@ -59,9 +59,9 @@ export default function DiagnosticoPage() {
                 {checklist.map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-3 border border-white/10 bg-[#101720] p-4 text-[#DDE7F1]"
+                    className="flex items-center gap-3 border border-white/10 bg-[#0B1638] p-4 text-[#DDE7F1]"
                   >
-                    <CheckCircle2 className="text-[#54D2C0]" size={18} />
+                    <CheckCircle2 className="text-[#3B82FF]" size={18} />
                     {item}
                   </div>
                 ))}
@@ -72,9 +72,9 @@ export default function DiagnosticoPage() {
           </div>
         </section>
 
-        <section className="bg-[#0B1018] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
-            <article className="border border-white/10 bg-[#101720] p-7">
+            <article className="border border-white/10 bg-[#0B1638] p-7">
               <h2 className="text-2xl font-black text-white">
                 Para quem é indicado
               </h2>
@@ -85,7 +85,7 @@ export default function DiagnosticoPage() {
               </p>
             </article>
 
-            <article className="border border-white/10 bg-[#101720] p-7">
+            <article className="border border-white/10 bg-[#0B1638] p-7">
               <h2 className="text-2xl font-black text-white">
                 Benefícios da análise
               </h2>
@@ -96,7 +96,7 @@ export default function DiagnosticoPage() {
                     className="flex gap-3 border-b border-white/10 pb-4 text-[#AAB7C4]"
                   >
                     <CheckCircle2
-                      className="mt-1 shrink-0 text-[#54D2C0]"
+                      className="mt-1 shrink-0 text-[#3B82FF]"
                       size={16}
                     />
                     {benefit}

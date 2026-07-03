@@ -27,23 +27,15 @@ export default function DiagnosticoForm() {
     const instagram = String(formData.get("instagram") || "");
     const objetivo = String(formData.get("objetivo") || "");
 
-    // Envia dados para o n8n
+    // Envia dados para o n8n via API Route (server-side, com secret protegido)
     try {
-      await fetch("https://energeticflea-n8n.cloudfy.live/webhook/reisart-lead-site", {
+      await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          nome,
-          empresa,
-          whatsapp,
-          instagram,
-          objetivo,
-          origem: "site_diagnostico",
-          data: new Date().toISOString(),
-        }),
+        body: JSON.stringify({ nome, empresa, whatsapp, instagram, objetivo }),
       });
     } catch (error) {
-      console.error("Erro ao enviar para n8n:", error);
+      console.error("Erro ao enviar lead:", error);
     }
 
     // Dispara conversões Meta
@@ -79,7 +71,7 @@ export default function DiagnosticoForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="border border-[#D8A84E]/35 bg-[#101720] p-6 md:p-8"
+      className="border border-[#3B82FF]/35 bg-[#0B1638] p-6 md:p-8"
     >
       <h2 className="text-2xl font-black text-white">
         Solicitar Diagnóstico
@@ -98,7 +90,7 @@ export default function DiagnosticoForm() {
               name={field.name}
               type={field.type}
               placeholder={field.placeholder}
-              className="border border-white/10 bg-[#0B1018] px-4 py-3 text-white outline-none transition placeholder:text-[#647386] focus:border-[#54D2C0]"
+              className="border border-white/10 bg-[#05070D] px-4 py-3 text-white outline-none transition placeholder:text-[#647386] focus:border-[#3B82FF]"
             />
           </label>
         ))}
@@ -109,7 +101,7 @@ export default function DiagnosticoForm() {
         <select
           required
           name="objetivo"
-          className="border border-white/10 bg-[#0B1018] px-4 py-3 text-white outline-none transition focus:border-[#54D2C0]"
+          className="border border-white/10 bg-[#05070D] px-4 py-3 text-white outline-none transition focus:border-[#3B82FF]"
         >
           <option value="">Selecione uma opção</option>
           <option value="aparecer_mais">Quero aparecer mais</option>

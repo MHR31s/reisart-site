@@ -41,7 +41,7 @@ export const faqJsonLd = {
 
 export default function FAQ() {
   return (
-    <section className="bg-[#101720] px-6 py-28">
+    <section className="bg-[#0B1638] px-6 py-28">
       <div className="mx-auto max-w-7xl">
         <p className="section-kicker">FAQ</p>
         <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
@@ -55,7 +55,7 @@ export default function FAQ() {
                 <span>{faq.pergunta}</span>
                 <span
                   aria-hidden="true"
-                  className="text-[#F4C76B] transition-transform group-open:rotate-45"
+                  className="text-[#3B82FF] transition-transform group-open:rotate-45"
                 >
                   +
                 </span>

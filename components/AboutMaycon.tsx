@@ -9,10 +9,10 @@ const pontos = [
 
 export default function AboutMaycon() {
   return (
-    <section id="sobre" className="bg-[#0D1520] px-6 py-28">
+    <section id="sobre" className="bg-[#0B1638] px-6 py-28">
       <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
         <FadeIn className="relative order-2 lg:order-1">
-          <div className="absolute inset-x-16 bottom-8 top-24 bg-[radial-gradient(circle_at_50%_45%,rgba(244,199,107,0.1),transparent_48%),radial-gradient(circle_at_50%_72%,rgba(84,210,192,0.07),transparent_48%)] blur-3xl" />
+          <div className="absolute inset-x-16 bottom-8 top-24 bg-[radial-gradient(circle_at_50%_45%,rgba(33,68,255,0.1),transparent_48%),radial-gradient(circle_at_50%_72%,rgba(59,130,255,0.07),transparent_48%)] blur-3xl" />
           <Image
             src="/maycon-about.png"
             alt="Maycon Reis"
@@ -52,8 +52,8 @@ export default function AboutMaycon() {
 
           <div className="mt-10 grid gap-px overflow-hidden border border-white/[0.07] bg-white/[0.05] sm:grid-cols-3">
             {pontos.map((ponto) => (
-              <div key={ponto} className="bg-[#0A1219] p-5">
-                <p className="text-sm font-bold leading-6 text-[#F4C76B]">
+              <div key={ponto} className="bg-[#0B1638] p-5">
+                <p className="text-sm font-bold leading-6 text-[#3B82FF]">
                   {ponto}
                 </p>
               </div>
