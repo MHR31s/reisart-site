@@ -37,7 +37,11 @@ export default function Hero() {
             <span className="section-kicker !text-[0.68rem]">Reisart Marketing Digital</span>
           </div>
 
-          <h1 className="mt-7 text-4xl font-black leading-[1.04] tracking-tight text-white sm:text-5xl lg:text-[3.6rem]">
+          <p className="mt-5 text-base font-semibold text-[#3B82FF] sm:text-lg">
+            Transformamos ideias em resultados reais.
+          </p>
+
+          <h1 className="mt-3 text-4xl font-black leading-[1.04] tracking-tight text-white sm:text-5xl lg:text-[3.6rem]">
             Transformamos empresas locais em{" "}
             <span className="gradient-text">máquinas de geração de clientes.</span>
           </h1>
