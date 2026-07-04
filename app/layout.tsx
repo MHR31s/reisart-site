@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Analytics from "@/components/Analytics";
 import JsonLd from "@/components/JsonLd";
 
-const inter = Inter({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-montserrat",
   display: "swap",
 });
 
@@ -106,7 +107,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning className={inter.variable}>
+    <html lang="pt-BR" suppressHydrationWarning className={montserrat.variable}>
       <body className="bg-[#05070D] text-white antialiased">
         <JsonLd />
 
