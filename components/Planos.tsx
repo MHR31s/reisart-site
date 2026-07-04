@@ -1,9 +1,9 @@
 "use client";
 
 import {
+  Bot,
   CheckCircle2,
   Crown,
-  MapPin,
   Rocket,
   TrendingUp,
 } from "lucide-react";
@@ -12,8 +12,8 @@ import FadeIn from "@/components/FadeIn";
 
 const planos = [
   {
-    nome: "Básico",
-    slug: "basico",
+    nome: "Essencial",
+    slug: "essencial",
     subtitulo: "Comece a ser visto. Comece a vender.",
     objetivo:
       "Criar presença digital, atrair o público certo e gerar as primeiras oportunidades de venda.",
@@ -41,16 +41,16 @@ const planos = [
     recomendado: true,
     icon: TrendingUp,
     topicos: [
+      "Gestão de Instagram e Google Meu Negócio",
       "Google Ads e Meta Ads em conjunto",
-      "Campanhas para WhatsApp e promoções",
-      "Remarketing para interessados",
-      "Conteúdo institucional e promocional",
-      "Calendário editorial estratégico",
+      "Remarketing para quem já demonstrou interesse",
+      "Relatórios mensais de desempenho",
+      "Reunião estratégica mensal",
     ],
   },
   {
-    nome: "Escala",
-    slug: "escala",
+    nome: "Performance",
+    slug: "performance",
     subtitulo: "Domine sua região e acelere suas vendas.",
     objetivo:
       "Gerar alto volume de leads, aumentar vendas e posicionar a marca como referência local.",
@@ -59,29 +59,28 @@ const planos = [
     destaque: "Crescimento regional",
     icon: Crown,
     topicos: [
-      "Estratégias avançadas de segmentação",
-      "Campanhas simultâneas para máximo alcance",
+      "Tráfego pago avançado com públicos estratégicos",
+      "Otimização constante de campanhas",
+      "Funis de conversão completos",
+      "Testes A/B e ajustes contínuos",
       "Conteúdo de autoridade e bastidores",
-      "Otimizações frequentes e testes A/B",
-      "Análise de métricas e ajustes estratégicos",
     ],
   },
   {
-    nome: "Presença Total",
-    slug: "presenca_total",
-    subtitulo: "Premium presencial para dominar sua região.",
+    nome: "Premium",
+    slug: "premium",
+    subtitulo: "Tecnologia e inteligência para dominar o mercado digital.",
     objetivo:
-      "Unir marketing completo, conteúdo real e presença presencial para construir autoridade e resultados reais.",
+      "Unir tecnologia, automação e inteligência de dados para escalar atendimento, conversão e resultados.",
     ideal:
-      "Empresas que querem terceirizar o marketing e se tornar referência no mercado local.",
-    destaque: "Premium presencial",
-    icon: MapPin,
+      "Empresas que já têm tração e querem operar com tecnologia de ponta e presença digital completa.",
+    destaque: "Tecnologia e IA",
+    icon: Bot,
     topicos: [
-      "Captação presencial de fotos e vídeos",
-      "Gravação de reels, bastidores e depoimentos",
-      "Campanhas completas em Google Ads e Meta Ads",
-      "Materiais criativos para anúncios",
-      "Marketing completo com estratégia e execução",
+      "Sites e landing pages profissionais",
+      "Automações e chatbots de atendimento",
+      "Agentes de IA para vendas e suporte",
+      "Relatórios e inteligência de dados",
     ],
   },
 ];
@@ -96,9 +95,10 @@ export default function Planos() {
             Escolha o nível de presença que combina com o momento da sua empresa.
           </h2>
           <p className="premium-copy mt-7 max-w-3xl text-lg leading-[1.85] text-[#8A9AAA]">
-            Do primeiro passo digital à presença premium presencial, cada plano
-            organiza estratégia, conteúdo, tráfego e acompanhamento para gerar
-            mais autoridade e oportunidades comerciais.
+            Do primeiro passo digital à tecnologia, automação e inteligência
+            de dados, cada plano organiza estratégia, conteúdo, tráfego e
+            acompanhamento para gerar mais autoridade e oportunidades
+            comerciais.
           </p>
         </FadeIn>
 
