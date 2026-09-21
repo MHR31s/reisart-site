@@ -40,7 +40,10 @@ const businessJsonLd = {
     addressRegion: "SP",
     addressCountry: "BR",
   },
-  sameAs: ["https://www.instagram.com/reisartmkd/"],
+  sameAs: [
+    "https://www.instagram.com/reisartmkd/",
+    "https://www.facebook.com/reisart.ads",
+  ],
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+55 19 99139-2850",
