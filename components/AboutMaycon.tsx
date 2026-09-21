@@ -1,5 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
+import TrackedLink from "@/components/TrackedLink";
 
 const pontos = [
   "Diagnóstico antes da proposta",
@@ -9,60 +12,91 @@ const pontos = [
 
 export default function AboutMaycon() {
   return (
-    <section id="sobre" className="bg-[#0B1638] px-6 py-28">
-      <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+    <section id="sobre" className="bg-white px-6 py-20 md:py-28">
+      <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20">
         <FadeIn className="relative order-2 lg:order-1">
-          <div className="absolute inset-x-16 bottom-8 top-24 bg-[radial-gradient(circle_at_50%_45%,rgba(33,68,255,0.1),transparent_48%),radial-gradient(circle_at_50%_72%,rgba(59,130,255,0.07),transparent_48%)] blur-3xl" />
-          <Image
-            src="/maycon-about.png"
-            alt="Maycon Reis"
-            width={600}
-            height={700}
-            className="relative z-10 mx-auto h-auto max-h-[640px] w-auto object-contain drop-shadow-[0_30px_80px_rgba(0,0,0,0.6)]"
-          />
+          <div className="relative mx-auto max-w-md">
+            <div className="absolute inset-x-0 bottom-0 top-16 rounded-[2rem] bg-[linear-gradient(160deg,#2144FF_0%,#5B3DF5_100%)]" />
+            <div className="absolute -left-6 top-24 h-24 w-24 rounded-full bg-[#2144FF]/10 blur-xl" />
+            <Image
+              src="/maycon-about.png"
+              alt="Maycon Reis, fundador da Reisart"
+              width={600}
+              height={700}
+              className="relative z-10 mx-auto h-auto max-h-[560px] w-auto object-contain"
+            />
+            <div className="absolute -bottom-5 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-2xl bg-white px-6 py-3 text-center shadow-[0_18px_40px_rgba(11,22,56,0.2)]">
+              <p className="text-sm font-extrabold text-[#0B1638]">Maycon Reis</p>
+              <p className="text-xs font-semibold text-[#4A5878]">
+                Fundador · Reisart
+              </p>
+            </div>
+          </div>
         </FadeIn>
 
         <FadeIn className="order-1 lg:order-2" delay={100}>
-          <p className="section-kicker">Quem está por trás da Reisart</p>
+          <p className="section-kicker text-[#2144FF]">
+            Quem está por trás da Reisart
+          </p>
 
-          <h2 className="mt-5 text-3xl font-black leading-tight tracking-tight text-white md:text-5xl">
+          <h2 className="display mt-5 text-4xl text-[#0B1638] md:text-6xl">
             Estratégia antes de execução.{" "}
-            <span className="text-[#9AA8B6]">Sempre.</span>
+            <span className="gradient-text-light">Sempre.</span>
           </h2>
 
-          <div className="mt-8 max-w-2xl space-y-5 text-[1.05rem] leading-[1.85] text-[#B8C8D8]">
-            <p className="premium-copy">
+          <div className="mt-8 max-w-2xl space-y-5 text-[1.05rem] leading-[1.85] text-[#3B4A6B]">
+            <p>
               Durante anos observei empresas investirem em marketing sem saber
               exatamente o que estavam construindo.
             </p>
-            <p className="premium-copy">
+            <p>
               Produziam conteúdo. Faziam anúncios. Contratavam ferramentas. Mas
               continuavam dependentes da sorte.
             </p>
-            <p className="premium-copy">
+            <p>
               A Reisart nasceu para mudar isso. Antes de qualquer campanha,
               entendemos o negócio, o mercado e o comportamento das pessoas que
               precisam comprar.
             </p>
-            <p className="premium-copy">
+            <p>
               Porque marketing sem direção gera movimento.{" "}
-              <strong className="font-black text-white">Estratégia gera crescimento.</strong>
+              <strong className="font-extrabold text-[#0B1638]">
+                Estratégia gera crescimento.
+              </strong>
             </p>
           </div>
 
-          <div className="mt-10 grid gap-px overflow-hidden border border-white/[0.07] bg-white/[0.05] sm:grid-cols-3">
+          <ul className="mt-9 flex flex-wrap gap-3">
             {pontos.map((ponto) => (
-              <div key={ponto} className="bg-[#0B1638] p-5">
-                <p className="text-sm font-bold leading-6 text-[#3B82FF]">
-                  {ponto}
-                </p>
-              </div>
+              <li
+                key={ponto}
+                className="rounded-full border border-[#CBD5EE] bg-[#F3F6FF] px-4 py-2 text-sm font-bold text-[#1F3BD6]"
+              >
+                {ponto}
+              </li>
             ))}
-          </div>
+          </ul>
 
-          <a href="#cases" className="premium-link mt-10 inline-flex">
-            Ver estratégia aplicada
-          </a>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <TrackedLink
+              href="https://wa.me/5519991392850?text=Ol%C3%A1%20Maycon%2C%20vim%20pelo%20site%20da%20Reisart%20e%20quero%20conversar."
+              eventName="whatsapp_click"
+              eventParams={{ location: "about_maycon" }}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="premium-button"
+            >
+              <MessageCircle size={18} />
+              Conversar com o Maycon
+            </TrackedLink>
+            <Link
+              href="/cases"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[#2144FF] hover:underline"
+            >
+              Ver trabalhos realizados
+              <ArrowRight size={16} />
+            </Link>
+          </div>
         </FadeIn>
       </div>
     </section>

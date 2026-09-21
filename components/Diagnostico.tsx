@@ -147,11 +147,11 @@ export default function Diagnostico() {
   }
 
   return (
-    <section id="contato" className="bg-[#05070D] px-6 py-28">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <section id="contato" className="bg-[#05070D] px-6 py-20 md:py-28">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div>
           <p className="section-kicker">Diagnóstico estratégico</p>
-          <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
+          <h2 className="mt-5 text-3xl font-extrabold leading-tight text-white md:text-5xl">
             Descubra o que está travando seu crescimento digital.
           </h2>
 
@@ -172,7 +172,7 @@ export default function Diagnostico() {
 
         <form
           onSubmit={handleSubmit}
-          className="grid gap-5 border border-white/10 bg-[#0B1638] p-6 shadow-2xl shadow-black/30 md:grid-cols-2 md:p-8"
+          className="grid min-w-0 gap-5 rounded-2xl border border-white/10 bg-[#0B1638] p-6 shadow-2xl shadow-black/30 md:grid-cols-2 md:p-8"
         >
           <input
             name="nome"

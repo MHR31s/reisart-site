@@ -71,9 +71,9 @@ export default function DiagnosticoForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="border border-[#3B82FF]/35 bg-[#0B1638] p-6 md:p-8"
+      className="rounded-2xl border border-[#3B82FF]/35 bg-[#0B1638] p-6 md:p-8"
     >
-      <h2 className="text-2xl font-black text-white">
+      <h2 className="text-2xl font-extrabold text-white">
         Solicitar Diagnóstico
       </h2>
       <p className="premium-copy mt-3 text-sm leading-7 text-[#AAB7C4]">

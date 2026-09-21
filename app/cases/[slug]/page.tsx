@@ -108,7 +108,7 @@ export default async function CasePage({ params }: PageProps) {
       <Header />
 
       <main className="bg-[#05070D] pt-20">
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div className="border border-white/10 bg-[#0B1638] p-10">
               <Image
@@ -121,7 +121,7 @@ export default async function CasePage({ params }: PageProps) {
             </div>
             <div>
               <p className="section-kicker">{item.segment}</p>
-              <h1 className="mt-5 text-4xl font-black leading-tight text-white md:text-6xl">
+              <h1 className="mt-5 text-4xl font-extrabold leading-tight text-white md:text-6xl">
                 {item.name}
               </h1>
               <p className="premium-copy mt-7 text-lg leading-8 text-[#AAB7C4]">
@@ -131,10 +131,10 @@ export default async function CasePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="bg-[#05070D] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
-            <article className="border border-white/10 bg-[#0B1638] p-7">
-              <h2 className="text-2xl font-black text-white">
+            <article className="rounded-2xl border border-white/10 bg-[#0B1638] p-7">
+              <h2 className="text-2xl font-extrabold text-white">
                 Desafio inicial
               </h2>
               <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">
@@ -142,8 +142,8 @@ export default async function CasePage({ params }: PageProps) {
               </p>
             </article>
 
-            <article className="border border-white/10 bg-[#0B1638] p-7">
-              <h2 className="text-2xl font-black text-white">
+            <article className="rounded-2xl border border-white/10 bg-[#0B1638] p-7">
+              <h2 className="text-2xl font-extrabold text-white">
                 Estratégia aplicada
               </h2>
               <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">
@@ -153,10 +153,10 @@ export default async function CasePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="border border-white/10 bg-[#0B1638] p-7">
-              <h2 className="text-2xl font-black text-white">
+            <div className="rounded-2xl border border-white/10 bg-[#0B1638] p-7">
+              <h2 className="text-2xl font-extrabold text-white">
                 Entregas realizadas
               </h2>
               <div className="mt-6 space-y-4">
@@ -171,8 +171,8 @@ export default async function CasePage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="border border-[#3B82FF]/35 bg-[#0B1638] p-7">
-              <h2 className="text-2xl font-black text-white">
+            <div className="rounded-2xl border border-[#3B82FF]/35 bg-[#0B1638] p-7">
+              <h2 className="text-2xl font-extrabold text-white">
                 Transformação percebida
               </h2>
               <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">

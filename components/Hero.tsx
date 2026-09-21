@@ -1,125 +1,132 @@
 import Image from "next/image";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import {
+  ArrowUpRight,
+  MapPin,
+  MessageCircle,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  UserRound,
+} from "lucide-react";
 import TrackedLink from "@/components/TrackedLink";
-
-const metrics = [
-  { value: "+50", label: "Projetos Entregues" },
-  { value: "1:1", label: "Atendimento Personalizado" },
-  { value: "MH360°", label: "Estratégia Proprietária" },
-];
 
 const whatsappLink =
   "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
 
+const garantias = [
+  { icon: ShieldCheck, texto: "Diagnóstico sem custo" },
+  { icon: UserRound, texto: "Atendimento direto com o fundador" },
+  { icon: MapPin, texto: "Agência de Piracicaba/SP" },
+];
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#05070D]">
-      {/* Grid de fundo */}
-      <div className="absolute inset-0 premium-grid" />
+      <div className="absolute inset-0 premium-grid opacity-70" />
+      <div className="pointer-events-none absolute -left-40 top-10 h-[620px] w-[620px] rounded-full bg-[radial-gradient(circle,rgba(33,68,255,0.28)_0%,transparent_68%)] blur-3xl" />
+      <div className="pointer-events-none absolute -right-24 top-1/4 h-[560px] w-[560px] rounded-full bg-[radial-gradient(circle,rgba(59,130,255,0.22)_0%,transparent_70%)] blur-3xl" />
 
-      {/* Glow camada 1 — dourado central */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <div className="h-[680px] w-[680px] rounded-full bg-[radial-gradient(circle,rgba(33,68,255,0.1)_0%,transparent_65%)] blur-3xl" />
-      </div>
-
-      {/* Glow camada 2 — mint lateral direito */}
-      <div className="pointer-events-none absolute right-0 top-1/3 h-[400px] w-[400px] translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(59,130,255,0.07)_0%,transparent_70%)] blur-3xl" />
-
-      {/* Fade inferior */}
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#05070D] to-transparent" />
-
-      <div className="relative mx-auto grid min-h-[92svh] max-w-7xl items-center gap-12 px-6 pb-14 pt-28 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:pt-32">
-
-        {/* ── Coluna esquerda ── */}
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2.5 border border-[#3B82FF]/30 bg-[#3B82FF]/[0.07] px-4 py-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#2144FF]" />
-            <span className="section-kicker !text-[0.68rem]">Reisart Marketing Digital</span>
+      <div className="relative mx-auto grid min-h-[100svh] max-w-7xl items-center gap-6 px-6 pb-16 pt-32 lg:grid-cols-[1.08fr_0.92fr] lg:px-8 lg:pt-36">
+        {/* Texto */}
+        <div>
+          <div className="inline-flex items-center gap-2.5 rounded-full border border-[#3B82FF]/35 bg-[#3B82FF]/10 px-4 py-2">
+            <span className="h-2 w-2 rounded-full bg-[#3B82FF] shadow-[0_0_12px_#3B82FF]" />
+            <span className="text-xs font-semibold tracking-[0.04em] text-[#A9C4FF] sm:text-sm">
+              Agência de marketing digital em Piracicaba/SP
+            </span>
           </div>
 
-          <p className="mt-5 text-base font-semibold text-[#3B82FF] sm:text-lg">
-            Transformamos ideias em resultados reais.
-          </p>
-
-          <h1 className="mt-3 text-4xl font-black leading-[1.04] tracking-tight text-white sm:text-5xl lg:text-[3.6rem]">
+          <h1 className="display mt-7 text-[2.6rem] text-white sm:text-6xl lg:text-[4.4rem]">
             Transformamos empresas locais em{" "}
             <span className="gradient-text">máquinas de geração de clientes.</span>
           </h1>
 
-          <p className="premium-copy mt-8 max-w-xl text-lg leading-[1.85] text-[#B8C8D8]">
-            Sites, Google, Tráfego Pago, Redes Sociais e Automações
-            Inteligentes para aumentar sua visibilidade, gerar oportunidades e
-            vender mais.
+          <p className="mt-7 max-w-xl text-lg leading-8 text-[#C3D0DE]">
+            Sites, Google, tráfego pago, redes sociais e automações com IA para
+            sua empresa ser encontrada, gerar confiança e vender mais.
           </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <TrackedLink
-              href="#contato"
+              href="/diagnostico"
               eventName="diagnostico_click"
               eventParams={{ source: "hero" }}
-              className="premium-button"
+              className="premium-button !min-h-14 !px-8 !text-base"
             >
-              Solicitar Diagnóstico Gratuito
+              Solicitar diagnóstico gratuito
               <ArrowUpRight size={18} />
             </TrackedLink>
-
             <TrackedLink
               href={whatsappLink}
               eventName="whatsapp_click"
               eventParams={{ location: "hero" }}
               target="_blank"
               rel="noopener noreferrer"
-              className="premium-button-secondary"
+              className="premium-button-secondary !min-h-14 !px-7 !text-base"
             >
               <MessageCircle size={18} />
               Falar no WhatsApp
             </TrackedLink>
           </div>
 
-          {/* Métricas */}
-          <div className="mt-12 grid gap-0 divide-x divide-white/10 border border-white/[0.08] bg-white/[0.02] sm:grid-cols-3">
-            {metrics.map((item) => (
-              <div key={item.label} className="px-5 py-5">
-                <strong className="block text-2xl font-black tracking-tight text-[#3B82FF] md:text-3xl">
-                  {item.value}
-                </strong>
-                <span className="mt-1.5 block text-xs font-medium uppercase tracking-[0.18em] text-[#7A8E9E]">
-                  {item.label}
+          <ul className="mt-10 grid gap-3 text-sm text-[#B8C8D8] sm:grid-cols-3">
+            {garantias.map(({ icon: Icon, texto }) => (
+              <li key={texto} className="flex items-center gap-3">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-white/12 bg-white/[0.05]">
+                  <Icon size={17} className="text-[#3B82FF]" />
                 </span>
-              </div>
+                <span className="leading-5">{texto}</span>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
 
-        {/* ── Coluna direita — imagem ── */}
-        <div className="relative flex items-end justify-center lg:min-h-[720px]">
-          {/* Glow atrás da foto */}
-          <div className="absolute bottom-10 h-[70%] w-[80%] bg-[radial-gradient(ellipse_at_50%_50%,rgba(33,68,255,0.13)_0%,rgba(59,130,255,0.06)_40%,transparent_70%)] blur-3xl" />
+        {/* Visual */}
+        <div className="relative mx-auto flex w-full max-w-[560px] items-end justify-center lg:min-h-[720px]">
+          {/* orbe + anéis */}
+          <div className="absolute bottom-6 left-1/2 h-[92%] w-[92%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_40%,rgba(33,68,255,0.55)_0%,rgba(33,68,255,0.18)_45%,transparent_70%)]" />
+          <div className="spin-slow absolute bottom-10 left-1/2 h-[84%] w-[84%] -translate-x-1/2 rounded-full border border-dashed border-[#3B82FF]/30" />
+          <div className="absolute bottom-24 left-1/2 h-[60%] w-[60%] -translate-x-1/2 rounded-full border border-[#3B82FF]/20" />
 
-          {/* Logo fantasma */}
-          <Image
-            src="/logo.png"
-            alt=""
-            width={980}
-            height={980}
-            aria-hidden="true"
-            className="absolute bottom-24 z-[1] w-[94%] max-w-[640px] opacity-[0.13] mix-blend-screen drop-shadow-[0_0_60px_rgba(33,68,255,0.18)]"
-          />
-
-          {/* Linhas decorativas */}
-          <div className="absolute right-6 top-28 hidden h-32 w-px bg-gradient-to-b from-transparent via-[#2144FF]/50 to-transparent lg:block" />
-          <div className="absolute left-10 top-24 hidden h-px w-24 bg-gradient-to-r from-transparent via-[#2144FF]/40 to-transparent lg:block" />
-          <div className="absolute bottom-32 left-6 hidden h-px w-16 bg-gradient-to-r from-transparent via-[#3B82FF]/35 to-transparent lg:block" />
-
-          {/* Foto principal */}
           <Image
             src="/maycon-hero.png"
             alt="Maycon Reis, fundador da Reisart Marketing Digital"
             width={1000}
             height={1400}
             priority
-            className="relative z-10 h-auto max-h-[620px] w-auto object-contain drop-shadow-[0_48px_96px_rgba(0,0,0,0.7)] lg:max-h-[760px]"
+            className="relative z-10 h-auto max-h-[520px] w-auto object-contain [mask-image:linear-gradient(to_bottom,#000_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,#000_80%,transparent_100%)] lg:max-h-[680px]"
           />
+
+          {/* cards flutuantes (ilustrativos, sem números) */}
+          <div className="glass float-slow absolute left-0 top-[14%] z-20 hidden sm:flex items-center gap-3 rounded-2xl px-4 py-3 shadow-2xl sm:-left-6">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3B82FF]/25">
+              <Search size={18} className="text-[#9DBBFF]" />
+            </span>
+            <div>
+              <p className="text-sm font-bold text-white">Google Meu Negócio</p>
+              <p className="text-xs text-[#A9BBD0]">Perfil otimizado</p>
+            </div>
+          </div>
+
+          <div className="glass float-slower absolute right-0 top-[40%] z-20 hidden sm:flex items-center gap-3 rounded-2xl px-4 py-3 shadow-2xl sm:-right-4">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366]/25">
+              <MessageCircle size={18} className="text-[#5CE38B]" />
+            </span>
+            <div>
+              <p className="text-sm font-bold text-white">Nova conversa</p>
+              <p className="text-xs text-[#A9BBD0]">chegando no WhatsApp</p>
+            </div>
+          </div>
+
+          <div className="glass float-slow absolute right-0 top-[6%] z-20 hidden sm:flex items-center gap-3 rounded-2xl px-4 py-3 shadow-2xl sm:-right-2">
+            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#3B82FF]/25">
+              <TrendingUp size={18} className="text-[#9DBBFF]" />
+            </span>
+            <div>
+              <p className="text-sm font-bold text-white">Campanha no ar</p>
+              <p className="text-xs text-[#A9BBD0]">Google + Meta Ads</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

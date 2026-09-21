@@ -74,10 +74,10 @@ export default function ServicosPage() {
       <Header />
 
       <main className="bg-[#05070D] pt-20">
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-24">
           <div className="mx-auto max-w-7xl">
             <p className="section-kicker">Serviços</p>
-            <h1 className="mt-5 max-w-5xl text-4xl font-black leading-tight text-white md:text-6xl">
+            <h1 className="mt-5 max-w-5xl text-4xl font-extrabold leading-tight text-white md:text-6xl">
               Serviços de Marketing Digital para Empresas Locais
             </h1>
             <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
@@ -111,14 +111,14 @@ export default function ServicosPage() {
           </div>
         </section>
 
-        <section className="bg-[#05070D] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-5 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <article
                 key={service.title}
                 className="border border-white/10 bg-[#0B1638] p-7 transition duration-300 hover:border-[#3B82FF]/50 hover:bg-[#0B1638]"
               >
-                <h2 className="text-2xl font-black text-white">
+                <h2 className="text-2xl font-extrabold text-white">
                   {service.title}
                 </h2>
                 <p className="premium-copy mt-5 text-base leading-7 text-[#AAB7C4]">

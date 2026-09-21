@@ -4,6 +4,7 @@ const cases = [
   {
     cliente: "Construvip Edificações",
     logo: "/case-construvip.png",
+    light: true,
     segmento: "Construção e reformas",
     desafio: "Organizar a comunicação e fortalecer a presença digital.",
     resultado: "Imagem mais profissional e geração contínua de oportunidades.",
@@ -26,11 +27,11 @@ const cases = [
 
 export default function Cases() {
   return (
-    <section id="cases" className="bg-[#05070D] px-6 py-28">
+    <section id="cases" className="bg-[#05070D] px-6 py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div>
           <p className="section-kicker">Cases reais</p>
-          <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
+          <h2 className="mt-5 text-3xl font-extrabold leading-tight text-white md:text-5xl">
             Marcas locais tratadas com critério de marca grande.
           </h2>
 
@@ -47,7 +48,7 @@ export default function Cases() {
               key={item.cliente}
               className="border border-white/10 bg-[#0B1638] p-7 transition-colors hover:border-[#3B82FF]/50"
             >
-              <div className="flex h-24 items-center border-b border-white/10 pb-6">
+              <div className={["flex h-24 items-center justify-center rounded-xl", item.light ? "bg-[#EEF2F8] px-4" : "bg-[#05070D] px-4"].join(" ")}>
                 <Image
                   src={item.logo}
                   alt={item.cliente}
@@ -61,7 +62,7 @@ export default function Cases() {
                 {item.segmento}
               </p>
 
-              <h3 className="mt-4 text-xl font-black text-white md:text-2xl">
+              <h3 className="mt-4 text-xl font-extrabold text-white md:text-2xl">
                 {item.cliente}
               </h3>
 

@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Image src="/logo.png" alt="Reisart" width={48} height={48} className="object-contain" />
               <div>
-                <p className="text-sm font-black uppercase tracking-[0.26em] text-white">
+                <p className="text-sm font-bold uppercase tracking-[0.26em] text-white">
                   Reisart
                 </p>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-[#5A6E7E]">
@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Navegação */}
           <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.24em] text-[#5A6E7E]">
+            <h4 className="text-xs font-bold uppercase tracking-[0.24em] text-[#5A6E7E]">
               Navegação
             </h4>
             <div className="mt-5 space-y-3">
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Contato */}
           <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.24em] text-[#5A6E7E]">
+            <h4 className="text-xs font-bold uppercase tracking-[0.24em] text-[#5A6E7E]">
               Contato
             </h4>
             <div className="mt-5 space-y-3 text-sm text-[#7A8E9E]">

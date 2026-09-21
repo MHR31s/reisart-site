@@ -30,11 +30,11 @@ const objetivos = [
 
 export default function FunilObjetivo() {
   return (
-    <section className="bg-[#05070D] px-6 py-28">
+    <section className="bg-[#05070D] px-6 py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-4xl">
           <p className="section-kicker">Funil de decisão</p>
-          <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
+          <h2 className="mt-5 text-3xl font-extrabold leading-tight text-white md:text-5xl">
             Qual é o seu objetivo?
           </h2>
           <p className="premium-copy mt-7 text-lg leading-8 text-[#AAB7C4]">
@@ -68,7 +68,7 @@ export default function FunilObjetivo() {
                   />
                 </div>
 
-                <h3 className="mt-8 text-2xl font-black text-white">
+                <h3 className="mt-8 text-2xl font-extrabold text-white">
                   {objetivo.titulo}
                 </h3>
 

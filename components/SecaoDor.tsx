@@ -20,11 +20,11 @@ const dores = [
 
 export default function SecaoDor() {
   return (
-    <section className="bg-[#0B1638] px-6 py-28">
+    <section className="bg-[#0B1638] px-6 py-20 md:py-28">
       <div className="mx-auto max-w-7xl">
         <div>
           <p className="section-kicker">Presença, percepção e conversão</p>
-          <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
+          <h2 className="mt-5 text-3xl font-extrabold leading-tight text-white md:text-5xl">
             Sua empresa pode estar perdendo vendas sem perceber.
           </h2>
           <p className="premium-copy mt-6 max-w-3xl text-xl leading-8 text-[#C7D2DE]">
@@ -39,7 +39,7 @@ export default function SecaoDor() {
             return (
               <article key={dor.titulo} className="bg-[#05070D] p-7">
                 <Icon className="text-[#3B82FF]" size={30} strokeWidth={1.8} />
-                <h3 className="mt-7 text-xl font-black text-white md:text-2xl">
+                <h3 className="mt-7 text-xl font-extrabold text-white md:text-2xl">
                   {dor.titulo}
                 </h3>
                 <p className="premium-copy mt-4 text-base leading-7 text-[#AAB7C4]">

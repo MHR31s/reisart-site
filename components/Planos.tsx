@@ -87,101 +87,125 @@ const planos = [
 
 export default function Planos() {
   return (
-    <section id="planos" className="bg-[#05070D] px-6 py-28">
+    <section
+      id="planos"
+      className="bg-[#F3F6FF] px-6 py-20 md:py-28"
+    >
       <div className="mx-auto max-w-7xl">
-        <FadeIn>
-          <p className="section-kicker">Planos REISART</p>
-          <h2 className="mt-5 max-w-4xl text-3xl font-black leading-tight tracking-tight text-white md:text-5xl">
-            Escolha o nível de presença que combina com o momento da sua empresa.
+        <FadeIn className="mx-auto max-w-3xl text-center">
+          <p className="section-kicker justify-center text-[#2144FF]">
+            Planos Reisart
+          </p>
+          <h2 className="display mt-5 text-4xl text-[#0B1638] md:text-6xl">
+            Escolha o nível de presença do{" "}
+            <span className="gradient-text-light">momento da sua empresa.</span>
           </h2>
-          <p className="premium-copy mt-7 max-w-3xl text-lg leading-[1.85] text-[#8A9AAA]">
-            Do primeiro passo digital à tecnologia, automação e inteligência
-            de dados, cada plano organiza estratégia, conteúdo, tráfego e
-            acompanhamento para gerar mais autoridade e oportunidades
-            comerciais.
+          <p className="mt-6 text-lg leading-8 text-[#4A5878]">
+            Do primeiro passo digital à tecnologia, automação e inteligência de
+            dados, cada plano organiza estratégia, conteúdo, tráfego e
+            acompanhamento.
           </p>
         </FadeIn>
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-4">
+        <div className="-mx-6 mt-16 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-6 pb-6 pt-5 lg:mx-0 lg:grid lg:grid-cols-4 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0 lg:pt-0">
           {planos.map((plano, i) => {
             const Icon = plano.icon;
             const isRecomendado = plano.recomendado;
 
             return (
-              <FadeIn key={plano.nome} delay={i * 80}>
+              <FadeIn key={plano.nome} delay={i * 80} className="w-[84vw] max-w-sm shrink-0 snap-center lg:w-auto lg:max-w-none">
                 <article
                   className={[
-                    "relative flex h-full min-h-full flex-col p-6 transition-all duration-300",
+                    "relative flex h-full flex-col rounded-3xl p-7 transition-all duration-300",
                     isRecomendado
-                      ? "border border-[#3B82FF]/60 bg-[#0B1638] shadow-[0_0_40px_rgba(33,68,255,0.08),0_0_0_1px_rgba(33,68,255,0.08)]"
-                      : "border border-white/[0.07] bg-[#0B1638] hover:border-[#3B82FF]/35 hover:shadow-[0_16px_40px_rgba(0,0,0,0.35)]",
+                      ? "bg-[linear-gradient(160deg,#2144FF_0%,#4B3DF0_100%)] text-white shadow-[0_30px_70px_rgba(33,68,255,0.4)] lg:-translate-y-4 lg:pb-11 lg:pt-10"
+                      : "border border-[#DCE3F5] bg-white text-[#0B1638] shadow-[0_10px_30px_rgba(33,68,255,0.06)] hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(33,68,255,0.14)]",
                   ].join(" ")}
                 >
                   {isRecomendado && (
-                    <span className="absolute -top-3 left-5 bg-[#2144FF] px-3 py-1 text-[11px] font-black uppercase tracking-[0.18em] text-white">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-white px-4 py-1.5 text-[11px] font-extrabold uppercase tracking-[0.16em] text-[#2144FF] shadow-lg">
                       Mais escolhido
                     </span>
                   )}
 
-                  <div className="flex items-center justify-between gap-4">
-                    <div className={[
-                      "flex h-10 w-10 items-center justify-center",
-                      isRecomendado
-                        ? "border border-[#3B82FF]/40 bg-[#3B82FF]/10"
-                        : "border border-white/10 bg-white/[0.04]",
-                    ].join(" ")}>
+                  <div className="flex items-center justify-between gap-3">
+                    <span
+                      className={[
+                        "flex h-12 w-12 items-center justify-center rounded-2xl",
+                        isRecomendado ? "bg-white/20" : "bg-[#EAF0FF]",
+                      ].join(" ")}
+                    >
                       <Icon
-                        className={isRecomendado ? "text-[#3B82FF]" : "text-[#9AA8B6]"}
-                        size={20}
+                        className={isRecomendado ? "text-white" : "text-[#2144FF]"}
+                        size={22}
                         strokeWidth={1.8}
                       />
-                    </div>
-                    <span className="border border-[#3B82FF]/30 px-2.5 py-1 text-[10px] font-black uppercase tracking-[0.18em] text-[#3B82FF]">
-                      {plano.destaque}
                     </span>
+                    {!isRecomendado && (
+                      <span className="rounded-full bg-[#EAF0FF] px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.12em] text-[#2144FF]">
+                        {plano.destaque}
+                      </span>
+                    )}
                   </div>
 
-                  <h3 className="mt-7 text-xl font-black tracking-tight text-white">
-                    {plano.nome}
-                  </h3>
+                  <h3 className="display mt-7 text-3xl">{plano.nome}</h3>
 
-                  <p className={[
-                    "mt-2.5 text-sm font-bold leading-6",
-                    isRecomendado ? "text-[#3B82FF]" : "text-[#8A9AAA]",
-                  ].join(" ")}>
+                  <p
+                    className={[
+                      "mt-3 text-sm font-bold leading-6",
+                      isRecomendado ? "text-[#DCE6FF]" : "text-[#2144FF]",
+                    ].join(" ")}
+                  >
                     {plano.subtitulo}
                   </p>
 
-                  <p className="premium-copy mt-4 text-sm leading-7 text-[#7A8E9E]">
+                  <p
+                    className={[
+                      "mt-4 text-sm leading-7",
+                      isRecomendado ? "text-[#E6ECFF]" : "text-[#4A5878]",
+                    ].join(" ")}
+                  >
                     {plano.objetivo}
                   </p>
 
-                  <div className="mt-6 border-t border-white/[0.07] pt-5">
-                    <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#4E6070]">
-                      Tópicos incluídos
-                    </p>
-                    <ul className="mt-4 space-y-2.5">
-                      {plano.topicos.map((topico) => (
-                        <li
-                          key={topico}
-                          className="flex gap-3 text-sm leading-6 text-[#C7D2DE]"
-                        >
-                          <CheckCircle2
-                            className={[
-                              "mt-0.5 shrink-0",
-                              "text-[#3B82FF]",
-                            ].join(" ")}
-                            size={15}
-                          />
-                          <span>{topico}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul
+                    className={[
+                      "mt-6 space-y-3 border-t pt-6",
+                      isRecomendado ? "border-white/25" : "border-[#E3E9F7]",
+                    ].join(" ")}
+                  >
+                    {plano.topicos.map((topico) => (
+                      <li
+                        key={topico}
+                        className={[
+                          "flex gap-3 text-sm leading-6",
+                          isRecomendado ? "text-white" : "text-[#2A3960]",
+                        ].join(" ")}
+                      >
+                        <CheckCircle2
+                          className={[
+                            "mt-0.5 shrink-0",
+                            isRecomendado ? "text-white" : "text-[#2144FF]",
+                          ].join(" ")}
+                          size={16}
+                        />
+                        <span>{topico}</span>
+                      </li>
+                    ))}
+                  </ul>
 
-                  <div className="mt-auto pt-6">
-                    <p className="premium-copy border-t border-white/[0.07] pt-5 text-sm leading-6 text-[#7A8E9E]">
-                      <strong className="text-[#C7D2DE]">Ideal para:</strong>{" "}
+                  <div className="mt-auto pt-7">
+                    <p
+                      className={[
+                        "text-xs leading-6",
+                        isRecomendado ? "text-[#DCE6FF]" : "text-[#6B7A99]",
+                      ].join(" ")}
+                    >
+                      <strong
+                        className={isRecomendado ? "text-white" : "text-[#2A3960]"}
+                      >
+                        Ideal para:
+                      </strong>{" "}
                       {plano.ideal}
                     </p>
 
@@ -195,13 +219,13 @@ export default function Planos() {
                         })
                       }
                       className={[
-                        "mt-5 inline-flex w-full items-center justify-center px-4 py-3 text-sm font-black",
+                        "mt-5 inline-flex w-full items-center justify-center rounded-xl px-4 py-3.5 text-sm font-extrabold transition",
                         isRecomendado
-                          ? "bg-[#2144FF] text-white hover:bg-[#1a35d1] hover:shadow-[0_8px_24px_rgba(59,130,255,0.3)]"
-                          : "border border-[#3B82FF]/30 text-[#3B82FF] hover:border-[#2144FF] hover:bg-[#2144FF] hover:text-white",
+                          ? "bg-white text-[#2144FF] hover:shadow-[0_10px_28px_rgba(0,0,0,0.25)]"
+                          : "bg-[#0B1638] text-white hover:bg-[#2144FF]",
                       ].join(" ")}
                     >
-                      Solicitar Proposta
+                      Solicitar proposta
                     </a>
                   </div>
                 </article>
@@ -211,10 +235,11 @@ export default function Planos() {
         </div>
 
         <FadeIn>
-          <div className="mt-10 flex flex-col items-start justify-between gap-5 border border-[#3B82FF]/25 bg-[#05070D] p-7 md:flex-row md:items-center">
-            <p className="premium-copy max-w-3xl text-base leading-7 text-[#C7D2DE]">
-              Quer saber qual plano faz mais sentido para sua empresa agora? O
-              diagnóstico ajuda a definir prioridade, canais e ritmo de execução.
+          <div className="mx-auto mt-16 flex max-w-4xl flex-col items-center justify-between gap-5 rounded-3xl border border-[#DCE3F5] bg-white p-7 text-center shadow-[0_10px_30px_rgba(33,68,255,0.06)] md:flex-row md:text-left">
+            <p className="max-w-xl text-base leading-7 text-[#3B4A6B]">
+              <strong className="text-[#0B1638]">Não sabe qual plano escolher?</strong>{" "}
+              O diagnóstico define prioridade, canais e ritmo de execução para a
+              sua empresa agora.
             </p>
             <a
               href="#contato"

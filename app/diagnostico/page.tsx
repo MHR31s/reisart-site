@@ -44,11 +44,11 @@ export default function DiagnosticoPage() {
       <Header />
 
       <main className="bg-[#05070D] pt-20">
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
             <div>
               <p className="section-kicker">Diagnóstico de presença digital</p>
-              <h1 className="mt-5 text-4xl font-black leading-tight text-white md:text-6xl">
+              <h1 className="mt-5 text-4xl font-extrabold leading-tight text-white md:text-6xl">
                 Descubra o que está impedindo sua empresa de crescer no digital.
               </h1>
               <p className="premium-copy mt-7 text-lg leading-8 text-[#AAB7C4]">
@@ -72,10 +72,10 @@ export default function DiagnosticoPage() {
           </div>
         </section>
 
-        <section className="bg-[#05070D] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
             <article className="border border-white/10 bg-[#0B1638] p-7">
-              <h2 className="text-2xl font-black text-white">
+              <h2 className="text-2xl font-extrabold text-white">
                 Para quem é indicado
               </h2>
               <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">
@@ -86,7 +86,7 @@ export default function DiagnosticoPage() {
             </article>
 
             <article className="border border-white/10 bg-[#0B1638] p-7">
-              <h2 className="text-2xl font-black text-white">
+              <h2 className="text-2xl font-extrabold text-white">
                 Benefícios da análise
               </h2>
               <div className="mt-6 grid gap-4">

@@ -33,12 +33,12 @@ const clients = [
 
 export default function TrustedBy() {
   return (
-    <section className="bg-[#05070D] px-6 py-24">
+    <section className="bg-[#05070D] px-6 py-16 md:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-5 border-y border-white/10 py-10 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="section-kicker">Prova social</p>
-            <h2 className="mt-4 text-2xl font-black text-white md:text-4xl">
+            <h2 className="mt-4 text-2xl font-extrabold text-white md:text-4xl">
               Empresas que confiam na REISART
             </h2>
           </div>
@@ -65,16 +65,16 @@ export default function TrustedBy() {
                     className="max-h-16 w-auto object-contain"
                   />
                 ) : (
-                  <span className="text-center text-xl font-black text-[#3B82FF]">
+                  <span className="text-center text-xl font-extrabold text-[#3B82FF]">
                     {client.name}
                   </span>
                 )}
               </div>
 
-              <p className="mt-6 text-xs font-black uppercase tracking-[0.24em] text-[#3B82FF]">
+              <p className="mt-6 text-xs font-bold uppercase tracking-[0.24em] text-[#3B82FF]">
                 {client.segment}
               </p>
-              <h3 className="mt-3 text-2xl font-black text-white">
+              <h3 className="mt-3 text-2xl font-extrabold text-white">
                 {client.name}
               </h3>
               <p className="premium-copy mt-4 text-sm leading-7 text-[#9AA8B6]">

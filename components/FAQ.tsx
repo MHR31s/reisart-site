@@ -41,26 +41,36 @@ export const faqJsonLd = {
 
 export default function FAQ() {
   return (
-    <section className="bg-[#0B1638] px-6 py-28">
-      <div className="mx-auto max-w-7xl">
-        <p className="section-kicker">FAQ</p>
-        <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
-          Perguntas frequentes
-        </h2>
+    <section id="faq" className="bg-white px-6 py-20 md:py-28">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+        <div className="lg:sticky lg:top-32 lg:self-start">
+          <p className="section-kicker text-[#2144FF]">FAQ</p>
+          <h2 className="display mt-5 text-4xl text-[#0B1638] md:text-5xl">
+            Perguntas <span className="gradient-text-light">frequentes</span>
+          </h2>
+          <p className="mt-6 max-w-sm text-base leading-7 text-[#4A5878]">
+            Ainda com dúvida? Peça o diagnóstico gratuito e converse direto com
+            o fundador da Reisart.
+          </p>
+        </div>
 
-        <div className="mt-12 divide-y divide-white/10 border-y border-white/10">
-          {faqs.map((faq) => (
-            <details key={faq.pergunta} className="group py-6">
-              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-xl font-black text-white">
+        <div className="space-y-4">
+          {faqs.map((faq, i) => (
+            <details
+              key={faq.pergunta}
+              open={i === 0}
+              className="group rounded-2xl border border-[#DCE3F5] bg-[#F7F9FF] px-6 py-5 transition open:border-[#2144FF]/40 open:bg-white open:shadow-[0_16px_40px_rgba(33,68,255,0.1)]"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-6 text-left text-lg font-extrabold text-[#0B1638]">
                 <span>{faq.pergunta}</span>
                 <span
                   aria-hidden="true"
-                  className="text-[#3B82FF] transition-transform group-open:rotate-45"
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#EAF0FF] text-xl leading-none text-[#2144FF] transition-transform group-open:rotate-45"
                 >
                   +
                 </span>
               </summary>
-              <p className="premium-copy mt-5 max-w-3xl text-base leading-8 text-[#AAB7C4]">
+              <p className="mt-4 max-w-3xl text-base leading-8 text-[#3B4A6B]">
                 {faq.resposta}
               </p>
             </details>

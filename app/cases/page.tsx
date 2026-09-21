@@ -59,10 +59,10 @@ export default function CasesPage() {
       <Header />
 
       <main className="bg-[#05070D] pt-20">
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-24">
           <div className="mx-auto max-w-7xl">
             <p className="section-kicker">Cases</p>
-            <h1 className="mt-5 max-w-5xl text-4xl font-black leading-tight text-white md:text-6xl">
+            <h1 className="mt-5 max-w-5xl text-4xl font-extrabold leading-tight text-white md:text-6xl">
               Cases e Projetos da REISART
             </h1>
             <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
@@ -73,7 +73,7 @@ export default function CasesPage() {
           </div>
         </section>
 
-        <section className="bg-[#05070D] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">
             {cases.map((item) => (
               <article
@@ -92,7 +92,7 @@ export default function CasesPage() {
                 <p className="mt-7 text-xs font-bold uppercase tracking-[0.24em] text-[#3B82FF]">
                   {item.segment}
                 </p>
-                <h2 className="mt-4 text-2xl font-black text-white">
+                <h2 className="mt-4 text-2xl font-extrabold text-white">
                   {item.name}
                 </h2>
                 <p className="premium-copy mt-5 text-base leading-7 text-[#AAB7C4]">

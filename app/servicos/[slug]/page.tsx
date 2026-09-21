@@ -270,10 +270,10 @@ export default async function ServicePage({ params }: PageProps) {
       <Header />
 
       <main className="bg-[#05070D] pt-20">
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-24">
           <div className="mx-auto max-w-7xl">
             <p className="section-kicker">Serviço estratégico</p>
-            <h1 className="mt-5 max-w-5xl text-4xl font-black leading-tight text-white md:text-6xl">
+            <h1 className="mt-5 max-w-5xl text-4xl font-extrabold leading-tight text-white md:text-6xl">
               {service.title}
             </h1>
             <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
@@ -304,11 +304,11 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="bg-[#05070D] px-6 py-24">
+        <section className="bg-[#05070D] px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
             <article className="border border-white/10 bg-[#0B1638] p-7">
               <p className="section-kicker">Problema do cliente</p>
-              <h2 className="mt-4 text-2xl font-black text-white md:text-3xl">
+              <h2 className="mt-4 text-2xl font-extrabold text-white md:text-3xl">
                 O que normalmente trava o resultado
               </h2>
               <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">
@@ -318,7 +318,7 @@ export default async function ServicePage({ params }: PageProps) {
 
             <article className="border border-white/10 bg-[#0B1638] p-7">
               <p className="section-kicker">Como a Reisart resolve</p>
-              <h2 className="mt-4 text-2xl font-black text-white md:text-3xl">
+              <h2 className="mt-4 text-2xl font-extrabold text-white md:text-3xl">
                 Estratégia antes da execução
               </h2>
               <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">
@@ -328,11 +328,11 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="px-6 py-24">
+        <section className="px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[1fr_0.9fr]">
             <div>
               <p className="section-kicker">Benefícios</p>
-              <h2 className="mt-4 text-3xl font-black text-white md:text-5xl">
+              <h2 className="mt-4 text-3xl font-extrabold text-white md:text-5xl">
                 O que sua empresa ganha com esse serviço
               </h2>
               <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -348,7 +348,7 @@ export default async function ServicePage({ params }: PageProps) {
             </div>
 
             <aside className="border border-[#3B82FF]/35 bg-[#0B1638] p-7">
-              <h2 className="text-2xl font-black text-white">
+              <h2 className="text-2xl font-extrabold text-white">
                 Para quem é indicado
               </h2>
               <div className="mt-6 space-y-4">

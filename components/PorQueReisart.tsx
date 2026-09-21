@@ -24,12 +24,12 @@ const motivos = [
 
 export default function PorQueReisart() {
   return (
-    <section className="bg-[#05070D] px-6 py-24">
+    <section className="bg-[#05070D] px-6 py-16 md:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="border-y border-white/[0.07] py-14">
           <FadeIn>
             <p className="section-kicker">Por que a Reisart</p>
-            <h2 className="mt-5 max-w-4xl text-3xl font-black leading-tight tracking-tight text-white md:text-5xl">
+            <h2 className="mt-5 max-w-4xl text-3xl font-extrabold leading-tight tracking-tight text-white md:text-5xl">
               O problema não é a falta de marketing.{" "}
               <span className="text-[#9AA8B6]">É a falta de estratégia por trás dele.</span>
             </h2>
@@ -44,7 +44,7 @@ export default function PorQueReisart() {
                     <div className="inline-flex h-11 w-11 items-center justify-center border border-[#3B82FF]/25 bg-[#3B82FF]/[0.08]">
                       <Icon className="text-[#3B82FF]" size={22} />
                     </div>
-                    <h3 className="mt-6 text-lg font-black tracking-tight text-white">
+                    <h3 className="mt-6 text-lg font-extrabold tracking-tight text-white">
                       {motivo.titulo}
                     </h3>
                     <p className="premium-copy mt-4 text-sm leading-7 text-[#8A9AAA]">

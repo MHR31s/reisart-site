@@ -1,150 +1,87 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, Quote } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
 
 const depoimentos = [
   {
     nome: "Construvip Edificações",
     contexto: "Materiais para Construção",
+    logo: "/case-construvip.png",
     texto:
       "Precisávamos fortalecer nossa presença digital e transmitir mais profissionalismo. A organização da comunicação trouxe mais credibilidade para a marca e melhorou a percepção dos clientes antes mesmo do primeiro contato.",
   },
   {
     nome: "Robert Auto Elétrica",
     contexto: "Serviços Automotivos",
+    logo: "/case-robert.png",
     texto:
       "Nossa empresa já possuía tradição e qualidade no atendimento. Com uma comunicação mais estratégica, conseguimos apresentar isso de forma mais clara, fortalecendo a confiança de quem procura nossos serviços.",
   },
   {
     nome: "Suzana Limpeza Premium",
     contexto: "Serviços Residenciais Premium",
+    logo: "/case-suzana.png",
     texto:
       "O posicionamento premium ajudou nossa marca a transmitir mais valor e profissionalismo. Hoje os clientes entendem melhor a qualidade do serviço antes mesmo de solicitar um orçamento.",
   },
 ];
 
-const logos = [
-  { name: "Construvip Edificações", logo: "/case-construvip.png" },
-  { name: "Robert Auto Elétrica", logo: "/case-robert.png" },
-  { name: "Suzana Limpeza Premium", logo: "/case-suzana.png" },
-  { name: "Santana na Brasa", logo: "/case-santana.png" },
-];
-
-const resultImage1 = "";
-const resultImage2 = "";
-
-const evidencias = [
-  {
-    titulo: "Crescimento de presença digital",
-    descricao:
-      "Alcance, visualizações e evolução de presença através de conteúdo, posicionamento e campanhas.",
-    imagem: resultImage1,
-    alt: "Resultados de alcance e visualizações",
-  },
-  {
-    titulo: "Geração de oportunidades",
-    descricao:
-      "Conversas, solicitações de orçamento e contatos gerados através da operação digital.",
-    imagem: resultImage2,
-    alt: "Conversas e oportunidades geradas",
-  },
-];
-
 export default function ProvaSocialResultados() {
   return (
-    <section className="bg-[#05070D] px-6 py-28">
-      <div className="mx-auto max-w-7xl">
-        <div>
-          <p className="section-kicker">Prova social</p>
-          <h2 className="mt-5 text-3xl font-black leading-tight text-white md:text-5xl">
-            Transformações construídas na prática.
-          </h2>
+    <section className="relative overflow-hidden bg-[#0B1638] px-6 py-20 md:py-28">
+      <div className="pointer-events-none absolute -right-40 -top-20 h-[520px] w-[520px] rounded-full bg-[radial-gradient(circle,rgba(59,130,255,0.25)_0%,transparent_70%)] blur-3xl" />
 
-          <p className="premium-copy mt-7 max-w-3xl text-lg leading-8 text-[#AAB7C4]">
-            Empresas locais que organizaram sua presença digital, fortaleceram
-            sua autoridade e passaram a comunicar mais valor para o mercado.
-          </p>
-        </div>
+      <div className="relative mx-auto max-w-7xl">
+        <FadeIn className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div className="max-w-3xl">
+            <p className="section-kicker">Quem já passou por aqui</p>
+            <h2 className="display mt-5 text-4xl text-white md:text-6xl">
+              Empresas reais.{" "}
+              <span className="gradient-text">Presença mais forte.</span>
+            </h2>
+          </div>
+          <Link
+            href="/cases"
+            className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-[#8DB8FF] hover:text-white"
+          >
+            Ver todos os cases
+            <ArrowRight size={16} />
+          </Link>
+        </FadeIn>
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-3">
-          {depoimentos.map((depoimento) => (
-            <article
-              key={`${depoimento.nome}-${depoimento.contexto}`}
-              className="border border-white/10 bg-[#0B1638] p-7"
-            >
-              <p className="premium-copy text-base leading-8 text-[#DDE7F1]">
-                “{depoimento.texto}”
-              </p>
-              <div className="mt-7 border-t border-white/10 pt-5">
-                <h3 className="font-black text-white">{depoimento.nome}</h3>
-                <p className="mt-1 text-sm text-[#9AA8B6]">
-                  {depoimento.contexto}
+        <div className="-mx-6 mt-14 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-6 pb-4 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
+          {depoimentos.map((depoimento, i) => (
+            <FadeIn key={depoimento.nome} delay={i * 100} className="w-[84vw] max-w-sm shrink-0 snap-center lg:w-auto lg:max-w-none">
+              <article className="no-surface flex h-full flex-col rounded-3xl border border-white/10 bg-white/[0.05] p-8 backdrop-blur">
+                <Quote className="text-[#3B82FF]" size={34} strokeWidth={1.5} />
+                <p className="mt-5 flex-1 text-base leading-8 text-[#E4ECF7]">
+                  {depoimento.texto}
                 </p>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="border border-white/10 bg-[#0B1638] p-7">
-            <h3 className="text-xl font-black text-white">
-              Clientes e segmentos atendidos
-            </h3>
-            <div className="mt-6 grid grid-cols-2 gap-px overflow-hidden border border-white/10 bg-white/10">
-              {logos.map((client) => (
-                <div
-                  key={client.name}
-                  className="flex min-h-32 items-center justify-center bg-[#05070D] p-5"
-                >
-                  <Image
-                    src={client.logo}
-                    alt={client.name}
-                    width={150}
-                    height={80}
-                    className="max-h-16 w-auto object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="border border-white/10 bg-[#0B1638] p-7">
-            <h3 className="text-xl font-black text-white">
-              Evidências da operação
-            </h3>
-            <p className="premium-copy mt-4 text-sm leading-7 text-[#9AA8B6]">
-              Resultados reais, oportunidades geradas e crescimento de presença
-              digital construídos através de estratégia e execução.
-            </p>
-
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              {evidencias.map((evidencia) => (
-                <article
-                  key={evidencia.titulo}
-                  className="group border border-white/10 bg-[#05070D] p-4 transition duration-300 hover:border-[#3B82FF]/45 hover:bg-[#0B1638]"
-                >
-                  <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border border-white/10 bg-[#0B1638]">
-                    {evidencia.imagem ? (
-                      <Image
-                        src={evidencia.imagem}
-                        alt={evidencia.alt}
-                        fill
-                        className="object-cover transition duration-300 group-hover:scale-[1.02]"
-                      />
-                    ) : (
-                      <span className="max-w-40 text-center text-xs font-bold uppercase tracking-[0.24em] text-[#3B82FF]/70">
-                        Imagem em breve
-                      </span>
-                    )}
+                <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
+                  <span className="flex h-14 w-20 shrink-0 items-center justify-center rounded-xl bg-white px-2">
+                    <Image
+                      src={depoimento.logo}
+                      alt=""
+                      width={72}
+                      height={40}
+                      style={{ width: "auto", height: "auto" }}
+                      loading="eager"
+                      className="max-h-9 max-w-full object-contain"
+                    />
+                  </span>
+                  <div>
+                    <h3 className="font-extrabold text-white">
+                      {depoimento.nome}
+                    </h3>
+                    <p className="mt-0.5 text-sm text-[#9AA8B6]">
+                      {depoimento.contexto}
+                    </p>
                   </div>
-                  <h4 className="mt-5 text-base font-black text-white">
-                    {evidencia.titulo}
-                  </h4>
-                  <p className="premium-copy mt-3 text-sm leading-6 text-[#9AA8B6]">
-                    {evidencia.descricao}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
+                </div>
+              </article>
+            </FadeIn>
+          ))}
         </div>
       </div>
     </section>

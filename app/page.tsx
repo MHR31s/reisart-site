@@ -1,18 +1,16 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutMaycon from "@/components/AboutMaycon";
-import PorQueReisart from "@/components/PorQueReisart";
-import SecaoDor from "@/components/SecaoDor";
-import Servicos from "@/components/Servicos";
-import FunilObjetivo from "@/components/FunilObjetivo";
+import Ticker from "@/components/Ticker";
+import LogoStrip from "@/components/LogoStrip";
+import ProblemaSolucao from "@/components/ProblemaSolucao";
+import ObjetivosServicos from "@/components/ObjetivosServicos";
+import EncontradoIA from "@/components/EncontradoIA";
 import Planos from "@/components/Planos";
-import TrustedBy from "@/components/TrustedBy";
 import ProvaSocialResultados from "@/components/ProvaSocialResultados";
 import Metodo from "@/components/Metodo";
-import Cases from "@/components/Cases";
 import FAQ, { faqJsonLd } from "@/components/FAQ";
 import Diagnostico from "@/components/Diagnostico";
-import CTAFinal from "@/components/CTAFinal";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -117,31 +115,27 @@ export default function Home() {
       <main className="overflow-x-hidden bg-[#05070D]">
         <Hero />
 
+        <Ticker />
+
+        <LogoStrip />
+
+        <ProblemaSolucao />
+
+        <ObjetivosServicos />
+
+        <EncontradoIA />
+
         <AboutMaycon />
 
-        <PorQueReisart />
-
-        <SecaoDor />
-
-        <Servicos />
-
-        <FunilObjetivo />
+        <Metodo />
 
         <Planos />
 
         <ProvaSocialResultados />
 
-        <TrustedBy />
-
-        <Metodo />
-
-        <Cases />
-
         <FAQ />
 
         <Diagnostico />
-
-        <CTAFinal />
       </main>
 
       <Footer />
