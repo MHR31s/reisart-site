@@ -1,14 +1,53 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 const navLinks = [
   { href: "/servicos", label: "Serviços" },
+  { href: "/automacoes", label: "Automações" },
   { href: "/#planos", label: "Planos" },
   { href: "/#metodo", label: "Método" },
   { href: "/cases", label: "Cases" },
   { href: "/diagnostico", label: "Diagnóstico" },
 ];
+
+function InstagramIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+function FacebookIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
 
 export default function Footer() {
   return (
@@ -42,16 +81,25 @@ export default function Footer() {
                 href="https://www.instagram.com/reisartmkd/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center border border-white/[0.09] text-[#7A8E9E] hover:border-[#3B82FF]/40 hover:text-[#3B82FF]"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.09] text-[#7A8E9E] hover:border-[#3B82FF]/40 hover:text-[#3B82FF]"
                 aria-label="Instagram Reisart"
               >
-                <ExternalLink size={15} />
+                <InstagramIcon />
+              </a>
+              <a
+                href="https://www.facebook.com/reisart.ads"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.09] text-[#7A8E9E] hover:border-[#3B82FF]/40 hover:text-[#3B82FF]"
+                aria-label="Facebook Reisart"
+              >
+                <FacebookIcon />
               </a>
               <a
                 href="https://wa.me/5519991392850"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center border border-white/[0.09] text-[#7A8E9E] hover:border-[#3B82FF]/40 hover:text-[#3B82FF]"
+                className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/[0.09] text-[#7A8E9E] hover:border-[#3B82FF]/40 hover:text-[#3B82FF]"
                 aria-label="WhatsApp Reisart"
               >
                 <MessageCircle size={15} />
@@ -84,7 +132,14 @@ export default function Footer() {
             </h4>
             <div className="mt-5 space-y-3 text-sm text-[#7A8E9E]">
               <p>(19) 99139-2850</p>
-              <p>@reisartmkd</p>
+              <a
+                href="https://www.instagram.com/reisartmkd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-[#3B82FF]"
+              >
+                @reisartmkd
+              </a>
               <p>reisartmkd.com.br</p>
             </div>
 
