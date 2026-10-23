@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutMaycon from "@/components/AboutMaycon";
 import Ticker from "@/components/Ticker";
+import VideoApresentacao from "@/components/VideoApresentacao";
 import LogoStrip from "@/components/LogoStrip";
 import ProblemaSolucao from "@/components/ProblemaSolucao";
 import ObjetivosServicos from "@/components/ObjetivosServicos";
@@ -90,6 +91,31 @@ const businessJsonLd = {
   ],
 };
 
+const videoJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Reisart Marketing Digital — do invisível ao inevitável",
+  description:
+    "Vídeo de apresentação da Reisart, agência de marketing digital em Piracicaba: estratégia, performance e crescimento para negócios locais.",
+  thumbnailUrl: [
+    "https://www.reisartmkd.com.br/video/reisart-apresentacao-16x9.jpg",
+    "https://www.reisartmkd.com.br/video/reisart-apresentacao-9x16.jpg",
+  ],
+  uploadDate: "2026-10-23T00:00:00-03:00",
+  duration: "PT21S",
+  contentUrl: "https://www.reisartmkd.com.br/video/reisart-apresentacao-16x9.mp4",
+  embedUrl: "https://www.reisartmkd.com.br/#apresentacao",
+  inLanguage: "pt-BR",
+  publisher: {
+    "@type": "Organization",
+    name: "Reisart Agência de Marketing Digital",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.reisartmkd.com.br/logo.png",
+    },
+  },
+};
+
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -109,7 +135,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([businessJsonLd, websiteJsonLd, faqJsonLd]),
+          __html: JSON.stringify([businessJsonLd, websiteJsonLd, videoJsonLd, faqJsonLd]),
         }}
       />
 
@@ -119,6 +145,8 @@ export default function Home() {
         <Hero />
 
         <Ticker />
+
+        <VideoApresentacao />
 
         <LogoStrip />
 
