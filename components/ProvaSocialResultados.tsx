@@ -12,7 +12,7 @@ const depoimentos = [
     texto:
       "“O lance que você faz pra mim é muito grande, irmão — eu nem tô conseguindo dar conta. Queria só visibilidade pra loja... e a clientela aumentou 30%.”",
     link: {
-      href: "https://www.instagram.com/reisartmkd/reels/",
+      href: "https://www.instagram.com/reel/DcCM1u6oWQP/",
       rotulo: "Ouvir o áudio original",
     },
   },
