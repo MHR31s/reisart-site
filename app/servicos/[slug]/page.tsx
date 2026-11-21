@@ -237,6 +237,20 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+// Títulos da aba/Google com a cidade em foco (o H1 da página não muda).
+const seoTitles: Record<string, string> = {
+  "gestao-redes-sociais": "Gestão de Redes Sociais em Piracicaba",
+  "trafego-pago": "Tráfego Pago em Piracicaba",
+  "meta-ads": "Meta Ads em Piracicaba",
+  "google-ads": "Google Ads em Piracicaba",
+  "google-meu-negocio": "Google Meu Negócio em Piracicaba",
+  "criacao-de-sites": "Criação de Sites em Piracicaba",
+  automacoes: "Automação de Atendimento em Piracicaba",
+  "identidade-visual": "Identidade Visual em Piracicaba",
+  "producao-de-conteudo": "Produção de Conteúdo em Piracicaba",
+  "consultoria-estrategica": "Consultoria de Marketing Digital em Piracicaba",
+};
+
 export function generateStaticParams() {
   return Object.keys(services).map((slug) => ({ slug }));
 }
@@ -252,7 +266,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: service.title,
+    title: seoTitles[slug] ?? service.title,
     description: service.description,
   };
 }
