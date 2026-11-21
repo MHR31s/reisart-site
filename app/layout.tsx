@@ -51,10 +51,6 @@ export const metadata: Metadata = {
   creator: "Reisart Agência de Marketing Digital",
   publisher: "Reisart Agência de Marketing Digital",
 
-  alternates: {
-    canonical: "https://www.reisartmkd.com.br",
-  },
-
   robots: {
     index: true,
     follow: true,

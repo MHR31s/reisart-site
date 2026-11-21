@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import AboutMaycon from "@/components/AboutMaycon";
@@ -116,6 +117,10 @@ const videoJsonLd = {
       url: "https://www.reisartmkd.com.br/logo.png",
     },
   },
+};
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
 };
 
 export default function Home() {

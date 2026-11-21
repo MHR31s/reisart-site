@@ -175,6 +175,7 @@ export async function generateMetadata({
   return {
     title: `${item.name} | Case REISART`,
     description: item.description,
+    alternates: { canonical: `/cases/${slug}` },
   };
 }
 

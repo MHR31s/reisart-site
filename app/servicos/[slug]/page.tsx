@@ -268,6 +268,7 @@ export async function generateMetadata({
   return {
     title: seoTitles[slug] ?? service.title,
     description: service.description,
+    alternates: { canonical: `/servicos/${slug}` },
   };
 }
 

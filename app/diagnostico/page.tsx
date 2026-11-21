@@ -8,6 +8,7 @@ import MetaPageEvent from "@/components/MetaPageEvent";
 
 export const metadata: Metadata = {
   title: "Diagnóstico Estratégico Digital",
+  alternates: { canonical: "/diagnostico" },
   description:
     "Receba uma análise estratégica da presença digital da sua empresa e descubra oportunidades em Instagram, Google, site, SEO, anúncios, WhatsApp e automações.",
 };

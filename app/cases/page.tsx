@@ -88,6 +88,7 @@ const cases = [
 
 export const metadata: Metadata = {
   title: "Cases e Projetos da REISART",
+  alternates: { canonical: "/cases" },
   description:
     "Conheça projetos da REISART com empresas locais que organizaram presença digital, fortaleceram autoridade e melhoraram sua comunicação.",
 };

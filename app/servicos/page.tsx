@@ -56,6 +56,7 @@ const services = [
 
 export const metadata: Metadata = {
   title: "Serviços de Marketing Digital para Empresas Locais",
+  alternates: { canonical: "/servicos" },
   description:
     "Conheça os serviços da REISART para empresas que desejam fortalecer sua presença digital, gerar mais oportunidades e crescer com estratégia.",
 };

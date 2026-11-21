@@ -11,6 +11,7 @@ const whatsappLink =
 
 export const metadata: Metadata = {
   title: "Automação Inteligente para Empresas",
+  alternates: { canonical: "/automacoes" },
   description:
     "Automatize processos, ganhe tempo e atenda clientes 24 horas por dia com WhatsApp inteligente, IA, CRM e follow-up automático.",
 };
