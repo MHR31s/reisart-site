@@ -2,12 +2,11 @@ import Image from "next/image";
 
 const cases = [
   {
-    cliente: "Construvip Edificações",
-    logo: "/case-construvip.png",
-    light: true,
-    segmento: "Construção e reformas",
-    desafio: "Organizar a comunicação e fortalecer a presença digital.",
-    resultado: "Imagem mais profissional e geração contínua de oportunidades.",
+    cliente: "Marcenaria Ponto Alto",
+    logo: "/case-pontoalto.png",
+    segmento: "Marcenaria e móveis planejados",
+    desafio: "Apoiar a rotina de produção e divulgar os móveis nas redes sociais.",
+    resultado: "Conteúdo para redes sociais e materiais de apoio à produção, como desenhos técnicos, lista de corte e cronograma.",
   },
   {
     cliente: "Robert Auto Elétrica",
@@ -42,13 +41,13 @@ export default function Cases() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-3">
+        <div className="mt-16 grid gap-5 lg:grid-cols-2">
           {cases.map((item) => (
             <article
               key={item.cliente}
               className="border border-white/10 bg-[#0B1638] p-7 transition-colors hover:border-[#3B82FF]/50"
             >
-              <div className={["flex h-24 items-center justify-center rounded-xl", item.light ? "bg-[#EEF2F8] px-4" : "bg-[#05070D] px-4"].join(" ")}>
+              <div className="flex h-24 items-center justify-center rounded-xl bg-[#05070D] px-4">
                 <Image
                   src={item.logo}
                   alt={item.cliente}

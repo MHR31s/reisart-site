@@ -2,11 +2,6 @@ import Image from "next/image";
 
 const clients = [
   {
-    name: "Construvip",
-    segment: "Materiais para construção",
-    logo: "/case-construvip.png",
-  },
-  {
     name: "Robert Auto Elétrica",
     segment: "Serviços automotivos",
     logo: "/case-robert.png",

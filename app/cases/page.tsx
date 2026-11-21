@@ -11,15 +11,6 @@ const whatsappLink =
 
 const cases = [
   {
-    name: "Construvip Edificações",
-    slug: "construvip",
-    segment: "Materiais para Construção",
-    done:
-      "Organização da presença digital, comunicação institucional e fortalecimento da percepção profissional da marca.",
-    logo: "/case-construvip.png",
-    href: "/cases/construvip",
-  },
-  {
     name: "Robert Auto Elétrica",
     slug: "robert_auto_eletrica",
     segment: "Serviços Automotivos",
@@ -27,6 +18,24 @@ const cases = [
       "Comunicação mais estratégica para apresentar tradição, confiança e qualidade de atendimento ao mercado local.",
     logo: "/case-robert.png",
     href: "/cases/robert-auto-eletrica",
+  },
+  {
+    name: "Marcenaria Ponto Alto",
+    slug: "marcenaria_ponto_alto",
+    segment: "Marcenaria e móveis planejados",
+    done:
+      "Conteúdo para redes sociais e materiais de apoio à rotina de produção da marcenaria.",
+    logo: "/case-pontoalto.png",
+    href: "/cases/marcenaria-ponto-alto",
+  },
+  {
+    name: "Santana na Brasa",
+    slug: "santana_na_brasa",
+    segment: "Churrasqueiro para eventos",
+    done:
+      "Comunicação para vender o serviço de churrasqueiro contratado para eventos, com orçamento personalizado.",
+    logo: "/case-santana.png",
+    href: "/cases/santana-na-brasa",
   },
   {
     name: "Fabinho Elétrica & Mecânica",
@@ -74,7 +83,7 @@ export default function CasesPage() {
         </section>
 
         <section className="bg-[#05070D] px-6 py-16 md:py-24">
-          <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
             {cases.map((item) => (
               <article
                 key={item.name}

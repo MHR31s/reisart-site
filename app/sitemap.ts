@@ -17,8 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/servicos/producao-de-conteudo",
     "/servicos/consultoria-estrategica",
     "/cases",
-    "/cases/construvip",
     "/cases/robert-auto-eletrica",
+    "/cases/marcenaria-ponto-alto",
+    "/cases/santana-na-brasa",
     "/cases/fabinho-eletrica-mecanica",
     "/diagnostico",
   ];

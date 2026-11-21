@@ -5,13 +5,6 @@ import FadeIn from "@/components/FadeIn";
 
 const depoimentos = [
   {
-    nome: "Construvip Edificações",
-    contexto: "Materiais para Construção",
-    logo: "/case-construvip.png",
-    texto:
-      "Precisávamos fortalecer nossa presença digital e transmitir mais profissionalismo. A organização da comunicação trouxe mais credibilidade para a marca e melhorou a percepção dos clientes antes mesmo do primeiro contato.",
-  },
-  {
     nome: "Robert Auto Elétrica",
     contexto: "Serviços Automotivos",
     logo: "/case-robert.png",
@@ -55,7 +48,7 @@ export default function ProvaSocialResultados() {
           </Link>
         </FadeIn>
 
-        <div className="-mx-6 mt-14 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-6 pb-4 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
+        <div className="-mx-6 mt-14 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-6 pb-4 lg:mx-auto lg:grid lg:max-w-5xl lg:grid-cols-2 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
           {depoimentos.map((depoimento, i) => (
             <FadeIn key={depoimento.nome} delay={i * 100} className="w-[84vw] max-w-sm shrink-0 snap-center lg:w-auto lg:max-w-none">
               <article className="no-surface flex h-full flex-col rounded-3xl border border-white/10 bg-white/[0.05] p-8 backdrop-blur">

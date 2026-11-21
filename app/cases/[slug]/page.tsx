@@ -10,25 +10,6 @@ const whatsappLink =
   "https://wa.me/5519991392850?text=Ol%C3%A1,%20quero%20solicitar%20um%20diagn%C3%B3stico%20estrat%C3%A9gico%20para%20minha%20empresa.";
 
 const cases = {
-  construvip: {
-    name: "Construvip Edificações",
-    segment: "Materiais para Construção",
-    logo: "/case-construvip.png",
-    description:
-      "Projeto de posicionamento e presença digital para uma empresa local do segmento de materiais para construção.",
-    challenge:
-      "A marca precisava fortalecer sua presença digital e transmitir mais profissionalismo para aumentar a confiança antes do primeiro contato.",
-    strategy:
-      "A estratégia foi organizar a comunicação, valorizar a autoridade local e construir uma presença mais consistente para o público da região.",
-    deliveries: [
-      "Organização da comunicação digital",
-      "Fortalecimento da presença institucional",
-      "Direcionamento de conteúdo para credibilidade",
-      "Apoio ao posicionamento da marca no mercado local",
-    ],
-    transformation:
-      "A empresa passou a comunicar mais profissionalismo e credibilidade, melhorando a percepção dos clientes sobre a marca.",
-  },
   "robert-auto-eletrica": {
     name: "Robert Auto Elétrica",
     segment: "Serviços Automotivos",
@@ -66,6 +47,44 @@ const cases = {
     ],
     transformation:
       "Em depoimento em áudio, o próprio Fabinho relata que a clientela aumentou 30% e que a demanda ficou grande demais para dar conta. Número informado pelo cliente.",
+  },
+  "marcenaria-ponto-alto": {
+    name: "Marcenaria Ponto Alto",
+    segment: "Marcenaria e móveis planejados",
+    logo: "/case-pontoalto.png",
+    description:
+      "Conteúdo para redes sociais e apoio à rotina de produção de uma marcenaria de móveis planejados.",
+    challenge:
+      "A marcenaria precisava divulgar os móveis nas redes sociais e organizar a rotina de produção do dia a dia.",
+    strategy:
+      "A Reisart combinou conteúdo para as redes com materiais de apoio à produção, mantendo tudo alinhado à identidade da marca.",
+    deliveries: [
+      "Conteúdo para redes sociais",
+      "Desenhos técnicos e plantas de móveis",
+      "Lista de corte e materiais",
+      "Cronograma de controle de produção",
+    ],
+    transformation:
+      "A marcenaria passou a ter conteúdo para divulgar o trabalho e materiais organizados para a produção.",
+  },
+  "santana-na-brasa": {
+    name: "Santana na Brasa",
+    segment: "Churrasqueiro para eventos",
+    logo: "/case-santana.png",
+    description:
+      "Comunicação para um churrasqueiro contratado para eventos, voltada a gerar pedidos de orçamento.",
+    challenge:
+      "Deixar claro que o Santana é um churrasqueiro contratado para eventos, e não um restaurante.",
+    strategy:
+      "A comunicação foi construída para vender o serviço contratado, com orçamento personalizado e os tipos de evento atendidos.",
+    deliveries: [
+      "Conteúdo para redes sociais",
+      "Comunicação focada em orçamento personalizado",
+      "Apresentação dos tipos de evento atendidos",
+      "Identidade visual aplicada aos materiais",
+    ],
+    transformation:
+      "A mensagem passou a ser a do serviço de churrasqueiro para eventos, o que ajuda quem busca esse tipo de contratação a entender a oferta.",
   },
 } as const;
 

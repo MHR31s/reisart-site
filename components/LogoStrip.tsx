@@ -7,7 +7,6 @@ const marcas = [
   { name: "Santana na Brasa", logo: "/case-santana.png" },
   { name: "União Vila Fátima", logo: "/case-uvf.png" },
   { name: "Fabinho Elétrica & Mecânica", logo: "/case-fabinho.png", escuro: true },
-  { name: "Construvip", logo: "/case-construvip.png" },
 ];
 
 const numeros = [
