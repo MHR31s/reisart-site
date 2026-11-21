@@ -25,16 +25,19 @@ const businessJsonLd = {
   description:
     "A Reisart ajuda empresas locais a gerar mais visibilidade, autoridade e oportunidades comerciais através de marketing digital, tráfego pago, sites, Google Meu Negócio e automações.",
   telephone: "+55 19 99139-2850",
-  areaServed: {
-    "@type": "City",
-    name: "Piracicaba",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Piracicaba",
-      addressRegion: "SP",
-      addressCountry: "BR",
-    },
+  founder: {
+    "@type": "Person",
+    name: "Maycon Reis",
   },
+  areaServed: [
+    "Piracicaba",
+    "Rio das Pedras",
+    "São Pedro",
+    "Charqueada",
+    "Limeira",
+    "Americana",
+    "Santa Bárbara d'Oeste",
+  ],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Piracicaba",
@@ -104,7 +107,6 @@ const videoJsonLd = {
   uploadDate: "2026-10-23T00:00:00-03:00",
   duration: "PT21S",
   contentUrl: "https://www.reisartmkd.com.br/video/reisart-apresentacao-16x9.mp4",
-  embedUrl: "https://www.reisartmkd.com.br/#apresentacao",
   inLanguage: "pt-BR",
   publisher: {
     "@type": "Organization",
@@ -116,26 +118,13 @@ const videoJsonLd = {
   },
 };
 
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "Reisart Agência de Marketing Digital",
-  url: "https://www.reisartmkd.com.br",
-  inLanguage: "pt-BR",
-  publisher: {
-    "@type": "Organization",
-    name: "Reisart Agência de Marketing Digital",
-    url: "https://www.reisartmkd.com.br",
-  },
-};
-
 export default function Home() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([businessJsonLd, websiteJsonLd, videoJsonLd, faqJsonLd]),
+          __html: JSON.stringify([businessJsonLd, videoJsonLd, faqJsonLd]),
         }}
       />
 

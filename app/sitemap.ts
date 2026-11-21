@@ -1,5 +1,8 @@
 import { MetadataRoute } from "next";
 
+// Atualize esta data quando o conteúdo do site mudar de verdade.
+const ULTIMA_ATUALIZACAO = new Date("2026-11-21");
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.reisartmkd.com.br";
   const routes = [
@@ -30,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    lastModified: ULTIMA_ATUALIZACAO,
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.8,
   }));
