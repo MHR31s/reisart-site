@@ -83,10 +83,8 @@ export default function Hero() {
 
         {/* Visual */}
         <div className="relative mx-auto flex w-full max-w-[560px] items-end justify-center lg:min-h-[720px]">
-          {/* orbe + anéis */}
+          {/* brilho de fundo (sem molduras) */}
           <div className="absolute bottom-6 left-1/2 h-[92%] w-[92%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_50%_40%,rgba(33,68,255,0.55)_0%,rgba(33,68,255,0.18)_45%,transparent_70%)]" />
-          <div className="spin-slow absolute bottom-10 left-1/2 h-[84%] w-[84%] -translate-x-1/2 rounded-full border border-dashed border-[#3B82FF]/30" />
-          <div className="absolute bottom-24 left-1/2 h-[60%] w-[60%] -translate-x-1/2 rounded-full border border-[#3B82FF]/20" />
 
           <Image
             src="/maycon-hero.png"

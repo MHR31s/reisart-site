@@ -16,8 +16,7 @@ export default function AboutMaycon() {
       <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20">
         <FadeIn className="relative order-2 lg:order-1">
           <div className="relative mx-auto max-w-md">
-            <div className="absolute inset-x-0 bottom-0 top-16 rounded-[2rem] bg-[linear-gradient(160deg,#2144FF_0%,#5B3DF5_100%)]" />
-            <div className="absolute -left-6 top-24 h-24 w-24 rounded-full bg-[#2144FF]/10 blur-xl" />
+            <div className="absolute inset-x-0 bottom-0 top-10 bg-[radial-gradient(ellipse_at_50%_55%,rgba(33,68,255,0.28)_0%,transparent_68%)]" />
             <Image
               src="/maycon-about.png"
               alt="Maycon Reis, fundador da Reisart"
@@ -25,7 +24,7 @@ export default function AboutMaycon() {
               height={700}
               className="relative z-10 mx-auto h-auto max-h-[560px] w-auto object-contain"
             />
-            <div className="absolute -bottom-5 left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded-2xl bg-white px-6 py-3 text-center shadow-[0_18px_40px_rgba(11,22,56,0.2)]">
+            <div className="relative z-20 mt-4 text-center">
               <p className="text-sm font-extrabold text-[#0B1638]">Maycon Reis</p>
               <p className="text-xs font-semibold text-[#4A5878]">
                 Fundador · Reisart
@@ -66,12 +65,13 @@ export default function AboutMaycon() {
             </p>
           </div>
 
-          <ul className="mt-9 flex flex-wrap gap-3">
+          <ul className="mt-9 flex flex-wrap gap-x-7 gap-y-3">
             {pontos.map((ponto) => (
               <li
                 key={ponto}
-                className="rounded-full border border-[#CBD5EE] bg-[#F3F6FF] px-4 py-2 text-sm font-bold text-[#1F3BD6]"
+                className="flex items-center gap-2 text-sm font-bold text-[#1F3BD6]"
               >
+                <span className="h-1.5 w-1.5 rounded-full bg-[#2144FF]" />
                 {ponto}
               </li>
             ))}
