@@ -17,11 +17,11 @@ const cases = [
     resultado: "Marca fortalecida e maior proximidade com clientes.",
   },
   {
-    cliente: "Suzana Limpeza Premium",
-    logo: "/case-suzana.png",
-    segmento: "Serviço premium",
-    desafio: "Posicionar uma oferta de alto valor em mercado competitivo.",
-    resultado: "Percepção premium mais clara e comunicação sofisticada.",
+    cliente: "Fabinho Elétrica & Mecânica",
+    logo: "/case-fabinho.png",
+    segmento: "Oficina de elétrica e mecânica",
+    desafio: "Comunicar o trabalho da oficina com clareza e atrair clientes pelo Instagram.",
+    resultado: "Anúncios e conteúdo no dia a dia da oficina, com depoimento em áudio do próprio Fabinho.",
   },
 ];
 

@@ -16,9 +16,9 @@ const clients = [
     segment: "Serviço especializado",
   },
   {
-    name: "Suzana Limpeza Premium",
-    segment: "Serviços residenciais premium",
-    logo: "/case-suzana.png",
+    name: "Fabinho Elétrica & Mecânica",
+    segment: "Oficina de elétrica e mecânica",
+    logo: "/case-fabinho.png",
   },
   {
     name: "União Vila Fátima",

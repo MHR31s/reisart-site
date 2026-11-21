@@ -48,24 +48,24 @@ const cases = {
     transformation:
       "A comunicação passou a refletir melhor a experiência real da empresa, fortalecendo a confiança de quem procura os serviços.",
   },
-  "suzana-limpeza-premium": {
-    name: "Suzana Limpeza Premium",
-    segment: "Serviços Residenciais Premium",
-    logo: "/case-suzana.png",
+  "fabinho-eletrica-mecanica": {
+    name: "Fabinho Elétrica & Mecânica",
+    segment: "Oficina de elétrica e mecânica",
+    logo: "/case-fabinho.png",
     description:
-      "Projeto de posicionamento premium para uma marca de serviços residenciais com foco em valor e profissionalismo.",
+      "Projeto de anúncios e conteúdo para o Instagram de uma oficina de elétrica e mecânica.",
     challenge:
-      "A marca precisava transmitir uma percepção premium em um mercado competitivo e deixar mais clara a qualidade do serviço.",
+      "A oficina precisava comunicar o seu trabalho de forma direta e atrair contatos pelo Instagram.",
     strategy:
-      "A estratégia foi construir uma comunicação mais sofisticada, orientada a valor, confiança e diferenciação antes do orçamento.",
+      "A estratégia foi criar anúncios e conteúdo pensados para a rotina da oficina, com mensagem clara e foco em levar a pessoa ao contato.",
     deliveries: [
-      "Direcionamento de posicionamento premium",
-      "Comunicação focada em valor percebido",
-      "Organização da apresentação dos serviços",
-      "Fortalecimento da autoridade e confiança",
+      "Anúncios para Instagram",
+      "Conteúdo para redes sociais",
+      "Comunicação alinhada ao dia a dia da oficina",
+      "Acompanhamento direto com o fundador da Reisart",
     ],
     transformation:
-      "A marca passou a transmitir mais valor e profissionalismo, ajudando os clientes a entenderem melhor a qualidade do serviço antes do contato.",
+      "O próprio Fabinho gravou um depoimento em áudio sobre o trabalho, publicado no Instagram da Reisart.",
   },
 } as const;
 

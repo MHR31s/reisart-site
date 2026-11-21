@@ -19,11 +19,16 @@ const depoimentos = [
       "Nossa empresa já possuía tradição e qualidade no atendimento. Com uma comunicação mais estratégica, conseguimos apresentar isso de forma mais clara, fortalecendo a confiança de quem procura nossos serviços.",
   },
   {
-    nome: "Suzana Limpeza Premium",
-    contexto: "Serviços Residenciais Premium",
-    logo: "/case-suzana.png",
+    nome: "Fabinho Elétrica & Mecânica",
+    contexto: "Oficina de elétrica e mecânica",
+    logo: "/case-fabinho.png",
+    escuro: true,
     texto:
-      "O posicionamento premium ajudou nossa marca a transmitir mais valor e profissionalismo. Hoje os clientes entendem melhor a qualidade do serviço antes mesmo de solicitar um orçamento.",
+      "O Fabinho gravou um depoimento em áudio sobre o trabalho com a Reisart. Ele está publicado no nosso Instagram.",
+    link: {
+      href: "https://www.instagram.com/reisartmkd/reels/",
+      rotulo: "Ouvir o depoimento",
+    },
   },
 ];
 
@@ -57,9 +62,29 @@ export default function ProvaSocialResultados() {
                 <Quote className="text-[#3B82FF]" size={34} strokeWidth={1.5} />
                 <p className="mt-5 flex-1 text-base leading-8 text-[#E4ECF7]">
                   {depoimento.texto}
+                  {"link" in depoimento && depoimento.link ? (
+                    <>
+                      {" "}
+                      <a
+                        href={depoimento.link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-[#8DB8FF] hover:text-white"
+                      >
+                        {depoimento.link.rotulo} →
+                      </a>
+                    </>
+                  ) : null}
                 </p>
                 <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
-                  <span className="flex h-14 w-20 shrink-0 items-center justify-center rounded-xl bg-white px-2">
+                  <span
+                    className={[
+                      "flex h-14 w-20 shrink-0 items-center justify-center rounded-xl px-2",
+                      "escuro" in depoimento && depoimento.escuro
+                        ? "bg-[#05070D]"
+                        : "bg-white",
+                    ].join(" ")}
+                  >
                     <Image
                       src={depoimento.logo}
                       alt=""

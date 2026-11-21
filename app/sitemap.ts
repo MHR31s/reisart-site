@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cases",
     "/cases/construvip",
     "/cases/robert-auto-eletrica",
-    "/cases/suzana-limpeza-premium",
+    "/cases/fabinho-eletrica-mecanica",
     "/diagnostico",
   ];
 

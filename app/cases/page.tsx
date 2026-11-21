@@ -29,13 +29,13 @@ const cases = [
     href: "/cases/robert-auto-eletrica",
   },
   {
-    name: "Suzana Limpeza Premium",
-    slug: "suzana_limpeza",
-    segment: "Serviços Residenciais Premium",
+    name: "Fabinho Elétrica & Mecânica",
+    slug: "fabinho_eletrica_mecanica",
+    segment: "Oficina de elétrica e mecânica",
     done:
-      "Posicionamento premium para transmitir valor, profissionalismo e qualidade antes da solicitação de orçamento.",
-    logo: "/case-suzana.png",
-    href: "/cases/suzana-limpeza-premium",
+      "Anúncios e conteúdo para o Instagram da oficina, com comunicação direta voltada a contato e atendimento.",
+    logo: "/case-fabinho.png",
+    href: "/cases/fabinho-eletrica-mecanica",
   },
 ];
 

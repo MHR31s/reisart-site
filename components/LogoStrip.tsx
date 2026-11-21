@@ -6,7 +6,7 @@ const marcas = [
   { name: "Marcenaria Ponto Alto", logo: "/case-pontoalto.png" },
   { name: "Santana na Brasa", logo: "/case-santana.png" },
   { name: "União Vila Fátima", logo: "/case-uvf.png" },
-  { name: "Suzana Limpeza Premium", logo: "/case-suzana.png" },
+  { name: "Fabinho Elétrica & Mecânica", logo: "/case-fabinho.png", escuro: true },
   { name: "Construvip", logo: "/case-construvip.png" },
 ];
 
@@ -22,7 +22,12 @@ function Fila({ ocultar = false }: { ocultar?: boolean }) {
       {marcas.map((marca) => (
         <li
           key={marca.name}
-          className="flex h-24 w-52 items-center justify-center rounded-2xl border border-[#DCE3F5] bg-white px-6 shadow-[0_6px_20px_rgba(33,68,255,0.06)]"
+          className={[
+            "flex h-24 w-52 items-center justify-center rounded-2xl border px-6 shadow-[0_6px_20px_rgba(33,68,255,0.06)]",
+            "escuro" in marca && marca.escuro
+              ? "border-[#0B1638] bg-[#0B1638]"
+              : "border-[#DCE3F5] bg-white",
+          ].join(" ")}
         >
           <Image
             src={marca.logo}
