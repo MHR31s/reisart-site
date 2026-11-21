@@ -20,8 +20,8 @@ const cases = [
     cliente: "Fabinho Elétrica & Mecânica",
     logo: "/case-fabinho.png",
     segmento: "Oficina de elétrica e mecânica",
-    desafio: "Comunicar o trabalho da oficina com clareza e atrair clientes pelo Instagram.",
-    resultado: "Anúncios e conteúdo no dia a dia da oficina, com depoimento em áudio do próprio Fabinho.",
+    desafio: "Dar visibilidade à loja e atrair clientes pelo Instagram.",
+    resultado: "Clientela 30% maior, segundo o próprio Fabinho em depoimento em áudio.",
   },
 ];
 

@@ -55,7 +55,7 @@ const cases = {
     description:
       "Projeto de anúncios e conteúdo para o Instagram de uma oficina de elétrica e mecânica.",
     challenge:
-      "A oficina precisava comunicar o seu trabalho de forma direta e atrair contatos pelo Instagram.",
+      "Dar visibilidade à loja e atrair mais clientes pelo Instagram.",
     strategy:
       "A estratégia foi criar anúncios e conteúdo pensados para a rotina da oficina, com mensagem clara e foco em levar a pessoa ao contato.",
     deliveries: [
@@ -65,7 +65,7 @@ const cases = {
       "Acompanhamento direto com o fundador da Reisart",
     ],
     transformation:
-      "O próprio Fabinho gravou um depoimento em áudio sobre o trabalho, publicado no Instagram da Reisart.",
+      "Em depoimento em áudio, o próprio Fabinho relata que a clientela aumentou 30% e que a demanda ficou grande demais para dar conta. Número informado pelo cliente.",
   },
 } as const;
 

@@ -33,7 +33,7 @@ const cases = [
     slug: "fabinho_eletrica_mecanica",
     segment: "Oficina de elétrica e mecânica",
     done:
-      "Anúncios e conteúdo para o Instagram da oficina, com comunicação direta voltada a contato e atendimento.",
+      "Visibilidade no Instagram para a oficina. Segundo o próprio Fabinho, a clientela aumentou 30%.",
     logo: "/case-fabinho.png",
     href: "/cases/fabinho-eletrica-mecanica",
   },
