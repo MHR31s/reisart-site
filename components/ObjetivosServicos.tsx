@@ -51,7 +51,7 @@ const objetivos: Objetivo[] = [
       },
       {
         nome: "Gestão de Redes Sociais",
-        descricao: "Transforme seguidores em clientes.",
+        descricao: "Dê um rumo comercial ao seu Instagram.",
         href: "/servicos/gestao-redes-sociais",
         icon: Share2,
       },
@@ -67,7 +67,7 @@ const objetivos: Objetivo[] = [
     id: "clientes",
     rotulo: "Mais clientes",
     icon: Megaphone,
-    titulo: "Receba mensagens de quem já quer comprar.",
+    titulo: "Receba mensagens de clientes em potencial.",
     texto: "Campanhas e páginas pensadas para gerar contatos e orçamentos.",
     servicos: [
       {
@@ -95,7 +95,7 @@ const objetivos: Objetivo[] = [
     rotulo: "Profissionalizar",
     icon: Palette,
     titulo: "Pareça a empresa que você realmente é.",
-    texto: "Site e identidade visual que geram confiança logo no primeiro contato.",
+    texto: "Site e identidade visual pensados para passar confiança logo no primeiro contato.",
     servicos: [
       {
         nome: "Criação de Sites",
@@ -115,7 +115,7 @@ const objetivos: Objetivo[] = [
     id: "automatizar",
     rotulo: "Automatizar",
     icon: Bot,
-    titulo: "Atenda rápido, sem perder nenhum contato.",
+    titulo: "Atenda rápido e mantenha seus contatos organizados.",
     texto: "Automações e IA para organizar e acelerar o seu atendimento.",
     servicos: [
       {

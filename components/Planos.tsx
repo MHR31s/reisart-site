@@ -14,9 +14,9 @@ const planos = [
   {
     nome: "Essencial",
     slug: "essencial",
-    subtitulo: "Comece a ser visto. Comece a vender.",
+    subtitulo: "Comece a ser visto no digital.",
     objetivo:
-      "Criar presença digital, atrair o público certo e gerar as primeiras oportunidades de venda.",
+      "Criar presença digital e começar a atrair o público certo.",
     ideal:
       "Empresas pequenas, negócios locais e marcas que estão começando no digital.",
     destaque: "Primeiro passo",
@@ -32,12 +32,12 @@ const planos = [
   {
     nome: "Crescimento",
     slug: "crescimento",
-    subtitulo: "Mais visibilidade, mais leads e mais vendas.",
+    subtitulo: "Mais canais trabalhando juntos.",
     objetivo:
-      "Aumentar o volume de leads qualificados, fortalecer a marca e gerar crescimento consistente.",
+      "Fortalecer a marca e atrair mais contatos com campanhas e conteúdo em conjunto.",
     ideal:
-      "Empresas que já vendem e querem crescer com mais previsibilidade.",
-    destaque: "Mais escolhido",
+      "Empresas que já vendem e querem organizar o crescimento.",
+    destaque: "Recomendado",
     recomendado: true,
     icon: TrendingUp,
     topicos: [
@@ -51,11 +51,11 @@ const planos = [
   {
     nome: "Performance",
     slug: "performance",
-    subtitulo: "Domine sua região e acelere suas vendas.",
+    subtitulo: "Presença forte na sua região.",
     objetivo:
-      "Gerar alto volume de leads, aumentar vendas e posicionar a marca como referência local.",
+      "Investir mais em anúncios e otimização para ganhar espaço na sua região.",
     ideal:
-      "Empresas que buscam resultados mais agressivos, consistentes e escaláveis.",
+      "Empresas que querem investir mais forte em tráfego e acompanhamento.",
     destaque: "Crescimento regional",
     icon: Crown,
     topicos: [
@@ -69,11 +69,11 @@ const planos = [
   {
     nome: "Premium",
     slug: "premium",
-    subtitulo: "Tecnologia e inteligência para dominar o mercado digital.",
+    subtitulo: "Tecnologia, automação e dados no seu atendimento.",
     objetivo:
-      "Unir tecnologia, automação e inteligência de dados para escalar atendimento, conversão e resultados.",
+      "Unir tecnologia, automação e dados para organizar e acelerar o atendimento.",
     ideal:
-      "Empresas que já têm tração e querem operar com tecnologia de ponta e presença digital completa.",
+      "Empresas que já têm demanda e querem automatizar o atendimento e ter presença digital completa.",
     destaque: "Tecnologia e IA",
     icon: Bot,
     topicos: [

@@ -28,13 +28,13 @@ const etapas: {
   {
     numero: "04",
     titulo: "Geração de Leads",
-    descricao: "Implementamos campanhas para gerar oportunidades qualificadas.",
+    descricao: "Colocamos campanhas no ar para atrair contatos de clientes em potencial.",
     icon: Megaphone,
   },
   {
     numero: "05",
     titulo: "Escala",
-    descricao: "Automações, dados e crescimento contínuo e previsível.",
+    descricao: "Automações e dados para crescer com mais organização.",
     icon: Rocket,
   },
 ];

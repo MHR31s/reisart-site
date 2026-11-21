@@ -37,13 +37,14 @@ export default function Hero() {
           </div>
 
           <h1 className="display mt-7 text-[2.6rem] text-white sm:text-6xl lg:text-[4.4rem]">
-            Transformamos empresas locais em{" "}
-            <span className="gradient-text">máquinas de geração de clientes.</span>
+            Marketing digital para empresas locais{" "}
+            <span className="gradient-text">serem encontradas e escolhidas.</span>
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-8 text-[#C3D0DE]">
             Sites, Google, tráfego pago, redes sociais e automações com IA para
-            sua empresa ser encontrada, gerar confiança e vender mais.
+            empresas de Piracicaba e região, com atendimento direto do
+            fundador.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
