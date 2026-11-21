@@ -7,6 +7,10 @@ const marcas = [
   { name: "Santana na Brasa", logo: "/case-santana.png" },
   { name: "União Vila Fátima", logo: "/case-uvf.png" },
   { name: "Fabinho Elétrica & Mecânica", logo: "/case-fabinho.png", escuro: true },
+  { name: "Dra. Adilaine Guastalli", logo: "/case-adilaine.png" },
+  { name: "AS Distribuidora", logo: "/case-as-distribuidora.png" },
+  { name: "Evertoon Tattoo", logo: "/case-evertoon.png", escuro: true },
+  { name: "Marmoraria Vila Sônia", logo: "/case-vilasonia.png", escuro: true },
 ];
 
 const numeros = [

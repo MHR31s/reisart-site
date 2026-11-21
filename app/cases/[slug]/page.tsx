@@ -86,6 +86,84 @@ const cases = {
     transformation:
       "A mensagem passou a ser a do serviço de churrasqueiro para eventos, o que ajuda quem busca esse tipo de contratação a entender a oferta.",
   },
+  "adilaine-guastalli": {
+    name: "Dra. Adilaine Guastalli",
+    segment: "Odontologia",
+    logo: "/case-adilaine.png",
+    claro: true,
+    description:
+      "Organização da presença digital de uma cirurgiã-dentista: Google, Instagram e informações do consultório.",
+    challenge:
+      "Dar sentido e consistência ao que a Dra. Adilaine já tinha, antes de pensar em anúncios.",
+    strategy:
+      "A Reisart começou organizando o perfil no Google, o Instagram e as informações do consultório, com a identidade visual dela como referência para todos os canais.",
+    deliveries: [
+      "Organização do perfil da empresa no Google",
+      "Organização do Instagram",
+      "Artes e vídeos alinhados à identidade visual",
+      "Nome profissional padronizado em todos os canais",
+    ],
+    transformation:
+      "A presença da Dra. Adilaine passou a seguir um mesmo padrão nos canais, como base para as próximas etapas.",
+  },
+  "as-distribuidora": {
+    name: "AS Distribuidora",
+    segment: "Produtos hospitalares e EPIs",
+    logo: "/case-as-distribuidora.png",
+    claro: true,
+    description:
+      "Catálogo digital com pedido pelo WhatsApp e painel de gestão de vendas para uma distribuidora de produtos hospitalares e EPIs.",
+    challenge:
+      "Vender mais pelo WhatsApp, site e Instagram, com uma operação comercial mais organizada.",
+    strategy:
+      "A Reisart criou um catálogo digital com pedido pelo WhatsApp e um painel para acompanhar as vendas.",
+    deliveries: [
+      "Catálogo digital com pedido pelo WhatsApp",
+      "Painel de gestão de vendas",
+      "Organização do fluxo de pedidos",
+      "Apoio comercial pelo WhatsApp",
+    ],
+    transformation:
+      "A distribuidora passou a ter um catálogo online e um painel para organizar pedidos e vendas.",
+  },
+  "evertoon-tattoo": {
+    name: "Evertoon Tattoo",
+    segment: "Tatuagem",
+    logo: "/case-evertoon.png",
+    description:
+      "Organização do Instagram e criação da marca pessoal de um tatuador premiado.",
+    challenge:
+      "Deixar claro quem é o Evertoon e quais são os trabalhos dele, separando a marca pessoal da marca do estúdio.",
+    strategy:
+      "A Reisart organizou o Instagram e criou a marca pessoal Evertoon, partindo da assinatura real do tatuador.",
+    deliveries: [
+      "Organização do Instagram e dos posts",
+      "Marca pessoal Evertoon",
+      "Reels e stories de eventos e trabalhos",
+      "Linguagem visual própria para os vídeos",
+    ],
+    transformation:
+      "O perfil passou a apresentar o tatuador e o trabalho dele com uma identidade própria.",
+  },
+  "marmoraria-vila-sonia": {
+    name: "Marmoraria Vila Sônia",
+    segment: "Granitos, mármores e quartzitos",
+    logo: "/case-vilasonia.png",
+    description:
+      "Reestruturação do perfil no Instagram de uma marmoraria de Piracicaba.",
+    challenge:
+      "Deixar o perfil da marmoraria mais claro e profissional para quem chega pelo Instagram.",
+    strategy:
+      "A Reisart reestruturou a bio, o nome, a categoria profissional e o contato do perfil.",
+    deliveries: [
+      "Nova bio",
+      "Nome do perfil com a cidade",
+      "Categoria profissional",
+      "Telefone de contato igual ao WhatsApp da bio",
+    ],
+    transformation:
+      "O perfil passou a apresentar a marmoraria e o contato de forma mais clara.",
+  },
 } as const;
 
 type CaseSlug = keyof typeof cases;
@@ -129,7 +207,12 @@ export default async function CasePage({ params }: PageProps) {
       <main className="bg-[#05070D] pt-20">
         <section className="px-6 py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-            <div className="border border-white/10 bg-[#0B1638] p-10">
+            <div
+              className={[
+                "border border-white/10 p-10",
+                "claro" in item && item.claro ? "bg-white" : "bg-[#0B1638]",
+              ].join(" ")}
+            >
               <Image
                 src={item.logo}
                 alt={item.name}

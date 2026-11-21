@@ -46,6 +46,44 @@ const cases = [
     logo: "/case-fabinho.png",
     href: "/cases/fabinho-eletrica-mecanica",
   },
+  {
+    name: "Dra. Adilaine Guastalli",
+    slug: "adilaine_guastalli",
+    segment: "Odontologia",
+    done:
+      "Organização do perfil no Google, do Instagram e das informações do consultório, com identidade visual consistente.",
+    logo: "/case-adilaine.png",
+    href: "/cases/adilaine-guastalli",
+    claro: true,
+  },
+  {
+    name: "AS Distribuidora",
+    slug: "as_distribuidora",
+    segment: "Produtos hospitalares e EPIs",
+    done:
+      "Catálogo digital com pedido pelo WhatsApp e painel de gestão de vendas.",
+    logo: "/case-as-distribuidora.png",
+    href: "/cases/as-distribuidora",
+    claro: true,
+  },
+  {
+    name: "Evertoon Tattoo",
+    slug: "evertoon_tattoo",
+    segment: "Tatuagem",
+    done:
+      "Organização do Instagram e criação da marca pessoal do tatuador.",
+    logo: "/case-evertoon.png",
+    href: "/cases/evertoon-tattoo",
+  },
+  {
+    name: "Marmoraria Vila Sônia",
+    slug: "marmoraria_vila_sonia",
+    segment: "Granitos, mármores e quartzitos",
+    done:
+      "Reestruturação do perfil no Instagram, com nova bio, nome, categoria profissional e contato.",
+    logo: "/case-vilasonia.png",
+    href: "/cases/marmoraria-vila-sonia",
+  },
 ];
 
 export const metadata: Metadata = {
@@ -89,7 +127,13 @@ export default function CasesPage() {
                 key={item.name}
                 className="border border-white/10 bg-[#0B1638] p-7 transition duration-300 hover:border-[#3B82FF]/50 hover:bg-[#0B1638]"
               >
-                <div className="flex h-24 items-center border-b border-white/10 pb-6">
+                <div
+                  className={
+                    "claro" in item && item.claro
+                      ? "flex h-24 items-center justify-center rounded-xl bg-white px-4"
+                      : "flex h-24 items-center border-b border-white/10 pb-6"
+                  }
+                >
                   <Image
                     src={item.logo}
                     alt={item.name}

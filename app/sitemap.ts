@@ -20,6 +20,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cases/robert-auto-eletrica",
     "/cases/marcenaria-ponto-alto",
     "/cases/santana-na-brasa",
+    "/cases/adilaine-guastalli",
+    "/cases/as-distribuidora",
+    "/cases/evertoon-tattoo",
+    "/cases/marmoraria-vila-sonia",
     "/cases/fabinho-eletrica-mecanica",
     "/diagnostico",
   ];
