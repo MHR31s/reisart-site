@@ -13,12 +13,6 @@ const marcas = [
   { name: "Marmoraria Vila Sônia", logo: "/case-vilasonia.png", escuro: true },
 ];
 
-const numeros = [
-  { valor: "+50", rotulo: "projetos entregues" },
-  { valor: "5", rotulo: "fases no método MH360°" },
-  { valor: "1:1", rotulo: "atendimento direto com o fundador" },
-];
-
 function Fila({ ocultar = false }: { ocultar?: boolean }) {
   return (
     <ul className="flex shrink-0 items-center gap-5 pr-5" aria-hidden={ocultar}>
@@ -64,18 +58,6 @@ export default function LogoStrip() {
         </div>
       </div>
 
-      <div className="mx-auto mt-14 max-w-5xl">
-        <dl className="grid divide-y divide-[#DCE3F5] overflow-hidden rounded-3xl border border-[#DCE3F5] bg-white shadow-[0_20px_60px_rgba(33,68,255,0.08)] md:grid-cols-3 md:divide-x md:divide-y-0">
-          {numeros.map((n) => (
-            <div key={n.rotulo} className="px-8 py-9 text-center">
-              <dt className="display gradient-text-light text-6xl">{n.valor}</dt>
-              <dd className="mt-3 text-sm font-semibold text-[#4A5878]">
-                {n.rotulo}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </div>
     </section>
   );
 }

@@ -5,13 +5,6 @@ import FadeIn from "@/components/FadeIn";
 
 const depoimentos = [
   {
-    nome: "Robert Auto Elétrica",
-    contexto: "Serviços Automotivos",
-    logo: "/case-robert.png",
-    texto:
-      "Nossa empresa já possuía tradição e qualidade no atendimento. Com uma comunicação mais estratégica, conseguimos apresentar isso de forma mais clara, fortalecendo a confiança de quem procura nossos serviços.",
-  },
-  {
     nome: "Fabinho Elétrica & Mecânica",
     contexto: "Oficina de elétrica e mecânica",
     logo: "/case-fabinho.png",
@@ -35,8 +28,8 @@ export default function ProvaSocialResultados() {
           <div className="max-w-3xl">
             <p className="section-kicker">Quem já passou por aqui</p>
             <h2 className="display mt-5 text-4xl text-white md:text-6xl">
-              Empresas reais.{" "}
-              <span className="gradient-text">Presença mais forte.</span>
+              Na palavra de{" "}
+              <span className="gradient-text">quem contratou.</span>
             </h2>
           </div>
           <Link
@@ -48,7 +41,7 @@ export default function ProvaSocialResultados() {
           </Link>
         </FadeIn>
 
-        <div className="-mx-6 mt-14 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-6 pb-4 lg:mx-auto lg:grid lg:max-w-5xl lg:grid-cols-2 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
+        <div className="-mx-6 mt-14 flex snap-x snap-mandatory items-stretch gap-4 overflow-x-auto px-6 pb-4 lg:mx-auto lg:grid lg:max-w-2xl lg:grid-cols-1 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
           {depoimentos.map((depoimento, i) => (
             <FadeIn key={depoimento.nome} delay={i * 100} className="w-[84vw] max-w-sm shrink-0 snap-center lg:w-auto lg:max-w-none">
               <article className="no-surface flex h-full flex-col rounded-3xl border border-white/10 bg-white/[0.05] p-8 backdrop-blur">

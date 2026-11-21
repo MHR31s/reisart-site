@@ -26,8 +26,6 @@ const cases = {
       "Organização da presença local",
       "Apoio à percepção de qualidade no atendimento",
     ],
-    transformation:
-      "A comunicação passou a refletir melhor a experiência real da empresa, fortalecendo a confiança de quem procura os serviços.",
   },
   "fabinho-eletrica-mecanica": {
     name: "Fabinho Elétrica & Mecânica",
@@ -64,8 +62,6 @@ const cases = {
       "Lista de corte e materiais",
       "Cronograma de controle de produção",
     ],
-    transformation:
-      "A marcenaria passou a ter conteúdo para divulgar o trabalho e materiais organizados para a produção.",
   },
   "santana-na-brasa": {
     name: "Santana na Brasa",
@@ -83,8 +79,6 @@ const cases = {
       "Apresentação dos tipos de evento atendidos",
       "Identidade visual aplicada aos materiais",
     ],
-    transformation:
-      "A mensagem passou a ser a do serviço de churrasqueiro para eventos, o que ajuda quem busca esse tipo de contratação a entender a oferta.",
   },
   "adilaine-guastalli": {
     name: "Dra. Adilaine Guastalli",
@@ -103,8 +97,6 @@ const cases = {
       "Artes e vídeos alinhados à identidade visual",
       "Nome profissional padronizado em todos os canais",
     ],
-    transformation:
-      "A presença da Dra. Adilaine passou a seguir um mesmo padrão nos canais, como base para as próximas etapas.",
   },
   "as-distribuidora": {
     name: "AS Distribuidora",
@@ -123,8 +115,6 @@ const cases = {
       "Organização do fluxo de pedidos",
       "Apoio comercial pelo WhatsApp",
     ],
-    transformation:
-      "A distribuidora passou a ter um catálogo online e um painel para organizar pedidos e vendas.",
   },
   "evertoon-tattoo": {
     name: "Evertoon Tattoo",
@@ -142,8 +132,6 @@ const cases = {
       "Reels e stories de eventos e trabalhos",
       "Linguagem visual própria para os vídeos",
     ],
-    transformation:
-      "O perfil passou a apresentar o tatuador e o trabalho dele com uma identidade própria.",
   },
   "marmoraria-vila-sonia": {
     name: "Marmoraria Vila Sônia",
@@ -161,8 +149,6 @@ const cases = {
       "Categoria profissional",
       "Telefone de contato igual ao WhatsApp da bio",
     ],
-    transformation:
-      "O perfil passou a apresentar a marmoraria e o contato de forma mais clara.",
   },
 } as const;
 
@@ -274,12 +260,20 @@ export default async function CasePage({ params }: PageProps) {
             </div>
 
             <div className="rounded-2xl border border-[#3B82FF]/35 bg-[#0B1638] p-7">
-              <h2 className="text-2xl font-extrabold text-white">
-                Transformação percebida
-              </h2>
-              <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">
-                {item.transformation}
-              </p>
+              {"transformation" in item ? (
+                <>
+                  <h2 className="text-2xl font-extrabold text-white">
+                    Relato do cliente
+                  </h2>
+                  <p className="premium-copy mt-5 text-base leading-8 text-[#AAB7C4]">
+                    {item.transformation}
+                  </p>
+                </>
+              ) : (
+                <h2 className="text-2xl font-extrabold text-white">
+                  Quer conversar sobre o seu negócio?
+                </h2>
+              )}
               <TrackedLink
                 href={whatsappLink}
                 eventName="diagnostico_click"
